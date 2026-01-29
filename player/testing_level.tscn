@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cghda3fg4o3d"]
+
+[ext_resource type="PackedScene" uid="uid://h2xotxmtsvq0" path="res://player/player.tscn" id="1_mrkqm"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_kkmst"]
+
+[node name="TestingLevel" type="Node3D" unique_id=888214706]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1212786741]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1102687011]
+shape = SubResource("WorldBoundaryShape3D_kkmst")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="Player" parent="." unique_id=1977031556 instance=ExtResource("1_mrkqm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.414738, 0)
