@@ -1,27 +1,49 @@
 [gd_scene format=3 uid="uid://h2xotxmtsvq0"]
 
-[ext_resource type="Script" uid="uid://502u4pxuykbo" path="res://player/camera_pivot.gd" id="1_oul6g"]
+[ext_resource type="Script" uid="uid://cpgox75irsaxa" path="res://player/hover_raycasts.gd" id="1_rkbax"]
 [ext_resource type="Script" uid="uid://cm7oi2jaitb28" path="res://player/player_controller.gd" id="2_rkbax"]
 [ext_resource type="PackedScene" uid="uid://67o2xe5xuev6" path="res://player/whiteboard.blend" id="3_g1dw6"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_oul6g"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g1dw6"]
+friction = 0.0
 
-[sub_resource type="SphereMesh" id="SphereMesh_oul6g"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_oul6g"]
+size = Vector3(1.6841431, 0.26104736, 5.814331)
 
-[node name="Player" type="RigidBody3D" unique_id=1464342755]
+[node name="Player" type="RigidBody3D" unique_id=518666012]
+mass = 20.0
+physics_material_override = SubResource("PhysicsMaterial_g1dw6")
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, -1, 0)
+max_contacts_reported = 2
+linear_damp = 1.0
+angular_damp = 3.0
 script = ExtResource("2_rkbax")
+turn_speed = 10000.0
+reverse_speed = 7000.0
+jump_force = 300.0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=319987249]
-shape = SubResource("SphereShape3D_oul6g")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=285270148]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10922241, -0.008575439, 0.010681152)
+shape = SubResource("BoxShape3D_oul6g")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1067178852]
-visible = false
-mesh = SubResource("SphereMesh_oul6g")
+[node name="whiteboard" parent="." unique_id=1471955689 instance=ExtResource("3_g1dw6")]
 
-[node name="Camera3D" type="Node3D" parent="." unique_id=1842336144]
-script = ExtResource("1_oul6g")
+[node name="Camera3D" type="Camera3D" parent="." unique_id=387855202]
+transform = Transform3D(1, 0, 0, 0, 0.68234295, 0.73103225, 0, -0.73103225, 0.68234295, 0, 5.706175, 5.723869)
 
-[node name="Camera3D2" type="Camera3D" parent="Camera3D" unique_id=1819905126]
-transform = Transform3D(1, 0, 0, 0, 0.9544437, 0.29839122, 0, -0.29839122, 0.9544437, 0, 3, 5)
+[node name="Hover" type="Node3D" parent="." unique_id=224496255]
+script = ExtResource("1_rkbax")
 
-[node name="whiteboard" parent="Camera3D" unique_id=1471955689 instance=ExtResource("3_g1dw6")]
+[node name="FrontLeft" type="RayCast3D" parent="Hover" unique_id=158429768 groups=["Raycasts"]]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, -0.975, 0.1, 2.974)
+hit_back_faces = false
+
+[node name="FrontRight" type="RayCast3D" parent="Hover" unique_id=510855177 groups=["Raycasts"]]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 1, 0.979, 0.1, 2.935)
+
+[node name="BackLeft" type="RayCast3D" parent="Hover" unique_id=96208573 groups=["Raycasts"]]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 1, -0.961, 0.1, -2.89)
+
+[node name="BackRight" type="RayCast3D" parent="Hover" unique_id=844165943 groups=["Raycasts"]]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 1, 0.987, 0.1, -2.89)
