@@ -1,16 +1,9 @@
 extends Node3D
 
-const SENSITIVITY = 100
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func _ready():
+	set_as_top_level(true)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
-
-func _input(event):
-	pass
-	#if event is InputEventMouseMotion:
-	#	rotate_y(-event.relative.x / SENSITIVITY)
+	var parent:Node3D = get_parent()
+	self.global_position=parent.global_position
+	look_at(parent.facing_direction.rotated(Vector3.UP,-PI/2)*100)
