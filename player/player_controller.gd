@@ -2,17 +2,19 @@ extends RigidBody3D
 
 @onready var rays = get_tree().get_nodes_in_group("Raycasts")
 
-@export var acceleration := 50.0 
-@export var max_speed := 40.0
-@export var turn_speed := 2.5 # Radians per second
-@export var hover_force := 50.0 
-@export var jump_force := 20.0
+@export var acceleration := 60.0 
+@export var max_speed := 50.0
+@export var turn_speed := 3.0 
+@export var hover_force := 70.0 
+@export var jump_force := 25.0
+@export var gravity_assist := 2.0
+@export var hover_height := 2.5
 
-@export_range(0.0, 1.0) var drift_snappiness := 0.9 
+@export_range(0.0, 1.0) var grip_standard := 0.95
+@export_range(0.0, 1.0) var grip_drift := 0.01
 
 func _ready():
-	# Optional: Prevents the board from flipping over entirely if you hit a weird bump
-	angular_damp = 3.0 
+	angular_damp = 5.0
 
 func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 	var dt = state.step
@@ -21,36 +23,47 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 	for ray in rays:
 		ray.force_raycast_update()
 		if ray.is_colliding():
-			is_grounded = true
-			var collision_point = ray.get_collision_point()
-			var dist = collision_point.distance_to(ray.global_position)
+			var dist = ray.get_collision_point().distance_to(ray.global_position)
+			if dist < hover_height: 
+				is_grounded = true
 			
 			var force_mag = (hover_force / clamp(dist, 0.1, 2.0))
 			var force_dir = state.transform.basis.y 
-			var pos_offset = ray.global_position - state.transform.origin
-			
-			state.apply_force(force_dir * force_mag, pos_offset)
-
+			state.apply_force(force_dir * force_mag, ray.global_position - state.transform.origin)
 
 	var turn_input = Input.get_axis("move_right", "move_left") # Inverted for standard turning
 	var gas_input = Input.get_axis("brake", "accelerate")
-	
+	var is_drifting = Input.is_action_pressed("drift")
 
 	if turn_input != 0:
 		var rot_amount = turn_input * turn_speed
-		state.angular_velocity.y = (state.transform.basis.y * rot_amount).y
-		# Todo: Add some banking (roll) here for visuals
+		var current_rot = state.transform.basis.inverse() * state.angular_velocity
+		current_rot.y = rot_amount 
+		state.angular_velocity = state.transform.basis * current_rot
+	else:
+		# Kill rotation for no unintended drift
+		var current_rot = state.transform.basis.inverse() * state.angular_velocity
+		current_rot.y = lerp(current_rot.y, 0.0, 0.2)
+		state.angular_velocity = state.transform.basis * current_rot
 
 	var local_velocity = state.transform.basis.inverse() * state.linear_velocity
 	
-	local_velocity.x = lerp(local_velocity.x, 0.0, drift_snappiness)
+	var current_grip = grip_drift if is_drifting else grip_standard
+	local_velocity.x = lerp(local_velocity.x, 0.0, current_grip)
 	
-	if gas_input > 0 and local_velocity.z > -max_speed:
-		local_velocity.z -= acceleration * dt
-	elif gas_input < 0:
-		local_velocity.z += acceleration * dt
-		
-	state.linear_velocity = state.transform.basis * local_velocity
+	if is_grounded:
+		if gas_input > 0 and local_velocity.z > -max_speed:
+			local_velocity.z -= acceleration * dt
+		elif gas_input < 0:
+			local_velocity.z += acceleration * dt
+	else:
+		# Might want slight movement in air?
+		pass 
 
+	if not is_grounded:
+		state.apply_central_force(Vector3.DOWN * 20.0 * gravity_assist)
+
+	state.linear_velocity = state.transform.basis * local_velocity
+	
 	if Input.is_action_just_pressed("jump") and is_grounded:
 		state.apply_central_impulse(state.transform.basis.y * jump_force)
