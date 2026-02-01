@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://uvj7miqi530m"]
+
+[ext_resource type="PackedScene" uid="uid://h2xotxmtsvq0" path="res://player/player.tscn" id="1_w0yvr"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w0yvr"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_3j3h8"]
+sky_material = SubResource("ProceduralSkyMaterial_w0yvr")
+
+[sub_resource type="Environment" id="Environment_u15jy"]
+background_mode = 2
+sky = SubResource("Sky_3j3h8")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_573st"]
+albedo_color = Color(0.37413925, 0.37413928, 0.37413922, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w0yvr"]
+albedo_color = Color(0.55274844, 0.32227856, 0.95683974, 1)
+
+[node name="Prototype level" type="Node3D" unique_id=1092864291]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=30314263]
+environment = SubResource("Environment_u15jy")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1069605296]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Colliders" type="Node3D" parent="." unique_id=1319465727]
+
+[node name="Ground" type="CSGBox3D" parent="Colliders" unique_id=523607595]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -26.196533)
+use_collision = true
+size = Vector3(200, 0.1, 200)
+material = SubResource("StandardMaterial3D_573st")
+
+[node name="Bump" type="CSGPolygon3D" parent="Colliders" unique_id=1489164803]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 63.100784, 0.030997515, 7.936516)
+use_collision = true
+polygon = PackedVector2Array(-2.089, 0, -6, 0, -1.798, 1.5, 1.592, 0)
+depth = 20.0
+material = SubResource("StandardMaterial3D_w0yvr")
+
+[node name="Bump2" type="CSGPolygon3D" parent="Colliders" unique_id=623191234]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -32.60221, -0.17100954, -1.9319)
+use_collision = true
+polygon = PackedVector2Array(1.8078156, 0.049737215, -6, 0, 7.925434, 5.7701073, 8.116116, 0.049737215)
+depth = 20.0
+material = SubResource("StandardMaterial3D_w0yvr")
+
+[node name="Bump3" type="CSGPolygon3D" parent="Colliders" unique_id=1174545453]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -51.54339, -0.17100954, -36.284492)
+use_collision = true
+polygon = PackedVector2Array(1.8078156, 0.049737215, -6, 0, 7.925434, 5.7701073, 8.116116, 0.049737215)
+depth = 20.0
+material = SubResource("StandardMaterial3D_w0yvr")
+
+[node name="Big bump" type="CSGPolygon3D" parent="Colliders" unique_id=1677994094]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 64.048454, 0.030997515, -13.040245)
+use_collision = true
+polygon = PackedVector2Array(-0.5280762, 0.0009647012, -8.977936, 0.029990435, -3.9727669, 2.2755847, -0.5935974, 2.2943058, 2.7949295, 2.2568636, 7.4110794, 0.039851487)
+depth = 20.0
+material = SubResource("StandardMaterial3D_w0yvr")
+
+[node name="Big bump2" type="CSGPolygon3D" parent="Colliders" unique_id=1702112172]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 64.048454, 0.030997515, -45.813553)
+use_collision = true
+polygon = PackedVector2Array(-0.5280762, 0.0009647012, -8.977936, 0.029990435, -3.9727669, 2.2755847, -0.5935974, 2.2943058, 2.7949295, 2.2568636, 7.4110794, 0.039851487)
+depth = 20.0
+material = SubResource("StandardMaterial3D_w0yvr")
+
+[node name="Ramp" type="CSGPolygon3D" parent="Colliders" unique_id=1301586963]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 1.3782672, 0.030997515, 21.351072)
+use_collision = true
+polygon = PackedVector2Array(-2.5, 0, -6, 0, -6, 2.528, -5, 1.513, -2.366, 0.5, 0.101, 0)
+depth = 20.0
+material = SubResource("StandardMaterial3D_w0yvr")
+
+[node name="Half-Pipe" type="CSGPolygon3D" parent="Colliders" unique_id=1254558034]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 5.2782555, 0.037144154, -13.758369)
+use_collision = true
+polygon = PackedVector2Array(0.5, 0, -7.447563, 0.11353794, -7.447563, 5.87443, -5.6737747, 3.0489242, -4.1197453, 1.6518683, -1.8593407, 0.16062942, 3.5876055, 0.097841054, 5.168074, 1.6502862, 6.911888, 3.1389084, 8.868364, 5.676655, 8.896717, 0.062422305)
+depth = 20.0
+material = SubResource("StandardMaterial3D_w0yvr")
+
+[node name="Half-Pipe2" type="CSGPolygon3D" parent="Colliders" unique_id=28752102]
+transform = Transform3D(-0.017766364, 0, -0.99984217, 0, 1, 0, 0.99984217, 0, -0.017766364, -0.2704544, 0.037144154, -81.16983)
+use_collision = true
+polygon = PackedVector2Array(0.5, 0, -7.447563, 0.11353794, -7.447563, 5.87443, -5.6737747, 3.0489242, -4.1197453, 1.6518683, -1.8593407, 0.16062942, 3.5876055, 0.097841054, 5.168074, 1.6502862, 6.911888, 3.1389084, 8.868364, 5.676655, 8.896717, 0.062422305)
+depth = 20.0
+material = SubResource("StandardMaterial3D_w0yvr")
+
+[node name="Ramp2" type="CSGPolygon3D" parent="Colliders" unique_id=1690957435]
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 21.378265, 0.030997515, 8.868215)
+use_collision = true
+polygon = PackedVector2Array(-2.5, 0, -6, 0, -6, 2.528, -5, 1.513, -2.366, 0.5, 0.101, 0)
+depth = 20.0
+material = SubResource("StandardMaterial3D_w0yvr")
+
+[node name="Enemies" type="Node3D" parent="." unique_id=1055746238]
+
+[node name="Player" parent="." unique_id=518666012 instance=ExtResource("1_w0yvr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.921608, 4.637535, 39.71564)
