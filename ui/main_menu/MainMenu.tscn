@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bh6l6i2j4dmfk"]
+
+[ext_resource type="Script" uid="uid://canxphibppiyg" path="res://ui/main_menu/main_menu.gd" id="1_h7g2k"]
+
+[node name="MainMenu" type="Control" unique_id=541379625]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h7g2k")
+
+[node name="BackgroundImage" type="TextureRect" parent="." unique_id=1152455617]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=269203973]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1896660733]
+layout_mode = 2
+alignment = 1
+
+[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1871248612]
+layout_mode = 2
+
+[node name="OptionsButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=140548732]
+layout_mode = 2
+
+[node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1823239019]
+layout_mode = 2
