@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dyhp2g5batggj"]
+
+[ext_resource type="Script" uid="uid://uyd4glh4dj4m" path="res://enemies/dummy_enemy.gd" id="1_cldl4"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ra0cx"]
+radius = 1.2
+height = 5.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ri42i"]
+radius = 1.2
+height = 5.0
+
+[node name="DummyEnemy" type="RigidBody3D" unique_id=962972829 groups=["damagable"]]
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+script = ExtResource("1_cldl4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=403939388]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1286116, 0)
+mesh = SubResource("CapsuleMesh_ra0cx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=997524980]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.215332, 0)
+shape = SubResource("CapsuleShape3D_ri42i")

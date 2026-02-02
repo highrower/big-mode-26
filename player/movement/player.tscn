@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://h2xotxmtsvq0"]
 
-[ext_resource type="Script" path="res://player/hover_raycasts.gd" id="1_rkbax"]
-[ext_resource type="Script" uid="uid://cm7oi2jaitb28" path="res://player/player_controller.gd" id="2_rkbax"]
-[ext_resource type="PackedScene" uid="uid://67o2xe5xuev6" path="res://player/whiteboard.blend" id="3_g1dw6"]
+[ext_resource type="Script" uid="uid://cpgox75irsaxa" path="res://player/movement/hover_raycasts.gd" id="1_rkbax"]
+[ext_resource type="Script" uid="uid://cm7oi2jaitb28" path="res://player/movement/player_controller.gd" id="2_rkbax"]
+[ext_resource type="PackedScene" uid="uid://67o2xe5xuev6" path="res://player/movement/whiteboard.blend" id="3_g1dw6"]
+[ext_resource type="PackedScene" uid="uid://cfxu8l7pwlof3" path="res://player/weapons/bat.tscn" id="4_tdtx0"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g1dw6"]
 friction = 0.0
@@ -19,6 +20,7 @@ max_contacts_reported = 2
 linear_damp = 1.0
 angular_damp = 3.0
 script = ExtResource("2_rkbax")
+gravity_assist = 6.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=285270148]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10922241, -0.008575439, 0.010681152)
@@ -48,3 +50,8 @@ target_position = Vector3(0, -1.0000001, 0)
 [node name="BackRight" type="RayCast3D" parent="Hover" unique_id=844165943 groups=["Raycasts"]]
 transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 1, 0.987, 0.1, -2.89)
 target_position = Vector3(0, -1.0000001, 0)
+
+[node name="WeaponManager" type="Node3D" parent="." unique_id=2030248533]
+
+[node name="Bat" parent="WeaponManager" unique_id=1849425671 instance=ExtResource("4_tdtx0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.117521, -4.187463)

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://67o2xe5xuev6"
-path="res://.godot/imported/whiteboard.blend-02ac20ccb40259fe41d5bb25c78ec5d4.scn"
+uid="uid://d0vf3b2x6malg"
+path="res://.godot/imported/testlevel.blend-46f69b591991e280ac558c776ea6aec7.scn"
 
 [deps]
 
-source_file="res://player/whiteboard.blend"
-dest_files=["res://.godot/imported/whiteboard.blend-02ac20ccb40259fe41d5bb25c78ec5d4.scn"]
+source_file="res://player/movement/testlevel.blend"
+dest_files=["res://.godot/imported/testlevel.blend-46f69b591991e280ac558c776ea6aec7.scn"]
 
 [params]
 
