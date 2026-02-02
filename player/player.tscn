@@ -16,6 +16,7 @@ physics_material_override = SubResource("PhysicsMaterial_g1dw6")
 gravity_scale = 4.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)
+continuous_cd = true
 max_contacts_reported = 2
 angular_damp = 3.0
 script = ExtResource("2_rkbax")
