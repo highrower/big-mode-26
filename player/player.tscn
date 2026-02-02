@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://h2xotxmtsvq0"]
 
-[ext_resource type="Script" path="res://player/hover_raycasts.gd" id="1_rkbax"]
+[ext_resource type="Script" uid="uid://cpgox75irsaxa" path="res://player/hover_raycasts.gd" id="1_rkbax"]
 [ext_resource type="Script" uid="uid://cm7oi2jaitb28" path="res://player/player_controller.gd" id="2_rkbax"]
 [ext_resource type="PackedScene" uid="uid://67o2xe5xuev6" path="res://player/whiteboard.blend" id="3_g1dw6"]
 
@@ -11,12 +11,13 @@ friction = 0.0
 size = Vector3(1.6841431, 0.26104736, 5.814331)
 
 [node name="Player" type="RigidBody3D" unique_id=518666012]
-mass = 20.0
+mass = 200.0
 physics_material_override = SubResource("PhysicsMaterial_g1dw6")
+gravity_scale = 4.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)
+continuous_cd = true
 max_contacts_reported = 2
-linear_damp = 1.0
 angular_damp = 3.0
 script = ExtResource("2_rkbax")
 
