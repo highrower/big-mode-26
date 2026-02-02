@@ -1,6 +1,7 @@
 extends RigidBody3D
 
 @onready var rays = get_tree().get_nodes_in_group("Raycasts")
+@onready var drift_manager = $DriftManager
 
 @export_group("Movement")
 @export var acceleration := 60.0 
@@ -18,8 +19,11 @@ extends RigidBody3D
 @export_range(0.0, 1.0) var grip_standard := 0.95
 @export_range(0.0, 1.0) var grip_drift := 0.01
 
+var pending_boost := 0.0
+
 func _ready():
 	angular_damp = 5.0
+	drift_manager.boost_ready.connect(_on_boost_ready)
 
 func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 	var dt = state.step
@@ -39,6 +43,11 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 	var turn_input = Input.get_axis("move_right", "move_left") # Inverted for standard turning
 	var gas_input = Input.get_axis("brake", "accelerate")
 	var is_drifting = Input.is_action_pressed("drift")
+	
+	if Input.is_action_just_pressed("drift"):
+		drift_manager.start_drift()
+	if Input.is_action_just_released("drift"):
+		drift_manager.stop_drift()
 
 	if turn_input != 0:
 		var rot_amount = turn_input * turn_speed
@@ -61,6 +70,10 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 			local_velocity.z -= acceleration * dt
 		elif gas_input < 0:
 			local_velocity.z += acceleration * dt
+		if pending_boost > 0:
+			print("hello")
+			state.apply_central_impulse(state.transform.basis.z * -pending_boost)
+			pending_boost = 0
 	else:
 		var vertical_vel = state.linear_velocity.y
 		
@@ -91,3 +104,7 @@ func _behaviour_manager(delta: float):
 func take_damage(damage):
 	self.health-=damage
 	print("PLAYER:"+str(self.health))
+		state.apply_central_impulse(state.transform.basis.y * jump_force * mass)
+		
+func _on_boost_ready(amount):
+	pending_boost = amount
