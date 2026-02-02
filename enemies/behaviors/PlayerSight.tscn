@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://c21rdyc5x7pu3"]
+
+[ext_resource type="Script" uid="uid://bln7351ywg85v" path="res://enemies/behaviors/PlayerSight.gd" id="1_o0hdp"]
+
+[node name="PlayerSight" type="Node3D" unique_id=83948702]
+script = ExtResource("1_o0hdp")
+
+[node name="Timer" type="Timer" parent="." unique_id=650790777]
+autostart = true
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=994108944]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

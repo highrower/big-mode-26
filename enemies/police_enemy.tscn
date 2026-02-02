@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://ckprci1fnwa1i"]
+
+[ext_resource type="Script" uid="uid://ddm5r06d23efc" path="res://enemies/police_enemy.gd" id="1_b6gg5"]
+[ext_resource type="PackedScene" uid="uid://c21rdyc5x7pu3" path="res://enemies/behaviors/PlayerSight.tscn" id="2_vcxqq"]
+[ext_resource type="PackedScene" uid="uid://chgyxk5kpa17n" path="res://enemies/behaviors/chase_player.tscn" id="3_mikam"]
+[ext_resource type="PackedScene" uid="uid://bh6mbtifu4hhu" path="res://enemies/behaviors/can_die.tscn" id="4_xt4sa"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ra0cx"]
+radius = 1.2
+height = 5.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ri42i"]
+radius = 1.2
+height = 5.0
+
+[node name="PoliceEnemy" type="RigidBody3D" unique_id=962972829 groups=["damagable"]]
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+script = ExtResource("1_b6gg5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=403939388]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1286116, 0)
+mesh = SubResource("CapsuleMesh_ra0cx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=997524980]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.215332, 0)
+shape = SubResource("CapsuleShape3D_ri42i")
+
+[node name="PlayerSight" parent="." unique_id=1767067021 instance=ExtResource("2_vcxqq")]
+
+[node name="ChasePlayer" parent="." unique_id=189868678 instance=ExtResource("3_mikam")]
+
+[node name="CanDie" parent="." unique_id=1900563199 instance=ExtResource("4_xt4sa")]

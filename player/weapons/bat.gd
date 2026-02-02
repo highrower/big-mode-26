@@ -1,9 +1,9 @@
 extends Area3D
 
 @onready var Cooldown := $Cooldown
-@export var CooldownTime := 2.0
+@export var CooldownTime := 1.0
 @export var damage := 1
-@export var knockback := 10
+@export var knockback := 25.0
 var can_attack := true
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,10 +21,9 @@ func _process(delta: float) -> void:
 					hit(i)
 
 func hit(target):
-	print("HIT")
 	target.take_damage(damage)
 	if target is RigidBody3D:
-		var knockback_vector=(target.global_position-self.global_position).normalized()*knockback
+		var knockback_vector=(target.global_position-get_parent().global_position).normalized()*knockback
 		target.apply_central_impulse(knockback_vector)
 
 func _on_cooldown_timeout() -> void:
