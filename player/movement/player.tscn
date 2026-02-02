@@ -59,12 +59,15 @@ target_position = Vector3(0, -1.0000001, 0)
 transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 1, 0.987, 0.1, -2.89)
 target_position = Vector3(0, -1.0000001, 0)
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=387855202 node_paths=PackedStringArray("move_target", "look_target")]
+[node name="CamTarget" type="Node3D" parent="." unique_id=1883564970]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.481623, 16.07193)
+
+[node name="Camera3D" type="Camera3D" parent="CamTarget" unique_id=387855202 node_paths=PackedStringArray("move_target", "look_target")]
 transform = Transform3D(1, 0, 0, 0, 0.68234295, 0.73103225, 0, -0.73103225, 0.68234295, 0, 5.706175, 5.723869)
 top_level = true
 script = ExtResource("4_yw30f")
-move_target = NodePath("../CamTarget")
-look_target = NodePath("..")
+move_target = NodePath("..")
+look_target = NodePath("../..")
 
 [node name="CamTarget" type="Node3D" parent="." unique_id=1883564970]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.481623, 16.07193)
@@ -91,3 +94,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0321436, 0)
 shape = SubResource("CapsuleShape3D_wa6sx")
 
 [node name="CanDie" parent="." unique_id=1900563199 instance=ExtResource("5_td4vs")]
+[node name="DriftManager" type="Node" parent="." unique_id=138607204]
+script = ExtResource("5_qjkh3")
+
+[node name="VisualsManager" type="Node" parent="." unique_id=1951325389]
+script = ExtResource("6_g6k8r")
