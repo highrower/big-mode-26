@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cpgox75irsaxa" path="res://player/hover_raycasts.gd" id="1_rkbax"]
 [ext_resource type="Script" uid="uid://cm7oi2jaitb28" path="res://player/player_controller.gd" id="2_rkbax"]
 [ext_resource type="PackedScene" uid="uid://67o2xe5xuev6" path="res://player/whiteboard.blend" id="3_g1dw6"]
+[ext_resource type="Script" uid="uid://dmjbhe6j6g7xq" path="res://player/camera.gd" id="4_yw30f"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g1dw6"]
 friction = 0.0
@@ -27,10 +28,6 @@ shape = SubResource("BoxShape3D_oul6g")
 
 [node name="whiteboard" parent="." unique_id=1471955689 instance=ExtResource("3_g1dw6")]
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=387855202]
-transform = Transform3D(1, 0, 0, 0, 0.68234295, 0.73103225, 0, -0.73103225, 0.68234295, 0, 5.706175, 5.723869)
-fov = 100.0
-
 [node name="Hover" type="Node3D" parent="." unique_id=224496255]
 script = ExtResource("1_rkbax")
 
@@ -49,3 +46,13 @@ target_position = Vector3(0, -1.0000001, 0)
 [node name="BackRight" type="RayCast3D" parent="Hover" unique_id=844165943 groups=["Raycasts"]]
 transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 1, 0.987, 0.1, -2.89)
 target_position = Vector3(0, -1.0000001, 0)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=387855202 node_paths=PackedStringArray("move_target", "look_target")]
+transform = Transform3D(1, 0, 0, 0, 0.68234295, 0.73103225, 0, -0.73103225, 0.68234295, 0, 5.706175, 5.723869)
+top_level = true
+script = ExtResource("4_yw30f")
+move_target = NodePath("../CamTarget")
+look_target = NodePath("..")
+
+[node name="CamTarget" type="Node3D" parent="." unique_id=1883564970]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.481623, 16.07193)
