@@ -11,7 +11,8 @@ extends RigidBody3D
 @export var jump_force := 25.0
 @export var gravity_assist := 2.0
 @export var hover_height := 2.5
-@export var fall_multiplier := 2.5 # Gravity strength when falling
+@export var fall_multiplier := 2.5
+@export var drift_min_speed := 5.0
 
 
 @export var health := 300.0
@@ -42,12 +43,8 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 
 	var turn_input = Input.get_axis("move_right", "move_left") # Inverted for standard turning
 	var gas_input = Input.get_axis("brake", "accelerate")
-	var is_drifting = Input.is_action_pressed("drift")
 	
-	if Input.is_action_just_pressed("drift"):
-		drift_manager.start_drift()
-	if Input.is_action_just_released("drift"):
-		drift_manager.stop_drift()
+	var current_grip = handle_drift(state)
 
 	if turn_input != 0:
 		var rot_amount = turn_input * turn_speed
@@ -62,7 +59,6 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 
 	var local_velocity = state.transform.basis.inverse() * state.linear_velocity
 	
-	var current_grip = grip_drift if is_drifting else grip_standard
 	local_velocity.x = lerp(local_velocity.x, 0.0, current_grip)
 	
 	if is_grounded:
@@ -71,8 +67,7 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 		elif gas_input < 0:
 			local_velocity.z += acceleration * dt
 		if pending_boost > 0:
-			print("hello")
-			state.apply_central_impulse(state.transform.basis.z * -pending_boost)
+			local_velocity.z -= pending_boost
 			pending_boost = 0
 	else:
 		var vertical_vel = state.linear_velocity.y
@@ -106,5 +101,15 @@ func take_damage(damage):
 	print("PLAYER:"+str(self.health))
 		state.apply_central_impulse(state.transform.basis.y * jump_force * mass)
 		
+func handle_drift(state: PhysicsDirectBodyState3D) -> float:
+	var curr_speed = state.linear_velocity.length()
+	var can_drift = curr_speed > drift_min_speed
+	if Input.is_action_just_pressed("drift"):
+		if can_drift:
+			drift_manager.start_drift()
+	if Input.is_action_just_released("drift") or (drift_manager.is_drifting and not can_drift):
+		drift_manager.stop_drift()
+	return grip_drift if drift_manager.is_drifting else grip_standard
+	
 func _on_boost_ready(amount):
 	pending_boost = amount
