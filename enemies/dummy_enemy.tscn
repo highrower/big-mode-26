@@ -10,7 +10,7 @@ height = 5.0
 radius = 1.2
 height = 5.0
 
-[node name="DummyEnemy" type="RigidBody3D" unique_id=962972829 groups=["damagable"]]
+[node name="DummyEnemy" type="RigidBody3D" unique_id=962972829 groups=["damagable", "enemy_team"]]
 axis_lock_angular_x = true
 axis_lock_angular_y = true
 axis_lock_angular_z = true

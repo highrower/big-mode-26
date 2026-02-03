@@ -7,4 +7,3 @@ script = ExtResource("1_bhxuc")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=270976922]
 path_height_offset = -0.25
-avoidance_enabled = true

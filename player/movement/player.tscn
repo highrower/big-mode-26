@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cpgox75irsaxa" path="res://player/movement/hover_raycasts.gd" id="1_rkbax"]
 [ext_resource type="Script" uid="uid://cm7oi2jaitb28" path="res://player/movement/player_controller.gd" id="2_rkbax"]
 [ext_resource type="Script" uid="uid://dmjbhe6j6g7xq" path="res://player/camera.gd" id="4_yw30f"]
+[ext_resource type="PackedScene" uid="uid://bh6mbtifu4hhu" path="res://enemies/behaviors/can_die.tscn" id="5_td4vs"]
 [ext_resource type="PackedScene" uid="uid://cfxu8l7pwlof3" path="res://player/weapons/bat.tscn" id="5_wa6sx"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g1dw6"]
@@ -14,7 +15,15 @@ size = Vector3(2, 0.5, 6)
 [sub_resource type="BoxMesh" id="BoxMesh_tdtx0"]
 size = Vector3(2, 0.5, 6)
 
-[node name="Player" type="RigidBody3D" unique_id=518666012 groups=["seekable"]]
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_tdtx0"]
+radius = 1.2
+height = 5.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wa6sx"]
+radius = 1.2
+height = 5.0
+
+[node name="Player" type="RigidBody3D" unique_id=518666012 groups=["damagable", "player_team"]]
 mass = 200.0
 physics_material_override = SubResource("PhysicsMaterial_g1dw6")
 gravity_scale = 4.0
@@ -63,6 +72,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.481623, 16.07193)
 
 [node name="Bat" parent="Node3D" unique_id=1849425671 instance=ExtResource("5_wa6sx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.3394232, -4.171708)
+knockback = 50.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=984524865]
 mesh = SubResource("BoxMesh_tdtx0")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1716787854]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1670003, 0)
+mesh = SubResource("CapsuleMesh_tdtx0")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=811608318]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0321436, 0)
+shape = SubResource("CapsuleShape3D_wa6sx")
+
+[node name="CanDie" parent="." unique_id=1900563199 instance=ExtResource("5_td4vs")]

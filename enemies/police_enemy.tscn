@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://chgyxk5kpa17n" path="res://enemies/behaviors/chase_player.tscn" id="3_mikam"]
 [ext_resource type="PackedScene" uid="uid://bh6mbtifu4hhu" path="res://enemies/behaviors/can_die.tscn" id="4_xt4sa"]
 [ext_resource type="PackedScene" uid="uid://bmol167bteymt" path="res://enemies/behaviors/patrol_around.tscn" id="5_6oxka"]
+[ext_resource type="PackedScene" uid="uid://dd3o21l4fnrfu" path="res://enemies/behaviors/hit_player.tscn" id="6_wnbo3"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ra0cx"]
 radius = 1.2
@@ -14,7 +15,7 @@ height = 5.0
 radius = 1.2
 height = 5.0
 
-[node name="PoliceEnemy" type="RigidBody3D" unique_id=962972829 groups=["damagable"]]
+[node name="PoliceEnemy" type="RigidBody3D" unique_id=962972829 groups=["damagable", "enemy_team"]]
 axis_lock_angular_x = true
 axis_lock_angular_y = true
 axis_lock_angular_z = true
@@ -36,3 +37,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0637121, 0)
 [node name="CanDie" parent="." unique_id=1900563199 instance=ExtResource("4_xt4sa")]
 
 [node name="PatrolAround" parent="." unique_id=438560549 instance=ExtResource("5_6oxka")]
+
+[node name="HitPlayer" parent="." unique_id=243545642 instance=ExtResource("6_wnbo3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)

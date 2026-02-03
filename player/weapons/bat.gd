@@ -2,7 +2,7 @@ extends Area3D
 
 @onready var Cooldown := $Cooldown
 @export var CooldownTime := 1.0
-@export var damage := 1
+@export var damage := 50.0
 @export var knockback := 25.0
 var can_attack := true
 # Called when the node enters the scene tree for the first time.
@@ -17,7 +17,7 @@ func _process(delta: float) -> void:
 		Cooldown.start()
 		if has_overlapping_bodies():
 			for i in get_overlapping_bodies():
-				if i.is_in_group("damagable"):
+				if i.is_in_group("enemy_team") and i.is_in_group("damagable"):
 					hit(i)
 
 func hit(target):

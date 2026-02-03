@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://h2xotxmtsvq0" path="res://player/movement/player.tscn" id="1_w0yvr"]
 [ext_resource type="PackedScene" uid="uid://ckprci1fnwa1i" path="res://enemies/police_enemy.tscn" id="2_3j3h8"]
+[ext_resource type="PackedScene" uid="uid://dtkmtl3oc8x5q" path="res://enemies/spawners/spawner.tscn" id="3_u15jy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w0yvr"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -429,3 +430,11 @@ material = SubResource("StandardMaterial3D_u15jy")
 
 [node name="PoliceEnemy" parent="." unique_id=962972829 instance=ExtResource("2_3j3h8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 26.010826, 0)
+
+[node name="Spawner" parent="." unique_id=447969390 instance=ExtResource("3_u15jy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.14258, 34.34858, -16.0542)
+spawn_list = {
+ExtResource("2_3j3h8"): 1.0
+}
+spawn_rate = 10.0
+spawn_bounds = Vector3(0, 0, 0)

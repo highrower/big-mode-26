@@ -18,7 +18,8 @@ config/icon="res://icon.svg"
 [global_group]
 
 damagable=""
-seekable=""
+player_team=""
+enemy_team=""
 
 [input]
 

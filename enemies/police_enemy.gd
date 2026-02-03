@@ -13,8 +13,8 @@ func _physics_process(delta: float) -> void:
 		ChasePlayer.speed = patrol_speed
 		var target = PatrolAround.target
 		ChasePlayer.update_target(target)
-		
 	_behaviour_manager(delta)
 
 func take_damage(damage):
 	self.health-=damage
+	print("ENEMY:"+str(self.health))

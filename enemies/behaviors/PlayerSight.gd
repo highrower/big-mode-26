@@ -13,7 +13,7 @@ func execute(caller,_delta:float):
 			
 
 func _on_timer_timeout() -> void:
-	var targetables := get_tree().get_nodes_in_group("seekable")
+	var targetables := get_tree().get_nodes_in_group("player_team")
 	
 	if len(targetables)==0:
 		return
