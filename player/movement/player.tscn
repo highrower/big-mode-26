@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://h2xotxmtsvq0"]
 
-[ext_resource type="Script" uid="uid://cpgox75irsaxa" path="res://player/movement/hover_raycasts.gd" id="1_rkbax"]
-[ext_resource type="Script" uid="uid://cm7oi2jaitb28" path="res://player/movement/player_controller.gd" id="2_rkbax"]
-[ext_resource type="PackedScene" uid="uid://67o2xe5xuev6" path="res://player/movement/whiteboard.blend" id="3_g1dw6"]
-[ext_resource type="PackedScene" uid="uid://cfxu8l7pwlof3" path="res://player/weapons/bat.tscn" id="4_tdtx0"]
+[ext_resource type="Script" uid="uid://cpgox75irsaxa" path="res://player/hover_raycasts.gd" id="1_rkbax"]
+[ext_resource type="Script" uid="uid://cm7oi2jaitb28" path="res://player/player_controller.gd" id="2_rkbax"]
+[ext_resource type="PackedScene" uid="uid://67o2xe5xuev6" path="res://player/whiteboard.blend" id="3_g1dw6"]
+[ext_resource type="Script" uid="uid://dmjbhe6j6g7xq" path="res://player/camera.gd" id="4_yw30f"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g1dw6"]
 friction = 0.0
@@ -11,13 +11,14 @@ friction = 0.0
 [sub_resource type="BoxShape3D" id="BoxShape3D_oul6g"]
 size = Vector3(1.6841431, 0.26104736, 5.814331)
 
-[node name="Player" type="RigidBody3D" unique_id=518666012 groups=["seekable"]]
-mass = 20.0
+[node name="Player" type="RigidBody3D" unique_id=518666012]
+mass = 200.0
 physics_material_override = SubResource("PhysicsMaterial_g1dw6")
+gravity_scale = 4.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -1, 0)
+continuous_cd = true
 max_contacts_reported = 2
-linear_damp = 1.0
 angular_damp = 3.0
 script = ExtResource("2_rkbax")
 gravity_assist = 6.0
@@ -27,10 +28,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10922241, -0.008575439, 0.0
 shape = SubResource("BoxShape3D_oul6g")
 
 [node name="whiteboard" parent="." unique_id=1471955689 instance=ExtResource("3_g1dw6")]
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=387855202]
-transform = Transform3D(1, 0, 0, 0, 0.68234295, 0.73103225, 0, -0.73103225, 0.68234295, 0, 5.706175, 5.723869)
-fov = 100.0
 
 [node name="Hover" type="Node3D" parent="." unique_id=224496255]
 script = ExtResource("1_rkbax")
@@ -51,7 +48,12 @@ target_position = Vector3(0, -1.0000001, 0)
 transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 1, 0.987, 0.1, -2.89)
 target_position = Vector3(0, -1.0000001, 0)
 
-[node name="WeaponManager" type="Node3D" parent="." unique_id=2030248533]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=387855202 node_paths=PackedStringArray("move_target", "look_target")]
+transform = Transform3D(1, 0, 0, 0, 0.68234295, 0.73103225, 0, -0.73103225, 0.68234295, 0, 5.706175, 5.723869)
+top_level = true
+script = ExtResource("4_yw30f")
+move_target = NodePath("../CamTarget")
+look_target = NodePath("..")
 
-[node name="Bat" parent="WeaponManager" unique_id=1849425671 instance=ExtResource("4_tdtx0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.117521, -4.187463)
+[node name="CamTarget" type="Node3D" parent="." unique_id=1883564970]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.481623, 16.07193)

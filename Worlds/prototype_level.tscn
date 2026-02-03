@@ -1,0 +1,410 @@
+[gd_scene format=3 uid="uid://uvj7miqi530m"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w0yvr"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_3j3h8"]
+sky_material = SubResource("ProceduralSkyMaterial_w0yvr")
+
+[sub_resource type="Environment" id="Environment_u15jy"]
+background_mode = 2
+sky = SubResource("Sky_3j3h8")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q0ook"]
+albedo_color = Color(0.9887603, 0, 0.08104963, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_573st"]
+albedo_color = Color(0.17283279, 0.17283264, 0.17283267, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3j3h8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u15jy"]
+albedo_color = Color(0.37413925, 0.37413928, 0.37413922, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w0yvr"]
+albedo_color = Color(0.55274844, 0.32227856, 0.95683974, 1)
+
+[node name="Prototype level" type="Node3D" unique_id=1092864291]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=30314263]
+environment = SubResource("Environment_u15jy")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1069605296]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="World props" type="Node3D" parent="." unique_id=1160212709]
+
+[node name="Building walls" type="Node3D" parent="World props" unique_id=294058140]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -225.159, 50, 60)
+
+[node name="Outer building" type="CSGBox3D" parent="World props/Building walls" unique_id=349787331]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8410034, 0, -211)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building2" type="CSGBox3D" parent="World props/Building walls" unique_id=1964608216]
+transform = Transform3D(0.73186076, 0, 0, 0, 0.8267391, 0, 0, 0, 1, 12.314575, -9.97987, -260.72516)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building3" type="CSGBox3D" parent="World props/Building walls" unique_id=1302317156]
+transform = Transform3D(0.94942015, 0, 0, 0, 0.8267391, 0, 0, 0, 0.488505, 6.314575, -9.97987, -172.65395)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building7" type="CSGBox3D" parent="World props/Building walls" unique_id=1032537785]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8410034, 0, 39.745735)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building8" type="CSGBox3D" parent="World props/Building walls" unique_id=1938426054]
+transform = Transform3D(0.73186076, 0, 0, 0, 0.8267391, 0, 0, 0, 1, 12.314575, -9.97987, -10.88398)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building9" type="CSGBox3D" parent="World props/Building walls" unique_id=1280056848]
+transform = Transform3D(0.94942015, 0, 0, 0, 0.8267391, 0, 0, 0, 1.063, 6.314575, -9.97987, 92.95201)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building4" type="CSGBox3D" parent="World props/Building walls" unique_id=956067701]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8839417, -6, -135.52295)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building5" type="CSGBox3D" parent="World props/Building walls" unique_id=2038286684]
+transform = Transform3D(0.73186076, 0, 0, 0, 0.8267391, 0, 0, 0, 1, 12.314575, 1.0201302, -86.05933)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building6" type="CSGBox3D" parent="World props/Building walls" unique_id=1093366911]
+transform = Transform3D(0.94942015, 0, 0, 0, 0.8267391, 0, 0, 0, 0.488505, 6.314575, 1.0201302, -48.763237)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Building walls4" type="Node3D" parent="World props" unique_id=117249579]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 207.10858, 50, 60)
+
+[node name="Outer building" type="CSGBox3D" parent="World props/Building walls4" unique_id=640077138]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8410034, 0, -211)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building2" type="CSGBox3D" parent="World props/Building walls4" unique_id=1777932913]
+transform = Transform3D(0.73186076, 0, 0, 0, 0.8267391, 0, 0, 0, 1, 12.314575, -9.97987, -260.72516)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building3" type="CSGBox3D" parent="World props/Building walls4" unique_id=358261164]
+transform = Transform3D(0.94942015, 0, 0, 0, 0.8267391, 0, 0, 0, 0.488505, 6.314575, -9.97987, -172.65395)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building7" type="CSGBox3D" parent="World props/Building walls4" unique_id=2012090385]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8410034, 0, 39.745735)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building8" type="CSGBox3D" parent="World props/Building walls4" unique_id=2036465637]
+transform = Transform3D(0.73186076, 0, 0, 0, 0.8267391, 0, 0, 0, 1, 12.314575, -9.97987, -10.88398)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building9" type="CSGBox3D" parent="World props/Building walls4" unique_id=1134832076]
+transform = Transform3D(0.94942015, 0, 0, 0, 0.8267391, 0, 0, 0, 1.063, 6.314575, -9.97987, 92.95201)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building4" type="CSGBox3D" parent="World props/Building walls4" unique_id=1882604310]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8839417, -6, -135.52295)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building5" type="CSGBox3D" parent="World props/Building walls4" unique_id=328508251]
+transform = Transform3D(0.73186076, 0, 0, 0, 0.8267391, 0, 0, 0, 1, 12.314575, 1.0201302, -86.05933)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building6" type="CSGBox3D" parent="World props/Building walls4" unique_id=259174586]
+transform = Transform3D(0.94942015, 0, 0, 0, 0.8267391, 0, 0, 0, 0.488505, 6.314575, 1.0201302, -48.763237)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Building walls2" type="Node3D" parent="World props" unique_id=454060915]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -74.32426, 47.897095, -248.05333)
+
+[node name="Outer building" type="CSGBox3D" parent="World props/Building walls2" unique_id=1518983736]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8410034, 0, -211)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building2" type="CSGBox3D" parent="World props/Building walls2" unique_id=1942433027]
+transform = Transform3D(0.73186076, 0, 0, 0, 0.8267391, 0, 0, 0, 0.7658804, 12.314575, -9.97987, -255.3491)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building3" type="CSGBox3D" parent="World props/Building walls2" unique_id=940138291]
+transform = Transform3D(0.94942015, 0, 0, 0, 0.8267391, 0, 0, 0, 0.488505, 6.314575, -9.97987, -172.65395)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building7" type="CSGBox3D" parent="World props/Building walls2" unique_id=543219424]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8410034, 0, 39.745735)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building8" type="CSGBox3D" parent="World props/Building walls2" unique_id=1641565500]
+transform = Transform3D(0.73186076, 0, 0, 0, 0.8267391, 0, 0, 0, 1, 12.314575, -9.97987, -10.88398)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building9" type="CSGBox3D" parent="World props/Building walls2" unique_id=56878681]
+transform = Transform3D(0.94942015, 0, 0, 0, 0.8267391, 0, 0, 0, 1.063, 6.314575, -9.97987, 92.95201)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building4" type="CSGBox3D" parent="World props/Building walls2" unique_id=1495046404]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8839417, -6, -135.52295)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building5" type="CSGBox3D" parent="World props/Building walls2" unique_id=125157927]
+transform = Transform3D(0.73186076, 0, 0, 0, 0.8267391, 0, 0, 0, 1, 12.314575, -12.4986, -86.05933)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building6" type="CSGBox3D" parent="World props/Building walls2" unique_id=1647056623]
+transform = Transform3D(0.94942015, 0, 0, 0, 0.8267391, 0, 0, 0, 0.488505, 6.314575, -12.4986, -48.763233)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Building walls3" type="Node3D" parent="World props" unique_id=684296816]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 79.92498, 63.428726, 162.25734)
+
+[node name="Outer building" type="CSGBox3D" parent="World props/Building walls3" unique_id=333440282]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8410034, 0, -211)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building2" type="CSGBox3D" parent="World props/Building walls3" unique_id=899468105]
+transform = Transform3D(0.73186076, 0, 0, 0, 0.8267391, 0, 0, 0, 0.7658804, 12.314575, -9.97987, -255.3491)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building3" type="CSGBox3D" parent="World props/Building walls3" unique_id=573169571]
+transform = Transform3D(0.94942015, 0, 0, 0, 0.8267391, 0, 0, 0, 0.488505, 6.314575, -9.97987, -172.65395)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building7" type="CSGBox3D" parent="World props/Building walls3" unique_id=280876607]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8410034, 0, 39.745735)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building8" type="CSGBox3D" parent="World props/Building walls3" unique_id=2023299706]
+transform = Transform3D(0.73186076, 0, 0, 0, 0.8267391, 0, 0, 0, 1, 12.314575, -9.97987, -10.88398)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building9" type="CSGBox3D" parent="World props/Building walls3" unique_id=391519353]
+transform = Transform3D(0.94942015, 0, 0, 0, 0.8267391, 0, 0, 0, 1.063, 6.314575, -9.97987, 92.95201)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building4" type="CSGBox3D" parent="World props/Building walls3" unique_id=1587938392]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8839417, -6, -135.52295)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building5" type="CSGBox3D" parent="World props/Building walls3" unique_id=76463474]
+transform = Transform3D(0.73186076, 0, 0, 0, 0.7719083, 0, 0, 0, 1, 12.314575, -18.543789, -86.05933)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building6" type="CSGBox3D" parent="World props/Building walls3" unique_id=633756235]
+transform = Transform3D(0.94942015, 0, 0, 0, 0.8267391, 0, 0, 0, 0.488505, 6.314575, -12.4986, -48.763233)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Ground" type="CSGBox3D" parent="World props" unique_id=523607595]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04336548, -7.6293945e-06, -26.30806)
+use_collision = true
+size = Vector3(400, 0.1, 400)
+material = SubResource("StandardMaterial3D_573st")
+
+[node name="Building" type="CSGBox3D" parent="World props" unique_id=1914543099]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 50, 60)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_3j3h8")
+
+[node name="Building5" type="CSGBox3D" parent="World props" unique_id=1722700449]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.975433, 77.85917, 247.58543)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_3j3h8")
+
+[node name="Building2" type="CSGBox3D" parent="World props" unique_id=1453542245]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 50, -100)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_3j3h8")
+
+[node name="Building3" type="CSGBox3D" parent="World props" unique_id=560246907]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 50, -100)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_3j3h8")
+
+[node name="Building4" type="CSGBox3D" parent="World props" unique_id=1897918403]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 50, 60)
+use_collision = true
+size = Vector3(50, 100, 50)
+material = SubResource("StandardMaterial3D_3j3h8")
+
+[node name="Platform" type="CSGPolygon3D" parent="World props" unique_id=186676548]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 199.68863, -0.7771168, 134.23553)
+use_collision = true
+polygon = PackedVector2Array(-13.2358265, 0.22986245, -40, 0, -29, 14, 12, 14, 172, 15, 212, 0)
+depth = 400.0
+material = SubResource("StandardMaterial3D_u15jy")
+
+[node name="Colliders" type="Node3D" parent="." unique_id=1319465727]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 277.63403)
+
+[node name="Bump" type="CSGPolygon3D" parent="Colliders" unique_id=1489164803]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.296707, 0.030997515, -378.06348)
+use_collision = true
+polygon = PackedVector2Array(-2.089, 0, -6, 0, -1.798, 1.5, 1.592, 0)
+depth = 20.0
+material = SubResource("StandardMaterial3D_w0yvr")
+
+[node name="Bump2" type="CSGPolygon3D" parent="Colliders" unique_id=623191234]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2491, -0.17100954, -431.63757)
+use_collision = true
+polygon = PackedVector2Array(1.8078156, 0.049737215, -6, 0, 7.925434, 5.7701073, 8.116116, 0.049737215)
+depth = 20.0
+material = SubResource("StandardMaterial3D_w0yvr")
+
+[node name="Bump3" type="CSGPolygon3D" parent="Colliders" unique_id=1174545453]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 19.1035, -0.17100954, -450.5788)
+use_collision = true
+polygon = PackedVector2Array(1.8078156, 0.049737215, -6, 0, 7.925434, 5.7701073, 8.116116, 0.049737215)
+depth = 20.0
+material = SubResource("StandardMaterial3D_w0yvr")
+
+[node name="Bump4" type="CSGPolygon3D" parent="Colliders" unique_id=1769332262]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -35.8499, 121.37903, -63.230347)
+use_collision = true
+polygon = PackedVector2Array(-8.088593, -6.689453, -26.45874, -7.782097, 7.925434, 5.7701073, 8.027985, -6.8260345)
+depth = 50.0
+material = SubResource("StandardMaterial3D_w0yvr")
+
+[node name="Big bump" type="CSGPolygon3D" parent="Colliders" unique_id=1677994094]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 164.04846, 0.030997515, -435.04025)
+use_collision = true
+polygon = PackedVector2Array(-0.5280762, 0.0009647012, -8.977936, 0.029990435, -3.9727669, 2.2755847, -0.5935974, 2.2943058, 2.7949295, 2.2568636, 7.4110794, 0.039851487)
+depth = 20.0
+material = SubResource("StandardMaterial3D_w0yvr")
+
+[node name="Dome90" type="CSGPolygon3D" parent="Colliders" unique_id=116560610]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.422356, 14.139977, -295.46597)
+use_collision = true
+polygon = PackedVector2Array(1.412, 0, 6.858635, 1.1480626, 10.821785, 2.5796838, 13.335625, 4.9123216, 13, 0)
+mode = 1
+spin_degrees = 90.0
+spin_sides = 8
+material = SubResource("StandardMaterial3D_w0yvr")
+
+[node name="Dome180" type="CSGPolygon3D" parent="Colliders" unique_id=1587103073]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -80.54399, 13.4992485, -294.30463)
+use_collision = true
+polygon = PackedVector2Array(4, 0, 8.265831, 1.4861664, 10.821785, 2.5796838, 13.335625, 4.9123216, 13, 0)
+mode = 1
+spin_degrees = 180.0
+spin_sides = 8
+material = SubResource("StandardMaterial3D_w0yvr")
+
+[node name="Tub" type="CSGPolygon3D" parent="Colliders" unique_id=1788182812]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20.724686, -0.3017732, -377.1645)
+use_collision = true
+polygon = PackedVector2Array(8, 0, 9.6985855, 1.2039858, 13.9433975, 2.597804, 20.143105, 6.5890875, 18, 0)
+mode = 1
+spin_degrees = 360.0
+spin_sides = 8
+material = SubResource("StandardMaterial3D_w0yvr")
+
+[node name="Big bump2" type="CSGPolygon3D" parent="Colliders" unique_id=1702112172]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 164.04846, 0.030997515, -467.81354)
+use_collision = true
+polygon = PackedVector2Array(-0.5280762, 0.0009647012, -8.977936, 0.029990435, -3.9727669, 2.2755847, -0.5935974, 2.2943058, 2.7949295, 2.2568636, 7.4110794, 0.039851487)
+depth = 20.0
+material = SubResource("StandardMaterial3D_w0yvr")
+
+[node name="Ramp" type="CSGPolygon3D" parent="Colliders" unique_id=1301586963]
+transform = Transform3D(2.0981462e-07, 0, -2.2000003, 0, 1.4399999, 0, 1.5999998, 0, 2.884952e-07, -10.621735, 13.755403, -239.90407)
+use_collision = true
+polygon = PackedVector2Array(-2.5, 0, -6, 0, -6, 2.528, -5, 1.513, -2.366, 0.5, 0.101, 0)
+depth = 20.0
+material = SubResource("StandardMaterial3D_w0yvr")
+
+[node name="Half-Pipe" type="CSGPolygon3D" parent="Colliders" unique_id=1254558034]
+transform = Transform3D(-2.4347293, 0, -1.4911753e-07, 0, 1.6571255, 0, 2.1285078e-07, 0, -1.7057058, -133.72174, 0.037144154, -467.4441)
+use_collision = true
+polygon = PackedVector2Array(0.5, 0, -7.447563, 0.11353794, -7.447563, 5.87443, -5.6737747, 3.0489242, -4.1197453, 1.6518683, -1.8593407, 0.16062942, 3.5876055, 0.097841054, 5.168074, 1.6502862, 6.911888, 3.1389084, 8.868364, 5.676655, 8.896717, 0.062422305)
+depth = 20.0
+material = SubResource("StandardMaterial3D_w0yvr")
+
+[node name="Half-Pipe2" type="CSGPolygon3D" parent="Colliders" unique_id=28752102]
+transform = Transform3D(-0.017766364, 0, -0.99984217, 0, 1, 0, 0.99984217, 0, -0.017766364, -137.90091, 13.222884, -154.9089)
+use_collision = true
+polygon = PackedVector2Array(0.5, 0, -7.447563, 0.11353794, -7.447563, 5.87443, -5.6737747, 3.0489242, -4.1197453, 1.6518683, -1.8593407, 0.16062942, 3.5876055, 0.097841054, 5.168074, 1.6502862, 6.911888, 3.1389084, 8.868364, 5.676655, 8.896717, 0.062422305)
+depth = 20.0
+material = SubResource("StandardMaterial3D_w0yvr")
+
+[node name="Ramp2" type="CSGPolygon3D" parent="Colliders" unique_id=1690957435]
+transform = Transform3D(-6.99382e-08, 0, 2.2, 0, 1.4399999, 0, -1.5999999, 0, -9.616504e-08, 33.378265, 13.755406, -259.87662)
+use_collision = true
+polygon = PackedVector2Array(-2.5, 0, -6, 0, -6, 2.528, -5, 1.513, -2.366, 0.5, 0.101, 0)
+depth = 20.0
+material = SubResource("StandardMaterial3D_w0yvr")

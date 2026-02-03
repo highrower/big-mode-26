@@ -9,6 +9,7 @@ extends RigidBody3D
 @export var jump_force := 25.0
 @export var gravity_assist := 2.0
 @export var hover_height := 2.5
+@export var fall_multiplier := 2.5 # Gravity strength when falling
 
 @export_range(0.0, 1.0) var grip_standard := 0.95
 @export_range(0.0, 1.0) var grip_drift := 0.01
@@ -57,13 +58,19 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 		elif gas_input < 0:
 			local_velocity.z += acceleration * dt
 	else:
-		# Might want slight movement in air?
-		pass 
-
-	if not is_grounded:
-		state.apply_central_force(Vector3.DOWN * 20.0 * gravity_assist)
+		var vertical_vel = state.linear_velocity.y
+		
+		if vertical_vel < 0: 
+			# Apply extra force to drag us down faster (more arcade-ey feel)
+			var extra_grav = (fall_multiplier - 1.0) * state.total_gravity * mass
+			state.apply_central_force(extra_grav)
+			
+		elif vertical_vel > 0 and not Input.is_action_pressed("jump"):
+			var short_hop_mult = 2.0
+			var extra_grav = (short_hop_mult - 1.0) * state.total_gravity * mass
+			state.apply_central_force(extra_grav)
 
 	state.linear_velocity = state.transform.basis * local_velocity
 	
 	if Input.is_action_just_pressed("jump") and is_grounded:
-		state.apply_central_impulse(state.transform.basis.y * jump_force)
+		state.apply_central_impulse(state.transform.basis.y * jump_force * mass)
