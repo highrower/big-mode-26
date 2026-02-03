@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="big-mode-26"
-run/main_scene="uid://cghda3fg4o3d"
+run/main_scene="uid://ss6f7hubg8xp"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/destronoi/plugin.cfg")
 
 [input]
 

@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://ss6f7hubg8xp"]
+
+[ext_resource type="Script" uid="uid://w1vxxd517b8u" path="res://terrain/destructable_body.gd" id="1_q3w74"]
+[ext_resource type="ArrayMesh" uid="uid://dh70fv5rbvu5w" path="res://terrain/Cylinder.obj" id="2_p6tfq"]
+[ext_resource type="Script" uid="uid://dbrl3b18ui5p6" path="res://addons/destronoi/DestronoiNode.gd" id="3_0rj76"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_p6tfq"]
+radius = 1.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0rj76"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_go4os"]
+
+[node name="DestructableBlockPrototype" type="Node3D" unique_id=110892766]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=143577794]
+script = ExtResource("1_q3w74")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D" unique_id=937486685]
+mesh = ExtResource("2_p6tfq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=1111834764]
+shape = SubResource("CylinderShape3D_p6tfq")
+
+[node name="DestronoiNode" type="Node" parent="RigidBody3D" unique_id=1602137634]
+script = ExtResource("3_0rj76")
+tree_height = 3
+metadata/_custom_type_script = "uid://dbrl3b18ui5p6"
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=279599035]
+transform = Transform3D(1, 0, 0, 0, 0.894911, 0.4462447, 0, -0.4462447, 0.894911, 0, 1.2390125, 3.3796625)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=20467535]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5598006, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=544376425]
+mesh = SubResource("PlaneMesh_0rj76")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=798309989]
+shape = SubResource("BoxShape3D_go4os")
