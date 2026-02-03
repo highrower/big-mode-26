@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://67o2xe5xuev6"
-path="res://.godot/imported/whiteboard.blend-02ac20ccb40259fe41d5bb25c78ec5d4.scn"
+path="res://.godot/imported/whiteboard.blend-4f18bcd671ae4d4313eea418d908b420.scn"
 
 [deps]
 
-source_file="res://player/whiteboard.blend"
-dest_files=["res://.godot/imported/whiteboard.blend-02ac20ccb40259fe41d5bb25c78ec5d4.scn"]
+source_file="res://Worlds/whiteboard.blend"
+dest_files=["res://.godot/imported/whiteboard.blend-4f18bcd671ae4d4313eea418d908b420.scn"]
 
 [params]
 

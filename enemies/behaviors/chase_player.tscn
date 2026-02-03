@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://chgyxk5kpa17n"]
+
+[ext_resource type="Script" uid="uid://cmcqmwoyabwqa" path="res://enemies/behaviors/chase_player.gd" id="1_bhxuc"]
+
+[node name="ChasePlayer" type="Node3D" unique_id=189868678]
+script = ExtResource("1_bhxuc")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=270976922]
+path_height_offset = -0.25

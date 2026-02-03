@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bh6mbtifu4hhu"]
+
+[ext_resource type="Script" uid="uid://brig6w7xyy4bo" path="res://enemies/behaviors/can_die.gd" id="1_73gyo"]
+
+[node name="CanDie" type="Node" unique_id=1900563199]
+script = ExtResource("1_73gyo")

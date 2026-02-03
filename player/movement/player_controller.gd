@@ -2,6 +2,7 @@ extends RigidBody3D
 
 @onready var rays = get_tree().get_nodes_in_group("Raycasts")
 
+@export_group("Movement")
 @export var acceleration := 60.0 
 @export var max_speed := 50.0
 @export var turn_speed := 3.0 
@@ -10,6 +11,9 @@ extends RigidBody3D
 @export var gravity_assist := 2.0
 @export var hover_height := 2.5
 @export var fall_multiplier := 2.5 # Gravity strength when falling
+
+
+@export var health := 300.0
 
 @export_range(0.0, 1.0) var grip_standard := 0.95
 @export_range(0.0, 1.0) var grip_drift := 0.01
@@ -73,4 +77,16 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 	state.linear_velocity = state.transform.basis * local_velocity
 	
 	if Input.is_action_just_pressed("jump") and is_grounded:
-		state.apply_central_impulse(state.transform.basis.y * jump_force * mass)
+		state.apply_central_impulse(Vector3.UP * jump_force * mass)
+
+func _physics_process(delta: float) -> void:
+	_behaviour_manager(delta)
+
+func _behaviour_manager(delta: float):
+	for child in get_children():
+		if child is Behaviour and child.enabled:
+			child.execute(self,delta)
+
+func take_damage(damage):
+	self.health-=damage
+	print("PLAYER:"+str(self.health))
