@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c21rdyc5x7pu3" path="res://enemies/behaviors/PlayerSight.tscn" id="2_vcxqq"]
 [ext_resource type="PackedScene" uid="uid://chgyxk5kpa17n" path="res://enemies/behaviors/chase_player.tscn" id="3_mikam"]
 [ext_resource type="PackedScene" uid="uid://bh6mbtifu4hhu" path="res://enemies/behaviors/can_die.tscn" id="4_xt4sa"]
+[ext_resource type="PackedScene" uid="uid://bmol167bteymt" path="res://enemies/behaviors/patrol_around.tscn" id="5_6oxka"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ra0cx"]
 radius = 1.2
@@ -28,7 +29,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.215332, 0)
 shape = SubResource("CapsuleShape3D_ri42i")
 
 [node name="PlayerSight" parent="." unique_id=1767067021 instance=ExtResource("2_vcxqq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0637121, 0)
 
 [node name="ChasePlayer" parent="." unique_id=189868678 instance=ExtResource("3_mikam")]
 
 [node name="CanDie" parent="." unique_id=1900563199 instance=ExtResource("4_xt4sa")]
+
+[node name="PatrolAround" parent="." unique_id=438560549 instance=ExtResource("5_6oxka")]

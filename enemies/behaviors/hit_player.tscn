@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dd3o21l4fnrfu"]
+
+[ext_resource type="Script" uid="uid://1ole826a4xrk" path="res://hit_player.gd" id="1_iwduq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b3fft"]
+
+[node name="HitPlayer" type="Node3D" unique_id=243545642]
+script = ExtResource("1_iwduq")
+
+[node name="Hurtbox" type="Area3D" parent="." unique_id=387255639]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hurtbox" unique_id=1617001004]
+shape = SubResource("BoxShape3D_b3fft")
+
+[node name="WindUp" type="Timer" parent="." unique_id=85071792]
+
+[node name="Cooldown" type="Timer" parent="." unique_id=1751777276]
+
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
+[connection signal="timeout" from="WindUp" to="." method="_on_wind_up_timeout"]
+[connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]

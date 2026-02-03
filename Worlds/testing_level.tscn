@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cghda3fg4o3d"]
 
-[ext_resource type="PackedScene" uid="uid://h2xotxmtsvq0" path="res://player/movement/player.tscn" id="1_3xc4v"]
-[ext_resource type="PackedScene" uid="uid://d0vf3b2x6malg" path="res://player/movement/testlevel.blend" id="2_heuv3"]
-[ext_resource type="PackedScene" uid="uid://ckprci1fnwa1i" path="res://enemies/police_enemy.tscn" id="3_heuv3"]
+[ext_resource type="PackedScene" uid="uid://h2xotxmtsvq0" path="res://player/movement/player.tscn" id="1_ousai"]
+[ext_resource type="PackedScene" uid="uid://ckprci1fnwa1i" path="res://enemies/police_enemy.tscn" id="2_8bdsk"]
+[ext_resource type="PackedScene" uid="uid://d0vf3b2x6malg" path="res://Worlds/testlevel.blend" id="3_7r1eo"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_kns0k"]
 
@@ -14,14 +14,14 @@ agent_radius = 1.2
 
 [node name="TestingLevel" type="Node3D" unique_id=888214706]
 
-[node name="Player" parent="." unique_id=1977031556 instance=ExtResource("1_3xc4v")]
+[node name="Player" parent="." unique_id=1977031556 instance=ExtResource("1_ousai")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.398402, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=548713642]
 transform = Transform3D(1, 0, 0, 0, 0.020837782, 0.99978286, 0, -0.99978286, 0.020837782, 22.842356, 18.414516, 0)
 light_indirect_energy = 5.541
 
-[node name="PoliceEnemy" parent="." unique_id=962972829 instance=ExtResource("3_heuv3")]
+[node name="PoliceEnemy" parent="." unique_id=962972829 instance=ExtResource("2_8bdsk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.186344, 15.699031, 11.1559925)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1944821538]
@@ -34,5 +34,5 @@ shape = SubResource("WorldBoundaryShape3D_kns0k")
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1577311985]
 navigation_mesh = SubResource("NavigationMesh_heuv3")
 
-[node name="testlevel" parent="NavigationRegion3D" unique_id=746396061 instance=ExtResource("2_heuv3")]
+[node name="testlevel" parent="NavigationRegion3D" unique_id=746396061 instance=ExtResource("3_7r1eo")]
 transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 0, 0, 0)

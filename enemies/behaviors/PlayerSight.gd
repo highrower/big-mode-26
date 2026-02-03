@@ -20,8 +20,8 @@ func _on_timer_timeout() -> void:
 	var min_distance = targetables[0].global_position.distance_squared_to(last_raycast.global_position)
 	var target = targetables[0]
 	for i in targetables:
-		if i.global_position.distance_squared_to(last_raycast.global_position)<min_distance:
-			min_distance=i.global_position.distance_squared_to(last_raycast.global_position)
+		if (i.global_position).distance_squared_to(last_raycast.global_position)<min_distance:
+			min_distance=(i.global_position).distance_squared_to(last_raycast.global_position)
 			target=i
 	
 	last_raycast.target_position=last_raycast.to_local(target.global_position)

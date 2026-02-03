@@ -73,4 +73,4 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 	state.linear_velocity = state.transform.basis * local_velocity
 	
 	if Input.is_action_just_pressed("jump") and is_grounded:
-		state.apply_central_impulse(state.transform.basis.y * jump_force * mass)
+		state.apply_central_impulse(Vector3.UP * jump_force * mass)
