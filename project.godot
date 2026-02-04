@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+ScoreSystem="*uid://d1yuavyle2ds0"
 AudioSystem="*uid://b45qs8c0e8xv0"
 
 [global_group]
