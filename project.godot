@@ -15,6 +15,10 @@ run/main_scene="uid://uvj7miqi530m"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+ScoreSystem="*uid://d1yuavyle2ds0"
+
 [global_group]
 
 damagable=""
