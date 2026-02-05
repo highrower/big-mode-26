@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cekh677jcfa3a"
-path.s3tc="res://.godot/imported/bat_bat_BaseColor.png-01ca84c4fcbb15c89faac380483c07cb.s3tc.ctex"
+uid="uid://dwusnhgmpelk"
+path.s3tc="res://.godot/imported/hoverboard_M_02___Defaultmetallicroughnesstex.png-14e45473086e57a81f637fa96cd4df9c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "eb6a9e5cb4a03151f2ce48816c873c9d"
+}
 
 [deps]
 
-source_file="res://textures/bat_bat_BaseColor.png"
-dest_files=["res://.godot/imported/bat_bat_BaseColor.png-01ca84c4fcbb15c89faac380483c07cb.s3tc.ctex"]
+source_file="res://textures/hoverboard/hoverboard_M_02___Defaultmetallicroughnesstex.png"
+dest_files=["res://.godot/imported/hoverboard_M_02___Defaultmetallicroughnesstex.png-14e45473086e57a81f637fa96cd4df9c.s3tc.ctex"]
 
 [params]
 
