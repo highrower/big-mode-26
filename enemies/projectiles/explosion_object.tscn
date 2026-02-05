@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bh1gx072k2gou"]
+
+[ext_resource type="Script" uid="uid://0df1p8ihmnb6" path="res://explosion_object.gd" id="1_g5weg"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_i6fkq"]
+
+[node name="ExplosionObject" type="Area3D" unique_id=2108906811]
+script = ExtResource("1_g5weg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2122077461]
+shape = SubResource("SphereShape3D_i6fkq")

@@ -12,8 +12,8 @@ extends RigidBody3D
 @export var hover_height := 2.5
 @export var fall_multiplier := 2.5 # Gravity strength when falling
 
-
 @export var health := 300.0
+signal player_health_update(health)
 
 @export_range(0.0, 1.0) var grip_standard := 0.95
 @export_range(0.0, 1.0) var grip_drift := 0.01
@@ -80,6 +80,7 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 		state.apply_central_impulse(Vector3.UP * jump_force * mass)
 
 func _physics_process(delta: float) -> void:
+	player_health_update.emit(health)
 	_behaviour_manager(delta)
 
 func _behaviour_manager(delta: float):
@@ -89,4 +90,7 @@ func _behaviour_manager(delta: float):
 
 func take_damage(damage):
 	self.health-=damage
-	print("PLAYER:"+str(self.health))
+
+
+func _on_player_health_update(health: Variant) -> void:
+	pass # Replace with function body.

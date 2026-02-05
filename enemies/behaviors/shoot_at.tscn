@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://4wrt57h1lqd1"]
+
+[ext_resource type="Script" uid="uid://dwvw20iwffy0g" path="res://shoot_at.gd" id="1_pyx8q"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_pyx8q"]
+
+[node name="ShootAt" type="Node3D" unique_id=243545642]
+script = ExtResource("1_pyx8q")
+
+[node name="WindUp" type="Timer" parent="." unique_id=85071792]
+
+[node name="Cooldown" type="Timer" parent="." unique_id=1751777276]
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1839656773]
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=1695950693]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Marker3D" unique_id=1554616426]
+mesh = SubResource("SphereMesh_pyx8q")
+
+[connection signal="timeout" from="WindUp" to="." method="_on_wind_up_timeout"]
+[connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]

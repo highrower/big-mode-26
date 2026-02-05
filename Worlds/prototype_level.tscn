@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://uvj7miqi530m"]
 
 [ext_resource type="PackedScene" uid="uid://h2xotxmtsvq0" path="res://player/movement/player.tscn" id="1_w0yvr"]
-[ext_resource type="PackedScene" uid="uid://ckprci1fnwa1i" path="res://enemies/police_enemy.tscn" id="2_3j3h8"]
-[ext_resource type="PackedScene" uid="uid://dtkmtl3oc8x5q" path="res://enemies/spawners/spawner.tscn" id="3_u15jy"]
+[ext_resource type="PackedScene" uid="uid://dy1epdwu16t2i" path="res://enemies/drone_shooting_enemy.tscn" id="3_u15jy"]
+[ext_resource type="Script" uid="uid://bvhwxhu01j5ed" path="res://Worlds/temp_hp_bar.gd" id="4_q0ook"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w0yvr"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -50,9 +50,10 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=518666012 instance=ExtResource("1_w0yvr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.26403, 136.18025, 230.19012)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.89136, 59.725357, 230.94897)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1203247307]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85.24733, -83.47775, 0)
 navigation_mesh = SubResource("NavigationMesh_u15jy")
 
 [node name="Colliders" type="Node3D" parent="NavigationRegion3D" unique_id=1319465727]
@@ -428,13 +429,17 @@ polygon = PackedVector2Array(-13.2358265, 0.22986245, -40, 0, -29, 14, 12, 14, 1
 depth = 400.0
 material = SubResource("StandardMaterial3D_u15jy")
 
-[node name="PoliceEnemy" parent="." unique_id=962972829 instance=ExtResource("2_3j3h8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 26.010826, 0)
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=435581308]
 
-[node name="Spawner" parent="." unique_id=447969390 instance=ExtResource("3_u15jy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.14258, 34.34858, -16.0542)
-spawn_list = {
-ExtResource("2_3j3h8"): 1.0
-}
-spawn_rate = 10.0
-spawn_bounds = Vector3(0, 0, 0)
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer" unique_id=344234484]
+offset_left = 18.0
+offset_top = 31.0
+offset_right = 285.0
+offset_bottom = 58.0
+max_value = 300.0
+script = ExtResource("4_q0ook")
+
+[node name="DroneShootingEnemy" parent="." unique_id=1337185290 instance=ExtResource("3_u15jy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.839058, 46.312317, 5.670361)
+
+[connection signal="player_health_update" from="Player" to="CanvasLayer/ProgressBar" method="_on_player_player_health_update"]

@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dy1epdwu16t2i"]
+
+[ext_resource type="Script" uid="uid://drm6sr5clc8o4" path="res://enemies/drone_shooting_enemy.gd" id="1_6nryf"]
+[ext_resource type="PackedScene" uid="uid://g32hqu0i7d61" path="res://enemies/behaviors/flying.tscn" id="2_ehwu8"]
+[ext_resource type="PackedScene" uid="uid://c21rdyc5x7pu3" path="res://enemies/behaviors/PlayerSight.tscn" id="4_py8ek"]
+[ext_resource type="PackedScene" uid="uid://c743qksbmstsu" path="res://enemies/behaviors/move_toward.tscn" id="5_hqlxa"]
+[ext_resource type="PackedScene" uid="uid://bh6mbtifu4hhu" path="res://enemies/behaviors/can_die.tscn" id="6_8iocy"]
+[ext_resource type="PackedScene" uid="uid://bmol167bteymt" path="res://enemies/behaviors/patrol_around.tscn" id="7_r4qy3"]
+[ext_resource type="PackedScene" uid="uid://vp2qh1qvpq0f" path="res://enemies/projectiles/canon_ball.tscn" id="8_6nryf"]
+[ext_resource type="PackedScene" uid="uid://4wrt57h1lqd1" path="res://enemies/behaviors/shoot_at.tscn" id="8_ga48s"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_j17pf"]
+radius = 2.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_jliw0"]
+radius = 2.0
+height = 4.0
+
+[node name="DroneShootingEnemy" type="RigidBody3D" unique_id=1337185290 groups=["damagable", "enemy_team"]]
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+script = ExtResource("1_6nryf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1095768195]
+shape = SubResource("SphereShape3D_j17pf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=473484263 groups=["damagable", "enemy_team"]]
+mesh = SubResource("SphereMesh_jliw0")
+
+[node name="Flying" parent="." unique_id=1504551945 instance=ExtResource("2_ehwu8")]
+
+[node name="PlayerSight" parent="." unique_id=83948702 instance=ExtResource("4_py8ek")]
+updatetimer = 0.2
+
+[node name="MoveToward" parent="." unique_id=189868678 instance=ExtResource("5_hqlxa")]
+
+[node name="CanDie" parent="." unique_id=1900563199 instance=ExtResource("6_8iocy")]
+
+[node name="PatrolAround" parent="." unique_id=438560549 instance=ExtResource("7_r4qy3")]
+
+[node name="ShootAt" parent="." unique_id=1870969402 instance=ExtResource("8_ga48s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.9763658, 0.007519245)
+projectile_path = ExtResource("8_6nryf")

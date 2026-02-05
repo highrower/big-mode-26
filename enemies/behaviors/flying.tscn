@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://g32hqu0i7d61"]
+
+[ext_resource type="Script" uid="uid://bspjlrfqif3" path="res://enemies/behaviors/flying.gd" id="1_32q44"]
+
+[node name="Flying" type="Node3D" unique_id=1504551945]
+script = ExtResource("1_32q44")
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=1171789046]
