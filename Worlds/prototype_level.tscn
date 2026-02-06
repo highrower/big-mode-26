@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://h2xotxmtsvq0" path="res://player/movement/player.tscn" id="1_w0yvr"]
 [ext_resource type="PackedScene" uid="uid://ckprci1fnwa1i" path="res://enemies/police_enemy.tscn" id="2_3j3h8"]
 [ext_resource type="PackedScene" uid="uid://dtkmtl3oc8x5q" path="res://enemies/spawners/spawner.tscn" id="3_u15jy"]
+[ext_resource type="Script" uid="uid://crwsxdoysoqpp" path="res://systems/audio/music_manager.gd" id="4_q0ook"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w0yvr"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -450,6 +451,9 @@ ExtResource("2_3j3h8"): 1.0
 }
 spawn_rate = 10.0
 spawn_bounds = Vector3(0, 0, 0)
+
+[node name="MusicManager" type="Node" parent="." unique_id=693600566]
+script = ExtResource("4_q0ook")
 
 [editable path="Player"]
 [editable path="PoliceEnemy"]

@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="AudioCatalog" format=3 uid="uid://5xn8evrfjnpu"]
+
+[ext_resource type="Script" uid="uid://biccmksu2406x" path="res://systems/audio/sound_entry.gd" id="1_wdwp7"]
+[ext_resource type="Script" uid="uid://btenaptqa1d5c" path="res://systems/audio/audio_catalog.gd" id="2_3uv7q"]
+[ext_resource type="AudioStream" uid="uid://c55f4swju0b3w" path="res://Assets/audio/music/baseball Bigmode.mp3" id="2_uoiod"]
+[ext_resource type="AudioStream" uid="uid://c6r6eh450bdk" path="res://Assets/audio/sfx/the-bat.wav" id="4_uoiod"]
+
+[sub_resource type="Resource" id="Resource_evfdh"]
+script = ExtResource("1_wdwp7")
+id = &"music_game"
+stream = ExtResource("2_uoiod")
+default_volume_db = -20.0
+metadata/_custom_type_script = "uid://biccmksu2406x"
+
+[sub_resource type="Resource" id="Resource_5o8uy"]
+script = ExtResource("1_wdwp7")
+id = &"sfx_hit"
+stream = ExtResource("4_uoiod")
+metadata/_custom_type_script = "uid://biccmksu2406x"
+
+[resource]
+script = ExtResource("2_3uv7q")
+sfx = Array[ExtResource("1_wdwp7")]([SubResource("Resource_5o8uy")])
+music = Array[ExtResource("1_wdwp7")]([SubResource("Resource_evfdh")])
+metadata/_custom_type_script = "uid://btenaptqa1d5c"
