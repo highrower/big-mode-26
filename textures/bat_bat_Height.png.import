@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br7opws4dj306"
-path.s3tc="res://.godot/imported/spraycan_spraypaintcan_DefaultMaterial_Normal.png-f98a7f2b6ec91385f67ae81c20c95af8.s3tc.ctex"
+uid="uid://dx0py8tctmj0m"
+path.s3tc="res://.godot/imported/bat_bat_Height.png-404a989838c01a57124e09c5b26ff805.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "8b1d4c894f6e4b70426f471decea5d00"
-}
 
 [deps]
 
-source_file="res://textures/spraycantexture/spraycan_spraypaintcan_DefaultMaterial_Normal.png"
-dest_files=["res://.godot/imported/spraycan_spraypaintcan_DefaultMaterial_Normal.png-f98a7f2b6ec91385f67ae81c20c95af8.s3tc.ctex"]
+source_file="res://textures/bat_bat_Height.png"
+dest_files=["res://.godot/imported/bat_bat_Height.png-404a989838c01a57124e09c5b26ff805.s3tc.ctex"]
 
 [params]
 
@@ -25,12 +22,12 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=1
+compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://player/weapons/spraycan_spraypaintcan_DefaultMaterial_Normal.png"
+roughness/mode=0
+roughness/src_normal=""
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

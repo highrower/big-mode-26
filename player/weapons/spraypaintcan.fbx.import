@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://day6y8dao3kce"
-path="res://.godot/imported/spraycan.glb-940029a04564b6f08813b7fa30957d62.scn"
+uid="uid://cbq673v7g50y0"
+path="res://.godot/imported/spraypaintcan.fbx-702845a2596a178a4e784498690ba96e.scn"
 
 [deps]
 
-source_file="res://player/weapons/spraycan.glb"
-dest_files=["res://.godot/imported/spraycan.glb-940029a04564b6f08813b7fa30957d62.scn"]
+source_file="res://player/weapons/spraypaintcan.fbx"
+dest_files=["res://.godot/imported/spraypaintcan.fbx-702845a2596a178a4e784498690ba96e.scn"]
 
 [params]
 
@@ -30,7 +30,7 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=false
+animation/trimming=true
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
@@ -38,5 +38,7 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-gltf/naming_version=2
-gltf/embedded_image_handling=1
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1
+fbx/naming_version=2
