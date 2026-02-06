@@ -41,4 +41,4 @@ updatetimer = 0.2
 
 [node name="ShootAt" parent="." unique_id=1870969402 instance=ExtResource("8_ga48s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.9763658, 0.007519245)
-projectile_path = ExtResource("8_6nryf")
+projectile_scene = ExtResource("8_6nryf")

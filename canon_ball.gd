@@ -1,21 +1,18 @@
 extends CharacterBody3D
 
-@export var speed := 5.0
-@export var target : Vector3
+@export var speed := 50.0
 @export var damage := 50.0
 var can_damage_groups : Array
 
-func setup(speed,damage,can_damage_array):
+func setup(speed,damage,can_damage_groups):
 	self.speed = speed
 	self.damage = damage
-	self.can_damage_groups = can_damage_array
+	self.can_damage_groups = can_damage_groups
 
-func set_target(target):
-	self.target=target
 
 func _physics_process(delta: float) -> void:
-	var projectile_velocity = (target-self.global_position).normalized()*speed*delta
-	var collision = move_and_collide(projectile_velocity)
+	var next_velocity=transform.basis * Vector3.FORWARD *speed * delta
+	var collision = move_and_collide(next_velocity)
 	if collision:
 		var body = collision.get_collider()
 		hit(body)
