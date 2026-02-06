@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bt8q71q0d0a3"
-path.s3tc="res://.godot/imported/bat_bat_Metallic.png-57eccb5d74c5cd674f1d57a81c1f6805.s3tc.ctex"
+uid="uid://cupgpavg1jka5"
+path.s3tc="res://.godot/imported/bat_bat_bat_Normal.png-cd0f44dc4faef20d1b5a98e542436411.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "8b1d4c894f6e4b70426f471decea5d00"
+}
 
 [deps]
 
-source_file="res://textures/bat_bat_Metallic.png"
-dest_files=["res://.godot/imported/bat_bat_Metallic.png-57eccb5d74c5cd674f1d57a81c1f6805.s3tc.ctex"]
+source_file="res://player/weapons/bat_bat_bat_Normal.png"
+dest_files=["res://.godot/imported/bat_bat_bat_Normal.png-cd0f44dc4faef20d1b5a98e542436411.s3tc.ctex"]
 
 [params]
 
@@ -22,12 +25,12 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=1
+roughness/src_normal="res://player/weapons/bat_bat_bat_Normal.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

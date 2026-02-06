@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dx0py8tctmj0m"
-path.s3tc="res://.godot/imported/bat_bat_Height.png-404a989838c01a57124e09c5b26ff805.s3tc.ctex"
+uid="uid://ifsstklwpcat"
+path.s3tc="res://.godot/imported/spraycan_M_03___Defaultbasecolortexture.png-ef16e6ddf01201cb1c5677c15722eed2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "819f61cc8cbf395a7a90823674350c35"
+}
 
 [deps]
 
-source_file="res://textures/bat_bat_Height.png"
-dest_files=["res://.godot/imported/bat_bat_Height.png-404a989838c01a57124e09c5b26ff805.s3tc.ctex"]
+source_file="res://player/weapons/spraycan_M_03___Defaultbasecolortexture.png"
+dest_files=["res://.godot/imported/spraycan_M_03___Defaultbasecolortexture.png-ef16e6ddf01201cb1c5677c15722eed2.s3tc.ctex"]
 
 [params]
 

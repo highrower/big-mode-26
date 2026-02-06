@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1jut2ccu5a4i"
-path.s3tc="res://.godot/imported/bat_bat_Normal.png-e0cdff01f6b8c86dc58a8fdc1b2b2c3d.s3tc.ctex"
+uid="uid://btrg81elw6xmb"
+path.s3tc="res://.godot/imported/hoverboard_hoverboard_hoverboard_Normal.png-21aaabc4fb0fa470560388c9ac0bb941.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "0c3fae36232186b3bf5c383dcf38b40f"
+}
 
 [deps]
 
-source_file="res://textures/bat_bat_Normal.png"
-dest_files=["res://.godot/imported/bat_bat_Normal.png-e0cdff01f6b8c86dc58a8fdc1b2b2c3d.s3tc.ctex"]
+source_file="res://player/movement/hoverboard_hoverboard_hoverboard_Normal.png"
+dest_files=["res://.godot/imported/hoverboard_hoverboard_hoverboard_Normal.png-21aaabc4fb0fa470560388c9ac0bb941.s3tc.ctex"]
 
 [params]
 
@@ -27,7 +30,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://textures/bat_bat_Normal.png"
+roughness/src_normal="res://player/movement/hoverboard_hoverboard_hoverboard_Normal.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2
