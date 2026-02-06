@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://dsj211ax14nqf"]
 
-[node name="ScoreHud" type="Control" unique_id=745819049]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="ScoreHud" type="CanvasLayer" unique_id=306346318]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2013478070]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=384215141]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=2010165922]
+layout_mode = 2
