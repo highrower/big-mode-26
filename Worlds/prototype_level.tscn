@@ -442,4 +442,10 @@ script = ExtResource("4_q0ook")
 [node name="DroneShootingEnemy" parent="." unique_id=1337185290 instance=ExtResource("3_u15jy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.839058, 46.312317, 5.670361)
 
+[node name="DroneShootingEnemy2" parent="." unique_id=595844139 instance=ExtResource("3_u15jy")]
+
+[node name="DroneShootingEnemy3" parent="." unique_id=1788845920 instance=ExtResource("3_u15jy")]
+
+[node name="DroneShootingEnemy4" parent="." unique_id=1134249463 instance=ExtResource("3_u15jy")]
+
 [connection signal="player_health_update" from="Player" to="CanvasLayer/ProgressBar" method="_on_player_player_health_update"]

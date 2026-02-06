@@ -1,10 +1,15 @@
 extends Behaviour
 
 var can_attack : bool = true
+@export var hitbox_radius := 0.5
+@export var cooldown_time := 2.0
 @export var projectile_scene : PackedScene
 @export var speed := 50.0
 @export var damage := 50.0
 @export var can_damage_groups : Array
+
+func _ready() -> void:
+	$Cooldown.wait_time=cooldown_time
 
 func _on_cooldown_timeout() -> void:
 	can_attack = true

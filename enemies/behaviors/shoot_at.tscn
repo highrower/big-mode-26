@@ -7,6 +7,7 @@ script = ExtResource("1_pyx8q")
 can_damage_groups = ["player_team"]
 
 [node name="Cooldown" type="Timer" parent="." unique_id=705371003]
+one_shot = true
 
 [node name="Node3D" type="Node3D" parent="." unique_id=1470509755]
 

@@ -1,8 +1,12 @@
 extends CharacterBody3D
 
+@export var hitbox_radius := 0.5
 @export var speed := 50.0
 @export var damage := 50.0
 var can_damage_groups : Array
+
+func _ready() -> void:
+	$CollisionShape3D.shape.radius = hitbox_radius
 
 func setup(speed,damage,can_damage_groups):
 	self.speed = speed
@@ -24,3 +28,7 @@ func hit(body):
 				body.take_damage(damage)
 				break
 	self.queue_free()
+
+func parry():
+	speed *= -1
+	can_damage_groups = ["enemy_team"]

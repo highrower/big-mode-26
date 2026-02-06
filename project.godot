@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 damagable=""
 player_team=""
 enemy_team=""
+parryable=""
 
 [input]
 

@@ -24,6 +24,8 @@ func _process(delta: float) -> void:
 			for i in get_overlapping_bodies():
 				if i.is_in_group("enemy_team") and i.is_in_group("damagable"):
 					hit(i)
+				if i.is_in_group("parryable"):
+					i.parry()
 
 func hit(target):
 	target.take_damage(damage)
