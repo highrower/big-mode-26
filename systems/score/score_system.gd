@@ -1,4 +1,3 @@
-# res://systems/score/score_system.gd
 extends Node
 
 signal score_changed(score: int, multiplier: float)
@@ -59,6 +58,7 @@ func reset_run() -> void:
 	_recompute_rank_and_multiplier()
 	_recompute_stars()
 	_emit_all()
+
 
 func add_score(amount: int, reason: String = "") -> void:
 	if amount <= 0:
