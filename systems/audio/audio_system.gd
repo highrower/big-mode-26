@@ -1,15 +1,21 @@
+# audio_system.gd
 extends Node
 
-const SFX_DIR := "res://audio/sfx"
-const UI_DIR := "res://audio/ui"
-const MUSIC_DIR := "res://audio/music"
+const CATALOG_PATH := "res://systems/audio/catalog/audio_catalog.tres"
+
+class Sfx:
+	const HIT := &"sfx_hit"
+	const EXPLOSION := &"sfx_explosion"
+
+class UI:
+	const CLICK := &"ui_click"
+	const HOVER := &"ui_hover"
+
+class Music:
+	const MAIN := &"music_main"
 
 @export var sfx_players := 8
 @export var ui_players := 4
-
-var sfx := {}
-var ui := {}
-var music := {}
 
 var _sfx_pool: Array[AudioStreamPlayer] = []
 var _ui_pool: Array[AudioStreamPlayer] = []
@@ -18,6 +24,11 @@ var _music_player: AudioStreamPlayer
 var _sfx_index := 0
 var _ui_index := 0
 
+var _sfx_map: Dictionary = {}
+var _ui_map: Dictionary = {}
+var _music_map: Dictionary = {}
+
+var _warned_missing: Dictionary = {} # avoids output spam if audio is missing
 
 func _ready() -> void:
 	_sfx_pool = _make_pool(sfx_players, "SFX")
@@ -27,61 +38,68 @@ func _ready() -> void:
 	_music_player.bus = "Music"
 	add_child(_music_player)
 
-	sfx = _load_library(SFX_DIR)
-	ui = _load_library(UI_DIR)
-	music = _load_library(MUSIC_DIR)
-
-	print("[AudioSystem] Loaded: sfx=%d ui=%d music=%d" % [sfx.size(), ui.size(), music.size()])
+	_load_catalog()
 
 
-func play_sfx(name: String, volume_db: float = 0.0, pitch_range: float = 0.0) -> void:
-	var stream: AudioStream = sfx.get(name)
-	if stream == null:
-		push_warning("[AudioSystem] Missing SFX: %s" % name)
+func _load_catalog() -> void:
+	_sfx_map.clear()
+	_ui_map.clear()
+	_music_map.clear()
+	_warned_missing.clear()
+
+	var catalog := load(CATALOG_PATH) as AudioCatalog
+	if catalog == null:
+		push_warning("[AudioSystem] Missing catalog at %s" % CATALOG_PATH)
+		return
+
+	_index_entries(catalog.sfx, _sfx_map, "SFX")
+	_index_entries(catalog.ui, _ui_map, "UI")
+	_index_entries(catalog.music, _music_map, "Music")
+
+	print("[AudioSystem] Catalog loaded. sfx=%d ui=%d music=%d" % [
+		_sfx_map.size(), _ui_map.size(), _music_map.size()
+	])
+
+
+func play_sfx(id: StringName, volume_db: float = INF, pitch_range: float = INF) -> void:
+	var entry := _sfx_map.get(id) as SoundEntry
+	if not _can_play(entry, id):
 		return
 
 	var p := _sfx_pool[_sfx_index]
 	_sfx_index = (_sfx_index + 1) % _sfx_pool.size()
 
 	p.stop()
-	p.stream = stream
-	p.volume_db = volume_db
-	p.pitch_scale = _rand_pitch(pitch_range)
+	p.stream = entry.stream
+	p.volume_db = entry.default_volume_db if volume_db == INF else volume_db
+	p.pitch_scale = _rand_pitch(entry.default_pitch_range if pitch_range == INF else pitch_range)
 	p.play()
 
 
-func play_ui(name: String, volume_db: float = 0.0, pitch_range: float = 0.0) -> void:
-	var stream: AudioStream = ui.get(name)
-	if stream == null:
-		push_warning("[AudioSystem] Missing UI: %s" % name)
+func play_ui(id: StringName, volume_db: float = INF, pitch_range: float = INF) -> void:
+	var entry := _ui_map.get(id) as SoundEntry
+	if not _can_play(entry, id):
 		return
 
 	var p := _ui_pool[_ui_index]
 	_ui_index = (_ui_index + 1) % _ui_pool.size()
 
 	p.stop()
-	p.stream = stream
-	p.volume_db = volume_db
-	p.pitch_scale = _rand_pitch(pitch_range)
+	p.stream = entry.stream
+	p.volume_db = entry.default_volume_db if volume_db == INF else volume_db
+	p.pitch_scale = _rand_pitch(entry.default_pitch_range if pitch_range == INF else pitch_range)
 	p.play()
 
 
-func play_music(name: String, volume_db: float = -6.0, loop: bool = true) -> void:
-	var stream: AudioStream = music.get(name)
-	if stream == null:
-		push_warning("[AudioSystem] Missing Music: %s" % name)
+func play_music(id: StringName, volume_db: float = INF, loop: bool = true) -> void:
+	var entry := _music_map.get(id) as SoundEntry
+	if not _can_play(entry, id):
 		return
 
 	_music_player.stop()
-	_music_player.stream = stream
-	_music_player.volume_db = volume_db
-
-	# Many music formats loop via import settings. This is a best-effort toggle.
-	if stream is AudioStreamOggVorbis:
-		(stream as AudioStreamOggVorbis).loop = loop
-	elif stream is AudioStreamWav:
-		(stream as AudioStreamWav).loop_mode = AudioStreamWav.LOOP_FORWARD if loop else AudioStreamWav.LOOP_DISABLED
-
+	_music_player.stream = entry.stream
+	_music_player.volume_db = entry.default_volume_db if volume_db == INF else volume_db
+	print("music_player.volume_db actually set to: ", _music_player.volume_db, " bus=", _music_player.bus)
 	_music_player.play()
 
 
@@ -89,7 +107,37 @@ func stop_music() -> void:
 	_music_player.stop()
 
 
-# --- helpers ---
+func _index_entries(entries: Array[SoundEntry], map: Dictionary, label: String) -> void:
+	for e in entries:
+		if e == null:
+			continue
+		if e.id == StringName():
+			push_warning("[AudioSystem] %s entry missing id" % label)
+			continue
+		map[e.id] = e
+
+
+func _can_play(entry: SoundEntry, id: StringName) -> bool:
+	if entry == null:
+		_warn_once(id, "[AudioSystem] Missing entry for id: %s" % String(id))
+		return false
+
+	if not entry.enabled:
+		return false
+
+	if entry.stream == null:
+		_warn_once(id, "[AudioSystem] No stream assigned yet for id: %s" % String(id))
+		return false
+
+	return true
+
+
+func _warn_once(key: StringName, msg: String) -> void:
+	if _warned_missing.has(key):
+		return
+	_warned_missing[key] = true
+	push_warning(msg)
+
 
 func _make_pool(count: int, bus: String) -> Array[AudioStreamPlayer]:
 	var pool: Array[AudioStreamPlayer] = []
@@ -99,36 +147,6 @@ func _make_pool(count: int, bus: String) -> Array[AudioStreamPlayer]:
 		add_child(p)
 		pool.append(p)
 	return pool
-
-
-func _load_library(dir_path: String) -> Dictionary:
-	var lib := {}
-
-	var dir := DirAccess.open(dir_path)
-	if dir == null:
-		push_warning("[AudioSystem] Could not open dir: %s" % dir_path)
-		return lib
-
-	dir.list_dir_begin()
-	while true:
-		var file := dir.get_next()
-		if file == "":
-			break
-		if dir.current_is_dir():
-			continue
-
-		var ext := file.get_extension().to_lower()
-		if ext != "ogg" and ext != "wav" and ext != "mp3":
-			continue
-
-		var key := file.get_basename() # filename without extension
-		var path := "%s/%s" % [dir_path, file]
-		var stream := load(path)
-		if stream != null:
-			lib[key] = stream
-
-	dir.list_dir_end()
-	return lib
 
 
 func _rand_pitch(range_amount: float) -> float:
