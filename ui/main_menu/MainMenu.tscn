@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bh6l6i2j4dmfk"]
 
 [ext_resource type="Script" uid="uid://canxphibppiyg" path="res://ui/main_menu/main_menu.gd" id="1_h7g2k"]
-[ext_resource type="Texture2D" uid="uid://cbd2cqs61lvap" path="res://ui/main_menu/title image.png" id="2_x85v6"]
+[ext_resource type="Texture2D" uid="uid://dcqdwet38ps1f" path="res://ui/main_menu/titlescreen2.png" id="2_x85v6"]
 [ext_resource type="Texture2D" uid="uid://wahjw0yq5xbi" path="res://ui/main_menu/play.png" id="3_u1tth"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x85v6"]
@@ -33,10 +33,10 @@ anchor_left = 0.577
 anchor_top = 0.741
 anchor_right = 0.577
 anchor_bottom = 0.741
-offset_left = -80.70404
-offset_top = 0.83200073
-offset_right = 23.469055
-offset_bottom = 60.46103
+offset_left = -92.70404
+offset_top = -87.168
+offset_right = 11.469055
+offset_bottom = -27.53897
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(6.47, 6.47)
