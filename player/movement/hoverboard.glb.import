@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dynfg8fg2jnxa"
-path="res://.godot/imported/Enemy Model.glb-ff8b39b85257509bc5b237234bbd6e53.scn"
+uid="uid://b1tqu6gcxbdx7"
+path="res://.godot/imported/hoverboard.glb-a6a5ad173309a7e041c58becf7c30091.scn"
 
 [deps]
 
-source_file="res://Assets/Enemy/Enemy Model.glb"
-dest_files=["res://.godot/imported/Enemy Model.glb-ff8b39b85257509bc5b237234bbd6e53.scn"]
+source_file="res://player/movement/hoverboard.glb"
+dest_files=["res://.godot/imported/hoverboard.glb-a6a5ad173309a7e041c58becf7c30091.scn"]
 
 [params]
 

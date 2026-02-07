@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dynfg8fg2jnxa"
-path="res://.godot/imported/Enemy Model.glb-ff8b39b85257509bc5b237234bbd6e53.scn"
+uid="uid://cq0stl5qcd3h3"
+path="res://.godot/imported/mailbox.glb-dc063b55002997891e0601d5efc91ddf.scn"
 
 [deps]
 
-source_file="res://Assets/Enemy/Enemy Model.glb"
-dest_files=["res://.godot/imported/Enemy Model.glb-ff8b39b85257509bc5b237234bbd6e53.scn"]
+source_file="res://Assets/destrutableprops/mailbox.glb"
+dest_files=["res://.godot/imported/mailbox.glb-dc063b55002997891e0601d5efc91ddf.scn"]
 
 [params]
 

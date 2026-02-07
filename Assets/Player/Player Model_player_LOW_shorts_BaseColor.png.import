@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr268rgst7tug"
-path.s3tc="res://.godot/imported/Enemy Model_Enemy.png-561eff6ef28661b44888cdb1bfedb8c8.s3tc.ctex"
+uid="uid://htxk4v8rwf0d"
+path.s3tc="res://.godot/imported/Player Model_player_LOW_shorts_BaseColor.png-b5312374434c60918156250c7cfaee3e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "149f84fd9b067ee6825c5637166a7fc3"
+"md5": "be2dc19ed0e3cd7c50e83ede50928c9c"
 }
 
 [deps]
 
-source_file="res://Assets/Enemy/Enemy Model_Enemy.png"
-dest_files=["res://.godot/imported/Enemy Model_Enemy.png-561eff6ef28661b44888cdb1bfedb8c8.s3tc.ctex"]
+source_file="res://Assets/Player/Player Model_player_LOW_shorts_BaseColor.png"
+dest_files=["res://.godot/imported/Player Model_player_LOW_shorts_BaseColor.png-b5312374434c60918156250c7cfaee3e.s3tc.ctex"]
 
 [params]
 

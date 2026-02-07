@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://bv1ioe4rqhxqm"]
+
+[ext_resource type="PackedScene" uid="uid://b0to0b2t4tyor" path="res://Assets/Player/Player Model.glb" id="1_70xuj"]
+[ext_resource type="Script" uid="uid://cemk4vwyrl5vo" path="res://player/player_model.gd" id="1_nis8b"]
+[ext_resource type="AnimationLibrary" uid="uid://npx05d3v7rhf" path="res://Assets/Player/Player Animations.glb" id="2_65fbn"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nis8b"]
+animation = &"Player Animations/Player Lean Foward"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4xcvv"]
+animation = &"Player Animations/Player Lean Backwards"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_mstlb"]
+animation = &"Player Animations/Player Lean Right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ugfh7"]
+animation = &"Player Animations/Player Lean Left"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_b6qoi"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_nis8b")
+blend_point_0/pos = Vector2(0, 1)
+blend_point_1/node = SubResource("AnimationNodeAnimation_4xcvv")
+blend_point_1/pos = Vector2(0, -1)
+blend_point_2/node = SubResource("AnimationNodeAnimation_mstlb")
+blend_point_2/pos = Vector2(1, 0)
+blend_point_3/node = SubResource("AnimationNodeAnimation_ugfh7")
+blend_point_3/pos = Vector2(-1, 0)
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nis8b"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_nis8b"]
+"states/Hover Pivot/node" = SubResource("AnimationNodeBlendSpace2D_b6qoi")
+"states/Hover Pivot/position" = Vector2(560, 66)
+transitions = ["Start", "Hover Pivot", SubResource("AnimationNodeStateMachineTransition_nis8b")]
+
+[node name="PlayerModelHolder" type="Node3D" unique_id=624723337]
+script = ExtResource("1_nis8b")
+
+[node name="Player Model" parent="." unique_id=341180623 instance=ExtResource("1_70xuj")]
+
+[node name="PlayerAnimations" type="AnimationPlayer" parent="Player Model" unique_id=1762213404]
+"libraries/Player Animations" = ExtResource("2_65fbn")
+
+[node name="AnimationTree" type="AnimationTree" parent="Player Model" unique_id=1729071956]
+tree_root = SubResource("AnimationNodeStateMachine_nis8b")
+anim_player = NodePath("../PlayerAnimations")
+"parameters/Hover Pivot/blend_position" = Vector2(0.0005339384, 0.042654037)

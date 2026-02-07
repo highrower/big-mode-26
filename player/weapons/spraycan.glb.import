@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dynfg8fg2jnxa"
-path="res://.godot/imported/Enemy Model.glb-ff8b39b85257509bc5b237234bbd6e53.scn"
+uid="uid://day6y8dao3kce"
+path="res://.godot/imported/spraycan.glb-940029a04564b6f08813b7fa30957d62.scn"
 
 [deps]
 
-source_file="res://Assets/Enemy/Enemy Model.glb"
-dest_files=["res://.godot/imported/Enemy Model.glb-ff8b39b85257509bc5b237234bbd6e53.scn"]
+source_file="res://player/weapons/spraycan.glb"
+dest_files=["res://.godot/imported/spraycan.glb-940029a04564b6f08813b7fa30957d62.scn"]
 
 [params]
 

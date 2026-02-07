@@ -14,6 +14,7 @@ radius = 1.0
 [node name="DestructableBlockPrototype" type="Node3D" unique_id=110892766]
 
 [node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=143577794]
+continuous_cd = true
 script = ExtResource("1_q3w74")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D" unique_id=937486685]

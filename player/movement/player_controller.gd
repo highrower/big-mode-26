@@ -77,6 +77,7 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 	state.linear_velocity = state.transform.basis * local_velocity
 	
 	if Input.is_action_just_pressed("jump") and is_grounded:
+		AudioSystem.play_sfx("sfx_hit")
 		state.apply_central_impulse(Vector3.UP * jump_force * mass)
 
 func _physics_process(delta: float) -> void:

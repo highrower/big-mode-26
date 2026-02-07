@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://btf2hv7lawc6v"]
+
+[ext_resource type="PackedScene" uid="uid://dynfg8fg2jnxa" path="res://Assets/Enemy/Enemy Model.glb" id="1_m07lh"]
+[ext_resource type="AnimationLibrary" uid="uid://db1to8m16mraw" path="res://Assets/Enemy/Enemy animations.glb" id="2_ug41m"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ug41m"]
+animation = &"Enemy animations/Enemy Recover"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_a5o5s"]
+animation = &"Enemy animations/Enemy Run"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1n2yc"]
+animation = &"Enemy animations/Enemy Throw"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vxxlm"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1n2yc"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vrea4"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_delp7"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ug41m"]
+"states/Enemy animations_Enemy Recover/node" = SubResource("AnimationNodeAnimation_ug41m")
+"states/Enemy animations_Enemy Recover/position" = Vector2(218, -35)
+"states/Enemy animations_Enemy Run/node" = SubResource("AnimationNodeAnimation_a5o5s")
+"states/Enemy animations_Enemy Run/position" = Vector2(450, 97)
+"states/Enemy animations_Enemy Throw/node" = SubResource("AnimationNodeAnimation_1n2yc")
+"states/Enemy animations_Enemy Throw/position" = Vector2(629, -35)
+transitions = ["Enemy animations_Enemy Throw", "Enemy animations_Enemy Recover", SubResource("AnimationNodeStateMachineTransition_vxxlm"), "Start", "Enemy animations_Enemy Run", SubResource("AnimationNodeStateMachineTransition_1n2yc"), "Enemy animations_Enemy Run", "Enemy animations_Enemy Throw", SubResource("AnimationNodeStateMachineTransition_vrea4"), "Enemy animations_Enemy Recover", "Enemy animations_Enemy Run", SubResource("AnimationNodeStateMachineTransition_delp7")]
+graph_offset = Vector2(-220, -81)
+
+[node name="EnemyModelHolder" type="Node3D" unique_id=849311592]
+
+[node name="Enemy Model" parent="." unique_id=1401620240 instance=ExtResource("1_m07lh")]
+
+[node name="EnemyAnimation" type="AnimationPlayer" parent="Enemy Model" unique_id=1428810713]
+"libraries/Enemy animations" = ExtResource("2_ug41m")
+
+[node name="AnimationTree" type="AnimationTree" parent="Enemy Model" unique_id=1105477025]
+tree_root = SubResource("AnimationNodeStateMachine_ug41m")
+anim_player = NodePath("../EnemyAnimation")
