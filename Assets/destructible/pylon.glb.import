@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://f113503g4xm4"
-path="res://.godot/imported/trafficcone.glb-cd8a0d55169ed0463ed2aed14b781ef7.scn"
+uid="uid://cbmgqqyv2s3i2"
+path="res://.godot/imported/pylon.glb-bbc0ccb7dc5ba72d06799edfe1963d04.scn"
 
 [deps]
 
-source_file="res://Assets/destrutableprops/trafficcone.glb"
-dest_files=["res://.godot/imported/trafficcone.glb-cd8a0d55169ed0463ed2aed14b781ef7.scn"]
+source_file="res://Assets/destructible/pylon.glb"
+dest_files=["res://.godot/imported/pylon.glb-bbc0ccb7dc5ba72d06799edfe1963d04.scn"]
 
 [params]
 

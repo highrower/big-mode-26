@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cif1ybkphfvgf"
-path.s3tc="res://.godot/imported/trafficcone_M_01___Defaultmetallicroughnesstex.png-eedfeb96fa330472b697492326445664.s3tc.ctex"
+uid="uid://swif2eymqvvk"
+path.s3tc="res://.godot/imported/slicksign_M_01___Defaultmetallicroughnesstex.png-290e4c0707197c42cfb2d5f90291d621.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "72e812bc72b6d7e0927b7a185812166f"
+"md5": "9d4d40dee782a44ee45c2a5def1eb435"
 }
 
 [deps]
 
-source_file="res://Assets/destrutableprops/trafficcone_M_01___Defaultmetallicroughnesstex.png"
-dest_files=["res://.godot/imported/trafficcone_M_01___Defaultmetallicroughnesstex.png-eedfeb96fa330472b697492326445664.s3tc.ctex"]
+source_file="res://Assets/destructible/slicksign_M_01___Defaultmetallicroughnesstex.png"
+dest_files=["res://.godot/imported/slicksign_M_01___Defaultmetallicroughnesstex.png-290e4c0707197c42cfb2d5f90291d621.s3tc.ctex"]
 
 [params]
 
