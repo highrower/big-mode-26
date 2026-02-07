@@ -53,9 +53,3 @@ layout_mode = 2
 position = Vector2(381, 12.999985)
 scale = Vector2(5.875, 5)
 texture = ExtResource("3_u1tth")
-
-[node name="OptionsButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=140548732]
-layout_mode = 2
-
-[node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1823239019]
-layout_mode = 2
