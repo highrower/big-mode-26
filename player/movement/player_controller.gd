@@ -99,7 +99,6 @@ func _behaviour_manager(delta: float):
 func take_damage(damage):
 	self.health-=damage
 	print("PLAYER:"+str(self.health))
-		state.apply_central_impulse(state.transform.basis.y * jump_force * mass)
 		
 func handle_drift(state: PhysicsDirectBodyState3D) -> float:
 	var curr_speed = state.linear_velocity.length()
