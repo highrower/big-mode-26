@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://brdgokfv75p5d"]
 
-[ext_resource type="Script" uid="uid://bwbv80j64lod4" path="res://bomb.gd" id="1_i6fkq"]
+[ext_resource type="Script" uid="uid://bwbv80j64lod4" path="res://enemies/projectiles/bomb.gd" id="1_i6fkq"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ean2q"]
 
@@ -10,8 +10,6 @@
 script = ExtResource("1_i6fkq")
 speed = null
 target = null
-explosion_radius = null
-explosion_power = null
 damage = null
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=221308613]

@@ -8,10 +8,11 @@ var can_damage_groups : Array
 func _ready() -> void:
 	$CollisionShape3D.shape.radius = hitbox_radius
 
-func setup(speed,damage,can_damage_groups):
+func setup(speed,damage,hitbox_radius,can_damage_groups):
 	self.speed = speed
 	self.damage = damage
 	self.can_damage_groups = can_damage_groups
+	self.hitbox_radius = hitbox_radius
 
 
 func _physics_process(delta: float) -> void:

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c743qksbmstsu"]
 
-[ext_resource type="Script" uid="uid://cexjibx4son1u" path="res://move_toward.gd" id="1_11sph"]
+[ext_resource type="Script" uid="uid://cexjibx4son1u" path="res://enemies/behaviors/move_toward.gd" id="1_11sph"]
 
 [node name="MoveToward" type="Node3D" unique_id=189868678]
 script = ExtResource("1_11sph")

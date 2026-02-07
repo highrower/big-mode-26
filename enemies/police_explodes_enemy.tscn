@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://camunn3dh5myq"]
+
+[ext_resource type="Script" uid="uid://bihc46l1rdieu" path="res://enemies/police_explodes_enemy.gd" id="1_gw4sp"]
+[ext_resource type="PackedScene" uid="uid://c21rdyc5x7pu3" path="res://enemies/behaviors/PlayerSight.tscn" id="2_78m6d"]
+[ext_resource type="PackedScene" uid="uid://chgyxk5kpa17n" path="res://enemies/behaviors/chase_player.tscn" id="3_j4yoy"]
+[ext_resource type="PackedScene" uid="uid://bmol167bteymt" path="res://enemies/behaviors/patrol_around.tscn" id="5_6uvtt"]
+[ext_resource type="PackedScene" uid="uid://dm68wavnp73l4" path="res://enemies/behaviors/die_leave_corpse_exploed.tscn" id="6_gw4sp"]
+[ext_resource type="PackedScene" uid="uid://dd3o21l4fnrfu" path="res://enemies/behaviors/hit_player.tscn" id="6_k4avm"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ra0cx"]
+radius = 1.2
+height = 5.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ri42i"]
+radius = 1.2
+height = 5.0
+
+[node name="PoliceExplodesEnemy" type="RigidBody3D" unique_id=962972829 groups=["damagable", "enemy_team"]]
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+script = ExtResource("1_gw4sp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=403939388]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1286116, 0)
+mesh = SubResource("CapsuleMesh_ra0cx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=997524980]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.215332, 0)
+shape = SubResource("CapsuleShape3D_ri42i")
+
+[node name="PlayerSight" parent="." unique_id=1767067021 instance=ExtResource("2_78m6d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0637121, 0)
+
+[node name="ChasePlayer" parent="." unique_id=189868678 instance=ExtResource("3_j4yoy")]
+
+[node name="PatrolAround" parent="." unique_id=438560549 instance=ExtResource("5_6uvtt")]
+
+[node name="HitPlayer" parent="." unique_id=243545642 instance=ExtResource("6_k4avm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="DieLeaveCorpseExploed" parent="." unique_id=586919742 instance=ExtResource("6_gw4sp")]
+explosion_power = 100.0
+explosion_radius = 30.0
+damage_to_groups = Array[String](["player_team"])

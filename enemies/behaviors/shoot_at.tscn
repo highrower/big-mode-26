@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://4wrt57h1lqd1"]
 
-[ext_resource type="Script" uid="uid://dwvw20iwffy0g" path="res://shoot_at.gd" id="1_pyx8q"]
+[ext_resource type="Script" uid="uid://dwvw20iwffy0g" path="res://enemies/behaviors/shoot_at.gd" id="1_pyx8q"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_pyx8q"]
 
 [node name="ShootAt" type="Node3D" unique_id=243545642]
 script = ExtResource("1_pyx8q")
@@ -10,5 +12,8 @@ can_damage_groups = ["player_team"]
 one_shot = true
 
 [node name="Node3D" type="Node3D" parent="." unique_id=1470509755]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D" unique_id=130868937]
+mesh = SubResource("SphereMesh_pyx8q")
 
 [connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]

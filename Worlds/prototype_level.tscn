@@ -1,8 +1,14 @@
 [gd_scene format=3 uid="uid://uvj7miqi530m"]
 
 [ext_resource type="PackedScene" uid="uid://h2xotxmtsvq0" path="res://player/movement/player.tscn" id="1_w0yvr"]
-[ext_resource type="PackedScene" uid="uid://dy1epdwu16t2i" path="res://enemies/drone_shooting_enemy.tscn" id="3_u15jy"]
+[ext_resource type="PackedScene" uid="uid://dvjhbl1c7l0xb" path="res://enemies/police_shoots_enemy.tscn" id="3_u15jy"]
+[ext_resource type="PackedScene" uid="uid://ckprci1fnwa1i" path="res://enemies/police_enemy.tscn" id="4_ad28g"]
 [ext_resource type="Script" uid="uid://bvhwxhu01j5ed" path="res://Worlds/temp_hp_bar.gd" id="4_q0ook"]
+[ext_resource type="PackedScene" uid="uid://dy1epdwu16t2i" path="res://enemies/drone_shooting_enemy.tscn" id="5_k2est"]
+[ext_resource type="PackedScene" uid="uid://bw456cvak5564" path="res://enemies/drone_exploding_enemy.tscn" id="6_d12ac"]
+[ext_resource type="PackedScene" uid="uid://bsf1qsdotu57v" path="res://enemies/heli_shooting_enemy.tscn" id="7_1swxr"]
+[ext_resource type="PackedScene" uid="uid://3xdhf2c8t1lj" path="res://enemies/police_enemy_stronger.tscn" id="8_fbbyy"]
+[ext_resource type="PackedScene" uid="uid://6xj0qx5mff5l" path="res://enemies/police_enemy_bigger.tscn" id="9_k6fxv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w0yvr"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -439,13 +445,25 @@ offset_bottom = 58.0
 max_value = 300.0
 script = ExtResource("4_q0ook")
 
-[node name="DroneShootingEnemy" parent="." unique_id=1337185290 instance=ExtResource("3_u15jy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.839058, 46.312317, 5.670361)
+[node name="PoliceShootsEnemy" parent="." unique_id=962972829 instance=ExtResource("3_u15jy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 226.71927, -68.266174, 24.666962)
 
-[node name="DroneShootingEnemy2" parent="." unique_id=595844139 instance=ExtResource("3_u15jy")]
+[node name="PoliceEnemy" parent="." unique_id=1207768361 instance=ExtResource("4_ad28g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 180.84482, -68.203804, 14.689053)
 
-[node name="DroneShootingEnemy3" parent="." unique_id=1788845920 instance=ExtResource("3_u15jy")]
+[node name="DroneShootingEnemy" parent="." unique_id=1337185290 instance=ExtResource("5_k2est")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 160.35626, -66.170815, 25.49903)
 
-[node name="DroneShootingEnemy4" parent="." unique_id=1134249463 instance=ExtResource("3_u15jy")]
+[node name="DroneEnemy" parent="." unique_id=1186950893 instance=ExtResource("6_d12ac")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 202.05054, -71.69982, -51.615425)
+
+[node name="HeliShootingEnemy" parent="." unique_id=611094005 instance=ExtResource("7_1swxr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 153.52899, -65.381, -13.584135)
+
+[node name="PoliceEnemyStronger" parent="." unique_id=1750445559 instance=ExtResource("8_fbbyy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 267.0239, -70.62027, -46.26259)
+
+[node name="PoliceEnemyBigger" parent="." unique_id=852601251 instance=ExtResource("9_k6fxv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 205.5477, -67.12679, 3.1676927)
 
 [connection signal="player_health_update" from="Player" to="CanvasLayer/ProgressBar" method="_on_player_player_health_update"]

@@ -1,11 +1,48 @@
 [gd_scene format=3 uid="uid://bh1gx072k2gou"]
 
-[ext_resource type="Script" uid="uid://0df1p8ihmnb6" path="res://explosion_object.gd" id="1_g5weg"]
+[ext_resource type="Script" uid="uid://0df1p8ihmnb6" path="res://enemies/projectiles/explosion_object.gd" id="1_g5weg"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_i6fkq"]
+resource_local_to_scene = true
+
+[sub_resource type="Curve" id="Curve_g5weg"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.74534166, 0.9887641), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_tbbsl"]
+curve = SubResource("Curve_g5weg")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_noj67"]
+particle_flag_align_y = true
+spread = 180.0
+initial_velocity_min = 12.0
+initial_velocity_max = 14.0
+scale_min = 0.5
+scale_max = 2.0
+scale_curve = SubResource("CurveTexture_tbbsl")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mmxds"]
+albedo_color = Color(1, 0.47058824, 0, 1)
+emission_enabled = true
+emission = Color(1, 0.39215687, 0, 1)
+emission_energy_multiplier = 2.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_kwuum"]
+material = SubResource("StandardMaterial3D_mmxds")
+top_radius = 0.1
+bottom_radius = 0.0
 
 [node name="ExplosionObject" type="Area3D" unique_id=2108906811]
 script = ExtResource("1_g5weg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2122077461]
 shape = SubResource("SphereShape3D_i6fkq")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=410343304]
+emitting = false
+amount = 24
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_noj67")
+draw_pass_1 = SubResource("CylinderMesh_kwuum")

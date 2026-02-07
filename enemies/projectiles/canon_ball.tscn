@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://vp2qh1qvpq0f"]
 
-[ext_resource type="Script" uid="uid://bw7s3ihjj2hrf" path="res://canon_ball.gd" id="1_pcn56"]
+[ext_resource type="Script" uid="uid://bw7s3ihjj2hrf" path="res://enemies/projectiles/canon_ball.gd" id="1_pcn56"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_3bq7v"]
 resource_local_to_scene = true

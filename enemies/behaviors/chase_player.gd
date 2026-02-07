@@ -12,5 +12,8 @@ func execute(caller,_delta:float):
 	var new_velocity = (next_location-current_location).normalized()*speed
 	caller.apply_central_force(new_velocity)
 
+func update_desired_range(range):
+	nav_agent.target_desired_distance = range
+
 func update_target(target_location):
 	nav_agent.target_position=target_location

@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dm68wavnp73l4"]
+
+[ext_resource type="Script" uid="uid://civ73yqk5p73j" path="res://enemies/behaviors/can_die_leaves_corpse.gd" id="1_gygch"]
+
+[sub_resource type="Curve" id="Curve_gygch"]
+_data = [Vector2(0, 0.20224726), 0.0, 0.0, 0, 0, Vector2(0.46583855, 1), 0.0, 0.0, 0, 0, Vector2(0.83229816, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.056179762), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_oh76w"]
+curve = SubResource("Curve_gygch")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_gygch"]
+emission_shape = 1
+emission_sphere_radius = 5.0
+inherit_velocity_ratio = 0.5
+spread = 90.0
+gravity = Vector3(0, 5, 0)
+scale_min = 2.0
+scale_max = 6.0
+scale_curve = SubResource("CurveTexture_oh76w")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oh76w"]
+transparency = 1
+albedo_color = Color(0.28118682, 0.28118688, 0.28118682, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_0o2xp"]
+material = SubResource("StandardMaterial3D_oh76w")
+
+[node name="DieLeaveCorpseExploed" type="Node3D" unique_id=586919742]
+script = ExtResource("1_gygch")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=267131193]
+emitting = false
+amount = 26
+process_material = SubResource("ParticleProcessMaterial_gygch")
+draw_pass_1 = SubResource("SphereMesh_0o2xp")
+
+[node name="Timer" type="Timer" parent="." unique_id=366057307]
+wait_time = 3.0
+one_shot = true
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1206375578]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

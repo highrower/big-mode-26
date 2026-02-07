@@ -1,6 +1,7 @@
 extends Behaviour
 
 var can_attack : bool = true
+@export var muzzle_length := 0.0
 @export var hitbox_radius := 0.5
 @export var cooldown_time := 2.0
 @export var projectile_scene : PackedScene
@@ -10,6 +11,7 @@ var can_attack : bool = true
 
 func _ready() -> void:
 	$Cooldown.wait_time=cooldown_time
+	$Node3D.position+=Vector3.FORWARD*muzzle_length
 
 func _on_cooldown_timeout() -> void:
 	can_attack = true
@@ -25,7 +27,7 @@ func shoot():
 		var projectile = projectile_scene.instantiate()
 		projectile.position = $Node3D.global_position
 		projectile.transform.basis = $Node3D.global_transform.basis
-		projectile.setup(speed,damage,can_damage_groups)
+		projectile.setup(speed,damage,hitbox_radius,can_damage_groups)
 		get_tree().root.add_child(projectile)
 		can_attack=false
 		$Cooldown.start()

@@ -2,8 +2,8 @@ extends Behaviour
 
 @export var damage := 20.0
 var can_attack : bool = true
-var attack_cooldown := 1.0
-var windup_time := 1.0
+@export var attack_cooldown := 1.0
+@export var windup_time := 1.0
 
 func _ready() -> void:
 	$WindUp.wait_time=attack_cooldown

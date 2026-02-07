@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bmol167bteymt"]
 
-[ext_resource type="Script" uid="uid://c3wid6dajx0wy" path="res://patrol_around.gd" id="1_unfwp"]
+[ext_resource type="Script" uid="uid://c3wid6dajx0wy" path="res://enemies/behaviors/patrol_around.gd" id="1_unfwp"]
 
 [node name="PatrolAround" type="Node3D" unique_id=438560549]
 script = ExtResource("1_unfwp")

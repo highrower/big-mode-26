@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dvjhbl1c7l0xb"]
+
+[ext_resource type="Script" uid="uid://4vluuidqytgm" path="res://enemies/police_shoots_enemy.gd" id="1_mcj7i"]
+[ext_resource type="PackedScene" uid="uid://c21rdyc5x7pu3" path="res://enemies/behaviors/PlayerSight.tscn" id="2_1myxl"]
+[ext_resource type="PackedScene" uid="uid://chgyxk5kpa17n" path="res://enemies/behaviors/chase_player.tscn" id="3_f3f4o"]
+[ext_resource type="PackedScene" uid="uid://bmol167bteymt" path="res://enemies/behaviors/patrol_around.tscn" id="4_umeqk"]
+[ext_resource type="PackedScene" uid="uid://bh6mbtifu4hhu" path="res://enemies/behaviors/can_die.tscn" id="6_7h03c"]
+[ext_resource type="PackedScene" uid="uid://4wrt57h1lqd1" path="res://enemies/behaviors/shoot_at.tscn" id="7_ojvr4"]
+[ext_resource type="PackedScene" uid="uid://vp2qh1qvpq0f" path="res://enemies/projectiles/canon_ball.tscn" id="8_1myxl"]
+[ext_resource type="PackedScene" uid="uid://7dep007iotkt" path="res://enemies/behaviors/turn_rotating.tscn" id="8_f3f4o"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ra0cx"]
+radius = 1.2
+height = 5.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ri42i"]
+radius = 1.2
+height = 5.0
+
+[node name="PoliceShootsEnemy" type="RigidBody3D" unique_id=962972829 groups=["damagable", "enemy_team"]]
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+script = ExtResource("1_mcj7i")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=403939388 groups=["rotating"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1286116, 0)
+mesh = SubResource("CapsuleMesh_ra0cx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=997524980]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.215332, 0)
+shape = SubResource("CapsuleShape3D_ri42i")
+
+[node name="PlayerSight" parent="." unique_id=1767067021 instance=ExtResource("2_1myxl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0637121, 0)
+
+[node name="ChasePlayer" parent="." unique_id=189868678 instance=ExtResource("3_f3f4o")]
+
+[node name="PatrolAround" parent="." unique_id=438560549 instance=ExtResource("4_umeqk")]
+
+[node name="CanDie" parent="." unique_id=1900563199 instance=ExtResource("6_7h03c")]
+
+[node name="ShootAt" parent="." unique_id=12334082 groups=["rotating"] instance=ExtResource("7_ojvr4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+muzzle_length = 1.5
+hitbox_radius = 1.0
+projectile_scene = ExtResource("8_1myxl")
+
+[node name="TurnRotating" parent="." unique_id=758092132 instance=ExtResource("8_f3f4o")]
