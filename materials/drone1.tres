@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dlakj6cvly8tf"]
+
+[ext_resource type="Texture2D" uid="uid://ckejb5s5ds4vg" path="res://textures/drone/drone1/drone_DefaultMaterial_BaseColor.png" id="1_755nt"]
+[ext_resource type="Texture2D" uid="uid://dwt7apr6avbol" path="res://textures/drone/drone1/drone_DefaultMaterial_Height.png" id="2_uyfcy"]
+[ext_resource type="Texture2D" uid="uid://q7vbp3j2422j" path="res://textures/drone/drone1/drone_DefaultMaterial_Metallic.png" id="3_57yno"]
+[ext_resource type="Texture2D" uid="uid://btyn2f8bdsxfa" path="res://textures/drone/drone1/drone_DefaultMaterial_Normal.png" id="4_0u0es"]
+[ext_resource type="Texture2D" uid="uid://b6sf60jrlgmot" path="res://textures/drone/drone1/drone_DefaultMaterial_Roughness.png" id="5_sjqu6"]
+
+[resource]
+albedo_texture = ExtResource("1_755nt")
+metallic = 1.0
+metallic_texture = ExtResource("3_57yno")
+roughness_texture = ExtResource("5_sjqu6")
+normal_enabled = true
+normal_texture = ExtResource("4_0u0es")
+heightmap_enabled = true
+heightmap_texture = ExtResource("2_uyfcy")

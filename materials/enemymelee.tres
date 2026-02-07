@@ -1,10 +1,10 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://dbj1evj0eymt1"]
 
-[ext_resource type="Texture2D" uid="uid://b6b8pihljjy85" path="res://textures/variant2/Enemy_export_Enemy_BaseColor.png" id="1_r2ira"]
-[ext_resource type="Texture2D" uid="uid://dn2bjql5pjsqw" path="res://textures/variant2/Enemy_export_Enemy_Height.png" id="2_b58qc"]
-[ext_resource type="Texture2D" uid="uid://bdnv07hvka3co" path="res://textures/variant2/Enemy_export_Enemy_Metallic.png" id="3_0om2g"]
-[ext_resource type="Texture2D" uid="uid://5emaafafpvsq" path="res://textures/variant2/Enemy_export_Enemy_Normal.png" id="4_b1sqd"]
-[ext_resource type="Texture2D" uid="uid://dp0kexklqnm6f" path="res://textures/variant2/Enemy_export_Enemy_Roughness.png" id="5_vfpev"]
+[ext_resource type="Texture2D" uid="uid://b6b8pihljjy85" path="res://textures/groundenemy/variant2/Enemy_export_Enemy_BaseColor.png" id="1_r2ira"]
+[ext_resource type="Texture2D" uid="uid://dn2bjql5pjsqw" path="res://textures/groundenemy/variant2/Enemy_export_Enemy_Height.png" id="2_b58qc"]
+[ext_resource type="Texture2D" uid="uid://bdnv07hvka3co" path="res://textures/groundenemy/variant2/Enemy_export_Enemy_Metallic.png" id="3_0om2g"]
+[ext_resource type="Texture2D" uid="uid://5emaafafpvsq" path="res://textures/groundenemy/variant2/Enemy_export_Enemy_Normal.png" id="4_b1sqd"]
+[ext_resource type="Texture2D" uid="uid://dp0kexklqnm6f" path="res://textures/groundenemy/variant2/Enemy_export_Enemy_Roughness.png" id="5_vfpev"]
 
 [resource]
 albedo_texture = ExtResource("1_r2ira")

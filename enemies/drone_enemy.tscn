@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://daxil0vsncdqe" path="res://enemies/drone_enemy.gd" id="1_jliw0"]
 [ext_resource type="PackedScene" uid="uid://g32hqu0i7d61" path="res://enemies/behaviors/flying.tscn" id="2_mef8y"]
+[ext_resource type="PackedScene" uid="uid://dlb8mdiivpt7y" path="res://Assets/Enemy/drone.glb" id="2_rcqjx"]
 [ext_resource type="PackedScene" uid="uid://dd3o21l4fnrfu" path="res://enemies/behaviors/hit_player.tscn" id="4_fgf2u"]
 [ext_resource type="PackedScene" uid="uid://c21rdyc5x7pu3" path="res://enemies/behaviors/PlayerSight.tscn" id="5_fgf2u"]
 [ext_resource type="PackedScene" uid="uid://c743qksbmstsu" path="res://enemies/behaviors/move_toward.tscn" id="5_kk2he"]
@@ -26,7 +27,12 @@ health = 100.0
 shape = SubResource("SphereShape3D_j17pf")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=473484263 groups=["damagable", "enemy_team"]]
+transform = Transform3D(0.99999845, -0.0011718086, 0.0013046067, 0.0011697352, 0.999998, 0.0015744647, -0.0013064661, -0.0015729222, 0.99999785, 0, 0, 0)
+layers = 0
 mesh = SubResource("SphereMesh_jliw0")
+
+[node name="drone2" parent="MeshInstance3D" unique_id=1381658929 instance=ExtResource("2_rcqjx")]
+transform = Transform3D(-0.010989464, 0.010291541, -1.9999439, -0.010585047, 1.9999449, 0.01034973, 1.9999412, 0.01064164, -0.010934668, -0.12534624, -1.8199407, 0.16111165)
 
 [node name="Flying" parent="." unique_id=1504551945 instance=ExtResource("2_mef8y")]
 

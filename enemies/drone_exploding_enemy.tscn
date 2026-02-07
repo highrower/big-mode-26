@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://daxil0vsncdqe" path="res://enemies/drone_enemy.gd" id="1_k18uy"]
 [ext_resource type="PackedScene" uid="uid://g32hqu0i7d61" path="res://enemies/behaviors/flying.tscn" id="2_ugkfu"]
+[ext_resource type="Material" uid="uid://cns7th0faab7w" path="res://materials/drone2.tres" id="3_g402h"]
 [ext_resource type="PackedScene" uid="uid://c21rdyc5x7pu3" path="res://enemies/behaviors/PlayerSight.tscn" id="4_g402h"]
+[ext_resource type="ArrayMesh" uid="uid://bnlo1lhcgu4yn" path="res://Assets/Enemy/drone.obj" id="4_w8n0s"]
 [ext_resource type="PackedScene" uid="uid://c743qksbmstsu" path="res://enemies/behaviors/move_toward.tscn" id="5_w8n0s"]
 [ext_resource type="PackedScene" uid="uid://dm68wavnp73l4" path="res://enemies/behaviors/die_leave_corpse_exploed.tscn" id="6_xawvv"]
 [ext_resource type="PackedScene" uid="uid://bmol167bteymt" path="res://enemies/behaviors/patrol_around.tscn" id="7_tdbx6"]
@@ -26,7 +28,14 @@ health = 100.0
 shape = SubResource("SphereShape3D_j17pf")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=473484263]
+layers = 0
+material_override = ExtResource("3_g402h")
 mesh = SubResource("SphereMesh_jliw0")
+
+[node name="Drone" type="MeshInstance3D" parent="MeshInstance3D" unique_id=152675599]
+transform = Transform3D(1.1456875e-09, 0, -0.05088878, 0, 0.051932465, 0, 0.04863079, 0, -2.3965812e-09, -0.101279944, -1.7565081, 0.12579277)
+material_override = ExtResource("3_g402h")
+mesh = ExtResource("4_w8n0s")
 
 [node name="Flying" parent="." unique_id=1504551945 instance=ExtResource("2_ugkfu")]
 

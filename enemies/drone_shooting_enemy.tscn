@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://dy1epdwu16t2i"]
 
 [ext_resource type="Script" uid="uid://drm6sr5clc8o4" path="res://enemies/drone_shooting_enemy.gd" id="1_6nryf"]
+[ext_resource type="Material" uid="uid://cucfjbka52033" path="res://materials/drone3.tres" id="2_a8xoj"]
 [ext_resource type="PackedScene" uid="uid://g32hqu0i7d61" path="res://enemies/behaviors/flying.tscn" id="2_ehwu8"]
+[ext_resource type="ArrayMesh" uid="uid://bnlo1lhcgu4yn" path="res://Assets/Enemy/drone.obj" id="3_py8ek"]
 [ext_resource type="PackedScene" uid="uid://c21rdyc5x7pu3" path="res://enemies/behaviors/PlayerSight.tscn" id="4_py8ek"]
 [ext_resource type="PackedScene" uid="uid://c743qksbmstsu" path="res://enemies/behaviors/move_toward.tscn" id="5_hqlxa"]
 [ext_resource type="PackedScene" uid="uid://bh6mbtifu4hhu" path="res://enemies/behaviors/can_die.tscn" id="6_8iocy"]
@@ -26,7 +28,14 @@ script = ExtResource("1_6nryf")
 shape = SubResource("SphereShape3D_j17pf")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=473484263 groups=["damagable", "enemy_team"]]
+layers = 0
+material_override = ExtResource("2_a8xoj")
 mesh = SubResource("SphereMesh_jliw0")
+
+[node name="Drone" type="MeshInstance3D" parent="MeshInstance3D" unique_id=1261561910]
+transform = Transform3D(1.1456875e-09, 0, -0.05088878, 0, 0.051932465, 0, 0.04863079, 0, -2.3965812e-09, -0.101279944, -1.7565081, 0.12579277)
+material_override = ExtResource("2_a8xoj")
+mesh = ExtResource("3_py8ek")
 
 [node name="Flying" parent="." unique_id=1504551945 instance=ExtResource("2_ehwu8")]
 

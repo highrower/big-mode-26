@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://vp2qh1qvpq0f"]
 
 [ext_resource type="Script" uid="uid://bw7s3ihjj2hrf" path="res://enemies/projectiles/canon_ball.gd" id="1_pcn56"]
+[ext_resource type="PackedScene" uid="uid://bq726h6y5yj13" path="res://enemies/projectiles/baseball.glb" id="2_3bq7v"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_3bq7v"]
 resource_local_to_scene = true
@@ -14,4 +15,8 @@ script = ExtResource("1_pcn56")
 shape = SubResource("SphereShape3D_3bq7v")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1804312796]
+layers = 0
 mesh = SubResource("SphereMesh_qmb2e")
+
+[node name="baseball" parent="MeshInstance3D" unique_id=1858692539 instance=ExtResource("2_3bq7v")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 19.601059, -7.5274143, -0.075508595)
