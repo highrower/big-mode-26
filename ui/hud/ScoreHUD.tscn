@@ -1,13 +1,27 @@
 [gd_scene format=3 uid="uid://dsj211ax14nqf"]
 
+[ext_resource type="Shader" uid="uid://qg7k7s1ucco" path="res://ui/hud/ScoreSpeedometer.gdshader" id="1_citqp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5lotn"]
+shader = ExtResource("1_citqp")
+shader_parameter/progress = 0.65
+shader_parameter/inner_radius = 0.3
+shader_parameter/outer_radius = 0.45
+shader_parameter/start_angle = 3.9269907
+shader_parameter/sweep_angle = 4.1887903
+shader_parameter/fill_color = Color(0.2, 0.7, 1, 1)
+shader_parameter/back_color = Color(0.1, 0.1, 0.1, 0.35)
+
 [node name="ScoreHud" type="CanvasLayer" unique_id=306346318]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2013478070]
+[node name="Control" type="Control" parent="." unique_id=912530235]
+layout_mode = 3
+anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=384215141]
-layout_mode = 2
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=2010165922]
-layout_mode = 2
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=915208775]
+material = SubResource("ShaderMaterial_5lotn")
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 256.0
