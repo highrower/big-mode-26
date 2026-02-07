@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://h2xotxmtsvq0" path="res://player/movement/player.tscn" id="1_w0yvr"]
 [ext_resource type="PackedScene" uid="uid://ckprci1fnwa1i" path="res://enemies/police_enemy.tscn" id="2_3j3h8"]
 [ext_resource type="PackedScene" uid="uid://c71une4c2sj72" path="res://Assets/World Props/Building test.glb" id="2_xemno"]
-[ext_resource type="PackedScene" uid="uid://brnu267ab7h6q" path="res://Assets/World Props/Road fill.glb" id="3_eghjr"]
 [ext_resource type="ArrayMesh" uid="uid://cqn1itm5xo5nv" path="res://Assets/destrutableprops/mailbox.obj" id="3_fbbyy"]
 [ext_resource type="PackedScene" uid="uid://fyvcood5w365" path="res://Assets/World Props/Roads.glb" id="3_rojaj"]
 [ext_resource type="PackedScene" uid="uid://dtkmtl3oc8x5q" path="res://enemies/spawners/spawner.tscn" id="3_u15jy"]
@@ -11,8 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://dmmpcn8yivd8c" path="res://Assets/World Props/Pillar.glb" id="4_eghjr"]
 [ext_resource type="Script" uid="uid://crwsxdoysoqpp" path="res://systems/audio/music_manager.gd" id="4_q0ook"]
 [ext_resource type="PackedScene" uid="uid://bw456cvak5564" path="res://enemies/drone_exploding_enemy.tscn" id="4_wu3ua"]
+[ext_resource type="PackedScene" uid="uid://chc832wlcuiam" path="res://Assets/World Props/Road Collider.glb" id="5_c8jah"]
 [ext_resource type="PackedScene" uid="uid://bsf1qsdotu57v" path="res://enemies/heli_shooting_enemy.tscn" id="5_k2est"]
 [ext_resource type="PackedScene" uid="uid://3xdhf2c8t1lj" path="res://enemies/police_enemy_stronger.tscn" id="6_d12ac"]
+[ext_resource type="PackedScene" uid="uid://6ttet7vf3pn6" path="res://Assets/World Props/Road Patch.glb" id="6_mmcgr"]
 [ext_resource type="PackedScene" uid="uid://byo5cbcjucood" path="res://enemies/police_enemy_bigger.tscn" id="7_1swxr"]
 [ext_resource type="PackedScene" uid="uid://camunn3dh5myq" path="res://enemies/police_explodes_enemy.tscn" id="8_fbbyy"]
 [ext_resource type="Texture2D" uid="uid://b1ila1eqmjo35" path="res://Assets/destrutableprops/mailbox_M_01___Defaultbasecolortexture.png" id="13_tvkxs"]
@@ -484,17 +485,11 @@ transform = Transform3D(0.57854116, 0, 0.8156532, 0, 1, 0, -0.8156532, 0, 0.5785
 [node name="Roads" parent="NavigationRegion3D/Main building and road" unique_id=742631485 instance=ExtResource("3_rojaj")]
 transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 179.09717, -3.7048225, 0)
 
-[node name="Road fill" parent="NavigationRegion3D/Main building and road" unique_id=1459178578 instance=ExtResource("3_eghjr")]
-transform = Transform3D(14.374715, -0.6459968, 13.890658, 1.0576922, 19.971329, -0.16576695, -13.865388, 0.85374475, 14.38827, 182.49666, 34.091125, 10.658747)
-
-[node name="Road fill2" parent="NavigationRegion3D/Main building and road" unique_id=830960460 instance=ExtResource("3_eghjr")]
-transform = Transform3D(14.537489, -2.2204465e-15, 13.735412, 0.35140315, 19.993458, -0.37192327, -13.730916, 0.51167476, 14.532731, 199.53, 34.926952, -7.6456184)
-
 [node name="Pillar" parent="NavigationRegion3D/Main building and road" unique_id=878814001 instance=ExtResource("4_eghjr")]
-transform = Transform3D(10.342018, 0, -10.864744, 0, 15, 0, 10.864744, 0, 10.342018, 206.89688, 15.678442, -5.747673)
+transform = Transform3D(10.342018, 0, -10.864744, 0, 15, 0, 10.864744, 0, 10.342018, 206.89688, 14.0977, -5.747673)
 
 [node name="Pillar2" parent="NavigationRegion3D/Main building and road" unique_id=512638088 instance=ExtResource("4_eghjr")]
-transform = Transform3D(10.342018, 0, -10.864744, 0, 15, 0, 10.864744, 0, 10.342018, 189.15202, 16.41334, -25.512817)
+transform = Transform3D(10.342018, 0, -10.864744, 0, 15, 0, 10.864744, 0, 10.342018, 189.15202, 15.324327, -25.512817)
 
 [node name="Pillar3" parent="NavigationRegion3D/Main building and road" unique_id=559835500 instance=ExtResource("4_eghjr")]
 transform = Transform3D(4.895403, 0, -14.178682, 0, 15, 0, 14.178682, 0, 4.895403, 480.71368, 16.25264, 129.96407)
@@ -548,6 +543,13 @@ use_collision = true
 polygon = PackedVector2Array(-6.2527237, -9.341865, -57.686264, -9.3422785, -104.00537, -8.148763, -43.089336, 3.5832396, 14.817383, 15.742017, 56.993835, 24.828293, 55.465515, 1.534545, 56.480774, -7.9964314)
 depth = 38.0
 material = SubResource("StandardMaterial3D_eghjr")
+
+[node name="Road Collider2" parent="NavigationRegion3D/Main building and road" unique_id=393598737 instance=ExtResource("5_c8jah")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 178.866, -3.8, 0)
+visible = false
+
+[node name="Road Patch" parent="NavigationRegion3D/Main building and road" unique_id=1886982018 instance=ExtResource("6_mmcgr")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 185.56934, 33.930428, -0.8148804)
 
 [node name="Spawner" parent="." unique_id=447969390 instance=ExtResource("3_u15jy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.14258, 34.34858, -16.0542)
