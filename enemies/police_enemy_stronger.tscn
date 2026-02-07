@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bh6mbtifu4hhu" path="res://enemies/behaviors/can_die.tscn" id="4_mmnkv"]
 [ext_resource type="PackedScene" uid="uid://bmol167bteymt" path="res://enemies/behaviors/patrol_around.tscn" id="5_s43la"]
 [ext_resource type="PackedScene" uid="uid://dd3o21l4fnrfu" path="res://enemies/behaviors/hit_player.tscn" id="6_ddca8"]
+[ext_resource type="PackedScene" uid="uid://bpodea7eihq7i" path="res://enemies/behaviors/turn_rotating.tscn" id="7_fymh5"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_qrn2b"]
 radius = 1.2
@@ -43,3 +44,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0637121, 0)
 [node name="HitPlayer" parent="." unique_id=243545642 instance=ExtResource("6_ddca8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 damage = 50.0
+
+[node name="TurnRotating" parent="." unique_id=758092132 instance=ExtResource("7_fymh5")]
