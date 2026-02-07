@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://brdgokfv75p5d"]
+
+[ext_resource type="Script" uid="uid://bwbv80j64lod4" path="res://enemies/projectiles/bomb.gd" id="1_i6fkq"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ean2q"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_3liq4"]
+
+[node name="Bomb" type="CharacterBody3D" unique_id=1954505399]
+script = ExtResource("1_i6fkq")
+speed = null
+target = null
+damage = null
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=221308613]
+shape = SubResource("SphereShape3D_ean2q")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=598620615]
+mesh = SubResource("SphereMesh_3liq4")

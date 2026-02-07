@@ -16,6 +16,7 @@ func _behaviour_manager(delta: float):
 		if child is Behaviour and child.enabled:
 			child.execute(self,delta)
 
+
 func take_damage(damage):
 	self.health-=damage
 	#print("Dummy Health:"+str(health))

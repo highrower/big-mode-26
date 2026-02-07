@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://7dep007iotkt"]
+
+[ext_resource type="Script" uid="uid://blya68cssnse6" path="res://enemies/behaviors/turn_rotating.gd" id="1_xp472"]
+
+[node name="TurnRotating" type="Node3D" unique_id=758092132]
+script = ExtResource("1_xp472")
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1889856107]

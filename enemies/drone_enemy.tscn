@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bkyptneenqk0y"]
+
+[ext_resource type="Script" uid="uid://daxil0vsncdqe" path="res://enemies/drone_enemy.gd" id="1_jliw0"]
+[ext_resource type="PackedScene" uid="uid://g32hqu0i7d61" path="res://enemies/behaviors/flying.tscn" id="2_mef8y"]
+[ext_resource type="PackedScene" uid="uid://dd3o21l4fnrfu" path="res://enemies/behaviors/hit_player.tscn" id="4_fgf2u"]
+[ext_resource type="PackedScene" uid="uid://c21rdyc5x7pu3" path="res://enemies/behaviors/PlayerSight.tscn" id="5_fgf2u"]
+[ext_resource type="PackedScene" uid="uid://c743qksbmstsu" path="res://enemies/behaviors/move_toward.tscn" id="5_kk2he"]
+[ext_resource type="PackedScene" uid="uid://bh6mbtifu4hhu" path="res://enemies/behaviors/can_die.tscn" id="6_kk2he"]
+[ext_resource type="PackedScene" uid="uid://bmol167bteymt" path="res://enemies/behaviors/patrol_around.tscn" id="7_gwxp8"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_j17pf"]
+radius = 2.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_jliw0"]
+radius = 2.0
+height = 4.0
+
+[node name="DroneEnemy" type="RigidBody3D" unique_id=1337185290 groups=["damagable", "enemy_team"]]
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+script = ExtResource("1_jliw0")
+health = 100.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1095768195]
+shape = SubResource("SphereShape3D_j17pf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=473484263 groups=["damagable", "enemy_team"]]
+mesh = SubResource("SphereMesh_jliw0")
+
+[node name="Flying" parent="." unique_id=1504551945 instance=ExtResource("2_mef8y")]
+
+[node name="HitPlayer" parent="." unique_id=243545642 instance=ExtResource("4_fgf2u")]
+
+[node name="PlayerSight" parent="." unique_id=83948702 instance=ExtResource("5_fgf2u")]
+updatetimer = 0.2
+
+[node name="MoveToward" parent="." unique_id=189868678 instance=ExtResource("5_kk2he")]
+
+[node name="CanDie" parent="." unique_id=1900563199 instance=ExtResource("6_kk2he")]
+
+[node name="PatrolAround" parent="." unique_id=438560549 instance=ExtResource("7_gwxp8")]

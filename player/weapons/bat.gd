@@ -14,11 +14,18 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("attack") and can_attack:
 		can_attack = false
+		#Placeholder Animation Tween for Macks!
+		var tween = create_tween()
+		tween.tween_property($TempAnim,"rotation:y",-PI,0.3)
+		tween.tween_property($TempAnim,"rotation:y",0.0,0.1)
+		#this is probably horrible please delete this later, I'm not killing the tween here since that doesn't make the animation play??
 		Cooldown.start()
 		if has_overlapping_bodies():
 			for i in get_overlapping_bodies():
 				if i.is_in_group("enemy_team") and i.is_in_group("damagable"):
 					hit(i)
+				if i.is_in_group("parryable"):
+					i.parry()
 
 func hit(target):
 	target.take_damage(damage)

@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://dd3o21l4fnrfu"]
 
-[ext_resource type="Script" uid="uid://1ole826a4xrk" path="res://hit_player.gd" id="1_iwduq"]
+[ext_resource type="Script" uid="uid://1ole826a4xrk" path="res://enemies/behaviors/hit_player.gd" id="1_iwduq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b3fft"]
 size = Vector3(9, 3, 9)
+
+[sub_resource type="BoxMesh" id="BoxMesh_iwduq"]
+size = Vector3(7, 1, 1)
 
 [node name="HitPlayer" type="Node3D" unique_id=243545642]
 script = ExtResource("1_iwduq")
@@ -16,6 +19,12 @@ shape = SubResource("BoxShape3D_b3fft")
 [node name="WindUp" type="Timer" parent="." unique_id=85071792]
 
 [node name="Cooldown" type="Timer" parent="." unique_id=1751777276]
+
+[node name="TempAnim" type="Node3D" parent="." unique_id=398387084]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TempAnim" unique_id=1892355715]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4255466, 0, 0)
+mesh = SubResource("BoxMesh_iwduq")
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
 [connection signal="timeout" from="WindUp" to="." method="_on_wind_up_timeout"]

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://vp2qh1qvpq0f"]
+
+[ext_resource type="Script" uid="uid://bw7s3ihjj2hrf" path="res://enemies/projectiles/canon_ball.gd" id="1_pcn56"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_3bq7v"]
+resource_local_to_scene = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_qmb2e"]
+
+[node name="CanonBall" type="CharacterBody3D" unique_id=205635804 groups=["parryable"]]
+script = ExtResource("1_pcn56")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=416801603]
+shape = SubResource("SphereShape3D_3bq7v")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1804312796]
+mesh = SubResource("SphereMesh_qmb2e")

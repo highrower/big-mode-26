@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://byo5cbcjucood"]
+
+[ext_resource type="Script" uid="uid://ddm5r06d23efc" path="res://enemies/police_enemy.gd" id="1_5b4re"]
+[ext_resource type="PackedScene" uid="uid://c21rdyc5x7pu3" path="res://enemies/behaviors/PlayerSight.tscn" id="2_glate"]
+[ext_resource type="PackedScene" uid="uid://chgyxk5kpa17n" path="res://enemies/behaviors/chase_player.tscn" id="3_owgsy"]
+[ext_resource type="PackedScene" uid="uid://bh6mbtifu4hhu" path="res://enemies/behaviors/can_die.tscn" id="4_nkvct"]
+[ext_resource type="PackedScene" uid="uid://bmol167bteymt" path="res://enemies/behaviors/patrol_around.tscn" id="5_m2g0c"]
+[ext_resource type="PackedScene" uid="uid://dd3o21l4fnrfu" path="res://enemies/behaviors/hit_player.tscn" id="6_n4eut"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ra0cx"]
+radius = 3.0
+height = 10.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ri42i"]
+resource_local_to_scene = true
+radius = 3.0
+height = 10.0
+
+[node name="PoliceEnemyBigger" type="RigidBody3D" unique_id=962972829 groups=["damagable", "enemy_team"]]
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+script = ExtResource("1_5b4re")
+chase_speed = 30.0
+patrol_speed = 10.0
+health = 600.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=403939388]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1286116, 0)
+mesh = SubResource("CapsuleMesh_ra0cx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=997524980]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.215332, 0)
+shape = SubResource("CapsuleShape3D_ri42i")
+
+[node name="PlayerSight" parent="." unique_id=1767067021 instance=ExtResource("2_glate")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0637121, 0)
+
+[node name="ChasePlayer" parent="." unique_id=189868678 instance=ExtResource("3_owgsy")]
+
+[node name="CanDie" parent="." unique_id=1900563199 instance=ExtResource("4_nkvct")]
+
+[node name="PatrolAround" parent="." unique_id=438560549 instance=ExtResource("5_m2g0c")]
+
+[node name="HitPlayer" parent="." unique_id=243545642 instance=ExtResource("6_n4eut")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+damage = 60.0
+windup_time = 3.0
