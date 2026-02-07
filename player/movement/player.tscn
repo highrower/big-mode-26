@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://celmm8w4lataj" path="res://player/movement/hoverboard.fbx" id="5_vuopl"]
 [ext_resource type="PackedScene" uid="uid://cfxu8l7pwlof3" path="res://player/weapons/bat.tscn" id="5_wa6sx"]
 [ext_resource type="Script" uid="uid://dap041ridrkje" path="res://player/drift_manager.gd" id="7_vuopl"]
+[ext_resource type="PackedScene" uid="uid://bv1ioe4rqhxqm" path="res://player/player_model.tscn" id="8_x6hbi"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g1dw6"]
 friction = 0.0
@@ -85,6 +86,7 @@ transform = Transform3D(35, 0, 0, 0, 15, 0, 0, 0, 35, 0, 2.5374322, 0)
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1716787854]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1670003, 0)
+visible = false
 mesh = SubResource("CapsuleMesh_tdtx0")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=811608318]
@@ -95,3 +97,6 @@ shape = SubResource("CapsuleShape3D_wa6sx")
 
 [node name="DriftManager" type="Node" parent="." unique_id=282060390]
 script = ExtResource("7_vuopl")
+
+[node name="PlayerModelHolder" parent="." unique_id=624723337 instance=ExtResource("8_x6hbi")]
+transform = Transform3D(-3, 0, 2.6226832e-07, 0, 3, 0, -2.6226832e-07, 0, -3, 0, 0, 0)

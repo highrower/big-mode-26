@@ -2,8 +2,8 @@ extends Node3D
 
 @export var animation_ease: float = 5.0
 
-@onready var player_animations: AnimationPlayer = $PlayerAnimations
-@onready var animation_tree: AnimationTree = $AnimationTree
+@onready var player_animations: AnimationPlayer = $"Player Model/PlayerAnimations"
+@onready var animation_tree: AnimationTree = $"Player Model/AnimationTree"
 @onready var playback: AnimationNodeStateMachinePlayback = animation_tree["parameters/playback"]
 
 var run_weight_target :Vector2

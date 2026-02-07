@@ -33,6 +33,7 @@ advance_mode = 2
 "states/Hover Pivot/node" = SubResource("AnimationNodeBlendSpace2D_b6qoi")
 "states/Hover Pivot/position" = Vector2(560, 66)
 transitions = ["Start", "Hover Pivot", SubResource("AnimationNodeStateMachineTransition_nis8b")]
+graph_offset = Vector2(4, -47)
 
 [node name="PlayerModelHolder" type="Node3D" unique_id=624723337]
 script = ExtResource("1_nis8b")
