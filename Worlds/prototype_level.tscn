@@ -3,10 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://h2xotxmtsvq0" path="res://player/movement/player.tscn" id="1_w0yvr"]
 [ext_resource type="PackedScene" uid="uid://ckprci1fnwa1i" path="res://enemies/police_enemy.tscn" id="2_3j3h8"]
 [ext_resource type="PackedScene" uid="uid://c71une4c2sj72" path="res://Assets/World Props/Building test.glb" id="2_xemno"]
+[ext_resource type="PackedScene" uid="uid://brnu267ab7h6q" path="res://Assets/World Props/Road fill.glb" id="3_eghjr"]
 [ext_resource type="ArrayMesh" uid="uid://cqn1itm5xo5nv" path="res://Assets/destrutableprops/mailbox.obj" id="3_fbbyy"]
+[ext_resource type="PackedScene" uid="uid://fyvcood5w365" path="res://Assets/World Props/Roads.glb" id="3_rojaj"]
 [ext_resource type="PackedScene" uid="uid://dtkmtl3oc8x5q" path="res://enemies/spawners/spawner.tscn" id="3_u15jy"]
-[ext_resource type="PackedScene" uid="uid://urryfii606jd" path="res://Assets/World Props/Road test.glb" id="3_wu3ua"]
 [ext_resource type="PackedScene" uid="uid://dy1epdwu16t2i" path="res://enemies/drone_shooting_enemy.tscn" id="3_xemno"]
+[ext_resource type="PackedScene" uid="uid://dmmpcn8yivd8c" path="res://Assets/World Props/Pillar.glb" id="4_eghjr"]
 [ext_resource type="Script" uid="uid://crwsxdoysoqpp" path="res://systems/audio/music_manager.gd" id="4_q0ook"]
 [ext_resource type="PackedScene" uid="uid://bw456cvak5564" path="res://enemies/drone_exploding_enemy.tscn" id="4_wu3ua"]
 [ext_resource type="PackedScene" uid="uid://bsf1qsdotu57v" path="res://enemies/heli_shooting_enemy.tscn" id="5_k2est"]
@@ -56,6 +58,9 @@ albedo_color = Color(0.17283279, 0.17283264, 0.17283267, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u15jy"]
 albedo_color = Color(0.37413925, 0.37413928, 0.37413922, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eghjr"]
+albedo_color = Color(0.58141565, 0.59433883, 0.6156899, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c8jah"]
 albedo_texture = ExtResource("13_tvkxs")
@@ -114,7 +119,7 @@ depth = 20.0
 material = SubResource("StandardMaterial3D_w0yvr")
 
 [node name="Big bump" type="CSGPolygon3D" parent="NavigationRegion3D/Colliders" unique_id=1677994094]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.341171, 0.030997515, -303.7479)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 565.1793, 0.030997276, -283.98254)
 use_collision = true
 polygon = PackedVector2Array(-0.5280762, 0.0009647012, -8.977936, 0.029990435, -3.9727669, 2.2755847, -0.5935974, 2.2943058, 2.7949295, 2.2568636, 7.4110794, 0.039851487)
 depth = 20.0
@@ -148,7 +153,7 @@ spin_sides = 8
 material = SubResource("StandardMaterial3D_w0yvr")
 
 [node name="Big bump2" type="CSGPolygon3D" parent="NavigationRegion3D/Colliders" unique_id=1702112172]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.341171, 0.030997515, -336.52118)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 565.1793, 0.030997276, -316.75583)
 use_collision = true
 polygon = PackedVector2Array(-0.5280762, 0.0009647012, -8.977936, 0.029990435, -3.9727669, 2.2755847, -0.5935974, 2.2943058, 2.7949295, 2.2568636, 7.4110794, 0.039851487)
 depth = 20.0
@@ -437,7 +442,7 @@ size = Vector3(50, 100, 50)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Ground" type="CSGBox3D" parent="NavigationRegion3D/World props" unique_id=523607595]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 196.37497, -7.6293945e-06, -7.362709)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 196.39676, 0.17255402, -7.185356)
 use_collision = true
 size = Vector3(792.6632, 1, 438.90027)
 material = SubResource("StandardMaterial3D_573st")
@@ -476,11 +481,73 @@ transform = Transform3D(0.34238094, 0, 0.93956125, 0, 1, 0, -0.93956125, 0, 0.34
 [node name="Building test6" parent="NavigationRegion3D/Main building and road" unique_id=1170139872 instance=ExtResource("2_xemno")]
 transform = Transform3D(0.57854116, 0, 0.8156532, 0, 1, 0, -0.8156532, 0, 0.57854116, 471.54224, 44.671173, -17.93293)
 
-[node name="Road test" parent="NavigationRegion3D/Main building and road" unique_id=186258756 instance=ExtResource("3_wu3ua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 169.822, 0.5, -3.3984451)
+[node name="Roads" parent="NavigationRegion3D/Main building and road" unique_id=742631485 instance=ExtResource("3_rojaj")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 179.09717, -3.7048225, 0)
 
-[node name="Road test2" parent="NavigationRegion3D/Main building and road" unique_id=1391581336 instance=ExtResource("3_wu3ua")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 197.64568, 0.5, -0.36793518)
+[node name="Road fill" parent="NavigationRegion3D/Main building and road" unique_id=1459178578 instance=ExtResource("3_eghjr")]
+transform = Transform3D(14.374715, -0.6459968, 13.890658, 1.0576922, 19.971329, -0.16576695, -13.865388, 0.85374475, 14.38827, 182.49666, 34.091125, 10.658747)
+
+[node name="Road fill2" parent="NavigationRegion3D/Main building and road" unique_id=830960460 instance=ExtResource("3_eghjr")]
+transform = Transform3D(14.537489, -2.2204465e-15, 13.735412, 0.35140315, 19.993458, -0.37192327, -13.730916, 0.51167476, 14.532731, 199.53, 34.926952, -7.6456184)
+
+[node name="Pillar" parent="NavigationRegion3D/Main building and road" unique_id=878814001 instance=ExtResource("4_eghjr")]
+transform = Transform3D(10.342018, 0, -10.864744, 0, 15, 0, 10.864744, 0, 10.342018, 206.89688, 15.678442, -5.747673)
+
+[node name="Pillar2" parent="NavigationRegion3D/Main building and road" unique_id=512638088 instance=ExtResource("4_eghjr")]
+transform = Transform3D(10.342018, 0, -10.864744, 0, 15, 0, 10.864744, 0, 10.342018, 189.15202, 16.41334, -25.512817)
+
+[node name="Pillar3" parent="NavigationRegion3D/Main building and road" unique_id=559835500 instance=ExtResource("4_eghjr")]
+transform = Transform3D(4.895403, 0, -14.178682, 0, 15, 0, 14.178682, 0, 4.895403, 480.71368, 16.25264, 129.96407)
+
+[node name="Pillar4" parent="NavigationRegion3D/Main building and road" unique_id=193716217 instance=ExtResource("4_eghjr")]
+transform = Transform3D(4.895403, 0, -14.178682, 0, 15, 0, 14.178682, 0, 4.895403, 472.7807, 13.092777, 106.31123)
+
+[node name="Pillar5" parent="NavigationRegion3D/Main building and road" unique_id=49399160 instance=ExtResource("4_eghjr")]
+transform = Transform3D(-6.3494735, 1.3969839e-08, -13.589856, -0.310926, 14.996073, 0.14527135, 13.5863, 0.3431891, -6.3478117, 471.49677, 13.674036, -115.29493)
+
+[node name="Pillar6" parent="NavigationRegion3D/Main building and road" unique_id=1307096345 instance=ExtResource("4_eghjr")]
+transform = Transform3D(-6.349473, 0, -13.589856, 0, 15, 0, 13.589856, 0, -6.349473, 482.25665, 16.410378, -137.80301)
+
+[node name="Pillar9" parent="NavigationRegion3D/Main building and road" unique_id=1277711581 instance=ExtResource("4_eghjr")]
+transform = Transform3D(9.235673, 0.30595216, -11.815617, -0.310926, 14.996073, 0.14527135, 11.815485, 0.15547357, 9.239595, 324.88647, 13.702396, -116.65439)
+
+[node name="Pillar10" parent="NavigationRegion3D/Main building and road" unique_id=1437018645 instance=ExtResource("4_eghjr")]
+transform = Transform3D(9.238844, 0, -11.817097, 0, 15, 0, 11.817097, 0, 9.238844, 309.69507, 16.438738, -136.44354)
+
+[node name="Pillar7" parent="NavigationRegion3D/Main building and road" unique_id=1081024186 instance=ExtResource("4_eghjr")]
+transform = Transform3D(14.997062, 0, -0.29686013, 0, 15, 0, 0.29686013, 0, 14.997062, 566.84235, 16.414402, -4.7550163)
+
+[node name="Pillar8" parent="NavigationRegion3D/Main building and road" unique_id=180245582 instance=ExtResource("4_eghjr")]
+transform = Transform3D(14.997062, 0, -0.29686013, 0, 15, 0, 0.29686013, 0, 14.997062, 541.90485, 13.7379265, -5.46941)
+
+[node name="Road Ramp" type="CSGPolygon3D" parent="NavigationRegion3D/Main building and road" unique_id=570405495]
+transform = Transform3D(0.8189419, 0, -0.57387644, 0, 1, 0, 0.57387644, 0, 0.8189419, 267.5313, 7.6368685, 112.60957)
+visible = false
+use_collision = true
+polygon = PackedVector2Array(-8.088593, -6.689453, -30.195282, -7.9588957, -54.27014, -7.1389065, -28.840302, 1.0881071, 16.422699, 16.811779, 58.541565, 30.652843, 62.210815, 1.8927584, 61.733887, -8.37498)
+depth = 40.0
+material = SubResource("StandardMaterial3D_eghjr")
+
+[node name="Ramp Visual" type="CSGPolygon3D" parent="NavigationRegion3D/Main building and road" unique_id=1415207336]
+transform = Transform3D(0.8189419, 0, -0.57387644, 0, 1, 0, 0.57387644, 0, 0.8189419, 267.5313, 7.6368685, 112.60957)
+polygon = PackedVector2Array(-8.088593, -6.689453, -30.195282, -7.9588957, -49.932648, -8.480548, -27.689514, -2.0110502, 16.992432, 15.974569, 58.61682, 25.643364, 60.80365, 1.9268465, 61.733887, -8.37498)
+depth = 40.0
+material = SubResource("StandardMaterial3D_eghjr")
+
+[node name="Road Ramp2" type="CSGPolygon3D" parent="NavigationRegion3D/Main building and road" unique_id=1501869077]
+transform = Transform3D(0.7757159, 0, 0.6310821, 0, 1, 0, -0.6310821, 0, 0.7757159, 133.43143, 7.6368685, 67.929214)
+visible = false
+use_collision = true
+polygon = PackedVector2Array(-6.2527237, -9.341865, -57.686264, -9.3422785, -104.00537, -8.148763, -44.533997, 6.7110505, 14.228806, 18.932846, 59.314148, 28.517487, 62.210815, 1.8927584, 61.733887, -8.37498)
+depth = 40.0
+material = SubResource("StandardMaterial3D_eghjr")
+
+[node name="Ramp Visual2" type="CSGPolygon3D" parent="NavigationRegion3D/Main building and road" unique_id=812986991]
+transform = Transform3D(0.8008461, 0, 0.59886986, 0, 1, 0, -0.59886986, 0, 0.8008461, 134.04991, 7.6368685, 68.67923)
+use_collision = true
+polygon = PackedVector2Array(-6.2527237, -9.341865, -57.686264, -9.3422785, -104.00537, -8.148763, -43.089336, 3.5832396, 14.817383, 15.742017, 56.993835, 24.828293, 55.465515, 1.534545, 56.480774, -7.9964314)
+depth = 38.0
+material = SubResource("StandardMaterial3D_eghjr")
 
 [node name="PoliceEnemy" parent="." unique_id=962972829 instance=ExtResource("2_3j3h8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 26.010826, 0)
