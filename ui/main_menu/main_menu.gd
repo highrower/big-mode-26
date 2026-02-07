@@ -1,6 +1,6 @@
 extends Control
 
-@onready var start_button = $MarginContainer/VBoxContainer/StartButton
+@onready var start_button = $StartButton
 #@onready var quit_button = $VBoxContainer/QuitButton
 
 func _ready():
