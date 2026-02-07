@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dpn1pf70suwkt"]
+
+[ext_resource type="Texture2D" uid="uid://lndgaijfilc5" path="res://textures/variant3/Enemy_export_Enemy_BaseColor.png" id="1_e65sh"]
+[ext_resource type="Texture2D" uid="uid://bxekv782662a7" path="res://textures/variant3/Enemy_export_Enemy_Height.png" id="2_bl0ch"]
+[ext_resource type="Texture2D" uid="uid://byhhgvs01cmbe" path="res://textures/variant3/Enemy_export_Enemy_Metallic.png" id="3_m13jc"]
+[ext_resource type="Texture2D" uid="uid://dtlju5gyibs3l" path="res://textures/variant3/Enemy_export_Enemy_Normal.png" id="4_o62cl"]
+[ext_resource type="Texture2D" uid="uid://8ysolgsmrkfp" path="res://textures/variant3/Enemy_export_Enemy_Roughness.png" id="5_cbmqf"]
+
+[resource]
+albedo_texture = ExtResource("1_e65sh")
+metallic = 1.0
+metallic_texture = ExtResource("3_m13jc")
+roughness_texture = ExtResource("5_cbmqf")
+normal_enabled = true
+normal_texture = ExtResource("4_o62cl")
+heightmap_enabled = true
+heightmap_texture = ExtResource("2_bl0ch")

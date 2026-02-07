@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bh6mbtifu4hhu" path="res://enemies/behaviors/can_die.tscn" id="4_xt4sa"]
 [ext_resource type="PackedScene" uid="uid://bmol167bteymt" path="res://enemies/behaviors/patrol_around.tscn" id="5_6oxka"]
 [ext_resource type="PackedScene" uid="uid://dd3o21l4fnrfu" path="res://enemies/behaviors/hit_player.tscn" id="6_wnbo3"]
+[ext_resource type="PackedScene" uid="uid://btf2hv7lawc6v" path="res://enemies/enemy_model.tscn" id="7_2wq40"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ra0cx"]
 radius = 1.2
@@ -23,6 +24,7 @@ script = ExtResource("1_b6gg5")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=403939388]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1286116, 0)
+visible = false
 mesh = SubResource("CapsuleMesh_ra0cx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=997524980]
@@ -40,3 +42,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0637121, 0)
 
 [node name="HitPlayer" parent="." unique_id=243545642 instance=ExtResource("6_wnbo3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="EnemyModelHolder" parent="." unique_id=849311592 instance=ExtResource("7_2wq40")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -1, 0)
