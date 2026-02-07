@@ -76,6 +76,7 @@ visible = false
 
 [node name="Bat" parent="Node3D" unique_id=1849425671 instance=ExtResource("5_wa6sx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.3394232, -4.171708)
+CooldownTime = 0.2
 knockback = 50.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=984524865]

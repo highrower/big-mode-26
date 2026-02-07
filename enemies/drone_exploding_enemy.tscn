@@ -51,6 +51,6 @@ updatetimer = 0.2
 [node name="DieLeaveCorpseExploed" parent="." unique_id=1224519093 instance=ExtResource("6_xawvv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3450217, 0)
 explosion_power = 100.0
-damage_to_groups = Array[String](["player_team"])
+damage_to_groups = Array[String](["player_team", "enemy_team"])
 
 [node name="TurnRotating" parent="." unique_id=758092132 instance=ExtResource("9_n760w")]

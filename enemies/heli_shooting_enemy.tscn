@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://4wrt57h1lqd1" path="res://enemies/behaviors/shoot_at.tscn" id="7_18onk"]
 [ext_resource type="PackedScene" uid="uid://vp2qh1qvpq0f" path="res://enemies/projectiles/canon_ball.tscn" id="8_4f5j6"]
 [ext_resource type="PackedScene" uid="uid://dlb8mdiivpt7y" path="res://Assets/Enemy/drone.glb" id="9_6cayt"]
+[ext_resource type="PackedScene" uid="uid://bpodea7eihq7i" path="res://enemies/behaviors/turn_rotating.tscn" id="10_htqgd"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_25ah3"]
 resource_local_to_scene = true
@@ -58,11 +59,13 @@ cooldown_time = 0.5
 projectile_scene = ExtResource("8_4f5j6")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=2020319241 groups=["damagable", "enemy_team", "rotating"]]
-transform = Transform3D(0.99999845, -0.0011718086, 0.0013046067, 0.0011697352, 0.999998, 0.0015744647, -0.0013064661, -0.0015729222, 0.99999785, 0, 0, 0)
+transform = Transform3D(1.999997, -0.0023435797, 0.0026092473, 0.0023394704, 1.9999962, 0.003148902, -0.0026129324, -0.0031458451, 1.9999958, 0, 0, 0)
 layers = 0
 mesh = SubResource("SphereMesh_htqgd")
 
 [node name="drone2" parent="MeshInstance3D2" unique_id=1466024166 instance=ExtResource("9_6cayt")]
 transform = Transform3D(-0.010989464, 0.010291541, -1.9999439, -0.010585047, 1.9999449, 0.01034973, 1.9999412, 0.01064164, -0.010934668, -0.12534624, -1.8199407, 0.16111165)
+
+[node name="TurnRotating" parent="." unique_id=758092132 instance=ExtResource("10_htqgd")]
 
 [editable path="MeshInstance3D2/drone2"]

@@ -45,7 +45,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 [node name="DieLeaveCorpseExploed" parent="." unique_id=586919742 instance=ExtResource("6_gw4sp")]
 explosion_power = 100.0
 explosion_radius = 30.0
-damage_to_groups = Array[String](["player_team"])
+damage_to_groups = Array[String](["player_team", "enemy_team"])
 
 [node name="EnemyExplosion" parent="." unique_id=849311592 groups=["rotating"] instance=ExtResource("7_5icni")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -1.2276278, 0)
