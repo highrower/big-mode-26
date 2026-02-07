@@ -1,10 +1,15 @@
 [gd_scene format=3 uid="uid://uvj7miqi530m"]
 
 [ext_resource type="PackedScene" uid="uid://h2xotxmtsvq0" path="res://player/movement/player.tscn" id="1_w0yvr"]
-
 [ext_resource type="PackedScene" uid="uid://ckprci1fnwa1i" path="res://enemies/police_enemy.tscn" id="2_3j3h8"]
 [ext_resource type="PackedScene" uid="uid://dtkmtl3oc8x5q" path="res://enemies/spawners/spawner.tscn" id="3_u15jy"]
+[ext_resource type="PackedScene" uid="uid://dy1epdwu16t2i" path="res://enemies/drone_shooting_enemy.tscn" id="3_xemno"]
 [ext_resource type="Script" uid="uid://crwsxdoysoqpp" path="res://systems/audio/music_manager.gd" id="4_q0ook"]
+[ext_resource type="PackedScene" path="res://enemies/drone_exploding_enemy.tscn" id="4_wu3ua"]
+[ext_resource type="PackedScene" path="res://enemies/heli_shooting_enemy.tscn" id="5_k2est"]
+[ext_resource type="PackedScene" path="res://enemies/police_enemy_stronger.tscn" id="6_d12ac"]
+[ext_resource type="PackedScene" path="res://enemies/police_enemy_bigger.tscn" id="7_1swxr"]
+[ext_resource type="PackedScene" path="res://enemies/police_explodes_enemy.tscn" id="8_fbbyy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w0yvr"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -51,23 +56,8 @@ environment = SubResource("Environment_u15jy")
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Player" parent="." unique_id=518666012 instance=ExtResource("1_w0yvr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.271217, 136.18025, 230.19012)
-
-[node name="FrontRight" parent="Player/Hover" parent_id_path=PackedInt32Array(518666012, 224496255) index="1" unique_id=510855177]
-target_position = Vector3(0, -1, 0)
-
-[node name="BackLeft" parent="Player/Hover" parent_id_path=PackedInt32Array(518666012, 224496255) index="2" unique_id=96208573]
-target_position = Vector3(0, -1, 0)
-
-[node name="BackRight" parent="Player/Hover" parent_id_path=PackedInt32Array(518666012, 224496255) index="3" unique_id=844165943]
-target_position = Vector3(0, -1, 0)
-
-[node name="Camera3D" parent="Player" index="2" unique_id=387855202]
-transform = Transform3D(1, 0, 0, 0, 0.68234295, 0.73103225, 0, -0.73103225, 0.68234295, -9.564308, 150.5753, 244.68863)
-
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1203247307]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85.24733, -83.47775, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.176926, -12.120659, 0)
 navigation_mesh = SubResource("NavigationMesh_u15jy")
 
 [node name="Colliders" type="Node3D" parent="NavigationRegion3D" unique_id=1319465727]
@@ -448,7 +438,13 @@ material = SubResource("StandardMaterial3D_u15jy")
 [node name="Spawner" parent="." unique_id=447969390 instance=ExtResource("3_u15jy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.14258, 34.34858, -16.0542)
 spawn_list = {
-ExtResource("2_3j3h8"): 1.0
+ExtResource("2_3j3h8"): 1.0,
+ExtResource("3_xemno"): 0.5,
+ExtResource("4_wu3ua"): 0.25,
+ExtResource("5_k2est"): 0.05,
+ExtResource("6_d12ac"): 0.75,
+ExtResource("7_1swxr"): 0.5,
+ExtResource("8_fbbyy"): 0.75
 }
 spawn_rate = 10.0
 spawn_bounds = Vector3(0, 0, 0)
@@ -456,5 +452,5 @@ spawn_bounds = Vector3(0, 0, 0)
 [node name="MusicManager" type="Node" parent="." unique_id=693600566]
 script = ExtResource("4_q0ook")
 
-[editable path="Player"]
-[editable path="PoliceEnemy"]
+[node name="Player" parent="." unique_id=518666012 instance=ExtResource("1_w0yvr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.549505, 120.44026, 238.16649)

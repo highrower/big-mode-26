@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cpgox75irsaxa" path="res://player/movement/hover_raycasts.gd" id="1_rkbax"]
 [ext_resource type="Script" uid="uid://cm7oi2jaitb28" path="res://player/movement/player_controller.gd" id="2_rkbax"]
-[ext_resource type="Script" path="res://player/camera.gd" id="4_yw30f"]
+[ext_resource type="Script" uid="uid://dmjbhe6j6g7xq" path="res://player/camera.gd" id="4_yw30f"]
 [ext_resource type="PackedScene" uid="uid://bh6mbtifu4hhu" path="res://enemies/behaviors/can_die.tscn" id="5_td4vs"]
 [ext_resource type="PackedScene" uid="uid://celmm8w4lataj" path="res://player/movement/hoverboard.fbx" id="5_vuopl"]
 [ext_resource type="PackedScene" uid="uid://cfxu8l7pwlof3" path="res://player/weapons/bat.tscn" id="5_wa6sx"]
