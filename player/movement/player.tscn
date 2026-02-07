@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bh6mbtifu4hhu" path="res://enemies/behaviors/can_die.tscn" id="5_td4vs"]
 [ext_resource type="PackedScene" uid="uid://cfxu8l7pwlof3" path="res://player/weapons/bat.tscn" id="5_wa6sx"]
 [ext_resource type="PackedScene" uid="uid://b1tqu6gcxbdx7" path="res://player/movement/hoverboard.glb" id="5_x6hbi"]
-[ext_resource type="Script" path="res://player/drift_manager.gd" id="7_vuopl"]
+[ext_resource type="Script" uid="uid://dap041ridrkje" path="res://player/drift_manager.gd" id="7_vuopl"]
 [ext_resource type="PackedScene" uid="uid://bv1ioe4rqhxqm" path="res://player/player_model.tscn" id="8_x6hbi"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g1dw6"]
@@ -102,3 +102,32 @@ script = ExtResource("7_vuopl")
 
 [node name="PlayerModelHolder" parent="." unique_id=624723337 instance=ExtResource("8_x6hbi")]
 transform = Transform3D(-3, 0, 2.6226832e-07, 0, 3, 0, -2.6226832e-07, 0, -3, 0, 0.30043828, 0)
+
+[node name="Skeleton3D" parent="PlayerModelHolder/Player Model/Player rig" parent_id_path=PackedInt32Array(624723337, 341180623, 795619704) index="0" unique_id=536155382]
+bones/0/position = Vector3(-0.09799999, 0.057919804, -0.36531714)
+bones/1/rotation = Quaternion(-0.39710367, 0.51750606, 0.7314407, 0.19872269)
+bones/2/position = Vector3(0.00023299293, 0.7403165, -0.1634501)
+bones/2/rotation = Quaternion(0.1162713, -0.36120152, 0.06301988, 0.9230618)
+bones/9/rotation = Quaternion(0.8653556, 0.25258893, 0.13048385, -0.4127136)
+bones/10/rotation = Quaternion(0.085373856, -0.0049227783, 0.068725616, 0.9939637)
+bones/12/rotation = Quaternion(0.85458857, 0.27472445, 0.13830215, -0.41842255)
+bones/13/rotation = Quaternion(0.011227048, 0.0018292983, 0.03272624, 0.99939966)
+bones/16/rotation = Quaternion(-0.099754624, 0.8256801, -0.5493407, 0.08078475)
+bones/17/rotation = Quaternion(0.39520508, -0.019819045, 0.055562947, 0.9166967)
+bones/18/rotation = Quaternion(0.17610745, -0.05694213, 0.063101366, 0.9806947)
+bones/23/rotation = Quaternion(0.3473782, -0.60945725, 0.61341053, 0.36279172)
+bones/24/rotation = Quaternion(0.71114695, 0.005110444, -0.12837061, 0.6912054)
+bones/25/rotation = Quaternion(0.17041178, -0.4786476, -0.27427602, 0.81647354)
+bones/33/rotation = Quaternion(0.9238886, 0.15867119, 0.11746809, 0.32780263)
+bones/34/rotation = Quaternion(0.36121795, -0.002077443, 0.10690092, 0.9263313)
+bones/37/rotation = Quaternion(0.91800666, -0.06754443, 0.38230616, 0.080893114)
+bones/38/rotation = Quaternion(0.22709805, 0.0021788839, -0.0672087, 0.97154766)
+
+[node name="BoneAttachment3D" parent="PlayerModelHolder/Player Model/Player rig/Skeleton3D" index="5" unique_id=1448830704]
+transform = Transform3D(0.32389316, 0.5656465, 0.7583779, 0.54200184, 0.5460734, -0.6387781, -0.77545255, 0.61793774, -0.12971205, -0.3966547, 1.2093179, -0.039522637)
+
+[connection signal="animation_finished" from="PlayerModelHolder/Player Model/AnimationTree" to="Node3D/Bat" method="_on_animation_tree_animation_finished"]
+[connection signal="animation_started" from="PlayerModelHolder/Player Model/AnimationTree" to="Node3D/Bat" method="_on_animation_tree_animation_started"]
+
+[editable path="PlayerModelHolder"]
+[editable path="PlayerModelHolder/Player Model"]
