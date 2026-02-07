@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bmol167bteymt" path="res://enemies/behaviors/patrol_around.tscn" id="5_s43la"]
 [ext_resource type="PackedScene" uid="uid://dd3o21l4fnrfu" path="res://enemies/behaviors/hit_player.tscn" id="6_ddca8"]
 [ext_resource type="PackedScene" uid="uid://bpodea7eihq7i" path="res://enemies/behaviors/turn_rotating.tscn" id="7_fymh5"]
+[ext_resource type="PackedScene" uid="uid://7jtajy71n6du" path="res://enemies/enemy_melee.tscn" id="8_1lrb0"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_qrn2b"]
 radius = 1.2
@@ -26,6 +27,7 @@ health = 500.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=403939388]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1286116, 0)
+visible = false
 mesh = SubResource("CapsuleMesh_qrn2b")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=997524980]
@@ -46,3 +48,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 damage = 50.0
 
 [node name="TurnRotating" parent="." unique_id=758092132 instance=ExtResource("7_fymh5")]
+
+[node name="EnemyMelee" parent="." unique_id=849311592 groups=["rotating"] instance=ExtResource("8_1lrb0")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -0.93729806, 0)

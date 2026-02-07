@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dy1epdwu16t2i"]
 
-[ext_resource type="Script" uid="uid://drm6sr5clc8o4" path="res://enemies/drone_shooting_enemy.gd" id="1_6nryf"]
+[ext_resource type="Script" path="res://enemies/drone_shooting_enemy.gd" id="1_6nryf"]
 [ext_resource type="Material" uid="uid://cucfjbka52033" path="res://materials/drone3.tres" id="2_a8xoj"]
 [ext_resource type="PackedScene" uid="uid://g32hqu0i7d61" path="res://enemies/behaviors/flying.tscn" id="2_ehwu8"]
 [ext_resource type="ArrayMesh" uid="uid://bnlo1lhcgu4yn" path="res://Assets/Enemy/drone.obj" id="3_py8ek"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bmol167bteymt" path="res://enemies/behaviors/patrol_around.tscn" id="7_r4qy3"]
 [ext_resource type="PackedScene" uid="uid://vp2qh1qvpq0f" path="res://enemies/projectiles/canon_ball.tscn" id="8_6nryf"]
 [ext_resource type="PackedScene" uid="uid://4wrt57h1lqd1" path="res://enemies/behaviors/shoot_at.tscn" id="8_ga48s"]
+[ext_resource type="PackedScene" uid="uid://bpodea7eihq7i" path="res://enemies/behaviors/turn_rotating.tscn" id="11_py8ek"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_j17pf"]
 radius = 2.0
@@ -23,11 +24,12 @@ axis_lock_angular_x = true
 axis_lock_angular_y = true
 axis_lock_angular_z = true
 script = ExtResource("1_6nryf")
+fly_height = 30.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1095768195]
 shape = SubResource("SphereShape3D_j17pf")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=473484263 groups=["damagable", "enemy_team"]]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=473484263 groups=["damagable", "enemy_team", "rotating"]]
 layers = 0
 material_override = ExtResource("2_a8xoj")
 mesh = SubResource("SphereMesh_jliw0")
@@ -48,7 +50,10 @@ updatetimer = 0.2
 
 [node name="PatrolAround" parent="." unique_id=438560549 instance=ExtResource("7_r4qy3")]
 
-[node name="ShootAt" parent="." unique_id=1870969402 instance=ExtResource("8_ga48s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.9763658, 0.007519245)
+[node name="ShootAt" parent="." unique_id=1870969402 groups=["rotating"] instance=ExtResource("8_ga48s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.17369056, 0.007519245)
+muzzle_length = 2.0
 hitbox_radius = 1.0
 projectile_scene = ExtResource("8_6nryf")
+
+[node name="TurnRotating" parent="." unique_id=758092132 instance=ExtResource("11_py8ek")]

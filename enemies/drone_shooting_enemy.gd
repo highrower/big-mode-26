@@ -30,7 +30,7 @@ func _swoop(distance) -> float:
 	var return_height = fly_height
 	if distance<swoop_radius:
 		return_height *= distance/swoop_radius 
-	return return_height+20.0
+	return return_height+5.0
 
 func take_damage(damage):
 	self.health-=damage

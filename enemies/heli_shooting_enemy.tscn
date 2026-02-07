@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bmol167bteymt" path="res://enemies/behaviors/patrol_around.tscn" id="6_cgpne"]
 [ext_resource type="PackedScene" uid="uid://4wrt57h1lqd1" path="res://enemies/behaviors/shoot_at.tscn" id="7_18onk"]
 [ext_resource type="PackedScene" uid="uid://vp2qh1qvpq0f" path="res://enemies/projectiles/canon_ball.tscn" id="8_4f5j6"]
+[ext_resource type="PackedScene" uid="uid://dlb8mdiivpt7y" path="res://Assets/Enemy/drone.glb" id="9_6cayt"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_25ah3"]
 resource_local_to_scene = true
@@ -16,6 +17,10 @@ radius = 4.0
 [sub_resource type="SphereMesh" id="SphereMesh_vt7s7"]
 radius = 4.0
 height = 8.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_htqgd"]
+radius = 2.0
+height = 4.0
 
 [node name="HeliShootingEnemy" type="RigidBody3D" unique_id=1337185290 groups=["damagable", "enemy_team"]]
 axis_lock_angular_x = true
@@ -31,6 +36,7 @@ swoop_radius = 200.0
 shape = SubResource("SphereShape3D_25ah3")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=473484263 groups=["damagable", "enemy_team"]]
+visible = false
 mesh = SubResource("SphereMesh_vt7s7")
 
 [node name="Flying" parent="." unique_id=1504551945 instance=ExtResource("2_vt7s7")]
@@ -50,3 +56,13 @@ muzzle_length = 4.0
 hitbox_radius = 1.0
 cooldown_time = 0.5
 projectile_scene = ExtResource("8_4f5j6")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=2020319241 groups=["damagable", "enemy_team", "rotating"]]
+transform = Transform3D(0.99999845, -0.0011718086, 0.0013046067, 0.0011697352, 0.999998, 0.0015744647, -0.0013064661, -0.0015729222, 0.99999785, 0, 0, 0)
+layers = 0
+mesh = SubResource("SphereMesh_htqgd")
+
+[node name="drone2" parent="MeshInstance3D2" unique_id=1466024166 instance=ExtResource("9_6cayt")]
+transform = Transform3D(-0.010989464, 0.010291541, -1.9999439, -0.010585047, 1.9999449, 0.01034973, 1.9999412, 0.01064164, -0.010934668, -0.12534624, -1.8199407, 0.16111165)
+
+[editable path="MeshInstance3D2/drone2"]

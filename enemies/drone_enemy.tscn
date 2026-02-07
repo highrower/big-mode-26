@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bkyptneenqk0y"]
 
-[ext_resource type="Script" uid="uid://daxil0vsncdqe" path="res://enemies/drone_enemy.gd" id="1_jliw0"]
+[ext_resource type="Script" path="res://enemies/drone_enemy.gd" id="1_jliw0"]
 [ext_resource type="PackedScene" uid="uid://g32hqu0i7d61" path="res://enemies/behaviors/flying.tscn" id="2_mef8y"]
 [ext_resource type="PackedScene" uid="uid://dlb8mdiivpt7y" path="res://Assets/Enemy/drone.glb" id="2_rcqjx"]
 [ext_resource type="PackedScene" uid="uid://dd3o21l4fnrfu" path="res://enemies/behaviors/hit_player.tscn" id="4_fgf2u"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c743qksbmstsu" path="res://enemies/behaviors/move_toward.tscn" id="5_kk2he"]
 [ext_resource type="PackedScene" uid="uid://bh6mbtifu4hhu" path="res://enemies/behaviors/can_die.tscn" id="6_kk2he"]
 [ext_resource type="PackedScene" uid="uid://bmol167bteymt" path="res://enemies/behaviors/patrol_around.tscn" id="7_gwxp8"]
+[ext_resource type="PackedScene" uid="uid://bpodea7eihq7i" path="res://enemies/behaviors/turn_rotating.tscn" id="9_rcqjx"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_j17pf"]
 radius = 2.0
@@ -26,7 +27,7 @@ health = 100.0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1095768195]
 shape = SubResource("SphereShape3D_j17pf")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=473484263 groups=["damagable", "enemy_team"]]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=473484263 groups=["damagable", "enemy_team", "rotating"]]
 transform = Transform3D(0.99999845, -0.0011718086, 0.0013046067, 0.0011697352, 0.999998, 0.0015744647, -0.0013064661, -0.0015729222, 0.99999785, 0, 0, 0)
 layers = 0
 mesh = SubResource("SphereMesh_jliw0")
@@ -46,5 +47,7 @@ updatetimer = 0.2
 [node name="CanDie" parent="." unique_id=1900563199 instance=ExtResource("6_kk2he")]
 
 [node name="PatrolAround" parent="." unique_id=438560549 instance=ExtResource("7_gwxp8")]
+
+[node name="TurnRotating" parent="." unique_id=758092132 instance=ExtResource("9_rcqjx")]
 
 [editable path="MeshInstance3D/drone2"]
