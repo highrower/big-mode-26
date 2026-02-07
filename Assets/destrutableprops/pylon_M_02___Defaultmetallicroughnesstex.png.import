@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ca348c53fx8u1"
-path.s3tc="res://.godot/imported/pylon_M_02___Defaultmetallicroughnesstex.png-bb1d3af3c6aa122f6ed7f6864dd596d4.s3tc.ctex"
+path.s3tc="res://.godot/imported/pylon_M_02___Defaultmetallicroughnesstex.png-02f93f7c6d3bc9d385cef5a59aa2207c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Assets/destructible/pylon_M_02___Defaultmetallicroughnesstex.png"
-dest_files=["res://.godot/imported/pylon_M_02___Defaultmetallicroughnesstex.png-bb1d3af3c6aa122f6ed7f6864dd596d4.s3tc.ctex"]
+source_file="res://Assets/destrutableprops/pylon_M_02___Defaultmetallicroughnesstex.png"
+dest_files=["res://.godot/imported/pylon_M_02___Defaultmetallicroughnesstex.png-02f93f7c6d3bc9d385cef5a59aa2207c.s3tc.ctex"]
 
 [params]
 

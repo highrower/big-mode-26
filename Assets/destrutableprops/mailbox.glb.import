@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://nyslahhrucwh"
-path="res://.godot/imported/slicksign.glb-957a8ae858ea237c2f46d0240e3ed70d.scn"
+uid="uid://cq0stl5qcd3h3"
+path="res://.godot/imported/mailbox.glb-dc063b55002997891e0601d5efc91ddf.scn"
 
 [deps]
 
-source_file="res://Assets/destructible/slicksign.glb"
-dest_files=["res://.godot/imported/slicksign.glb-957a8ae858ea237c2f46d0240e3ed70d.scn"]
+source_file="res://Assets/destrutableprops/mailbox.glb"
+dest_files=["res://.godot/imported/mailbox.glb-dc063b55002997891e0601d5efc91ddf.scn"]
 
 [params]
 

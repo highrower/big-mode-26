@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cq0stl5qcd3h3"
-path="res://.godot/imported/mailbox.glb-fc6e3d07ff80fe13b5772466f825b7aa.scn"
+uid="uid://cbmgqqyv2s3i2"
+path="res://.godot/imported/pylon.glb-8522bcc62265df3da8d2fb275f580a83.scn"
 
 [deps]
 
-source_file="res://Assets/destructible/mailbox.glb"
-dest_files=["res://.godot/imported/mailbox.glb-fc6e3d07ff80fe13b5772466f825b7aa.scn"]
+source_file="res://Assets/destrutableprops/pylon.glb"
+dest_files=["res://.godot/imported/pylon.glb-8522bcc62265df3da8d2fb275f580a83.scn"]
 
 [params]
 
