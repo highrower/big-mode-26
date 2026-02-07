@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://ckprci1fnwa1i" path="res://enemies/police_enemy.tscn" id="2_3j3h8"]
 [ext_resource type="PackedScene" uid="uid://c71une4c2sj72" path="res://Assets/World Props/Building test.glb" id="2_xemno"]
 [ext_resource type="PackedScene" uid="uid://dtkmtl3oc8x5q" path="res://enemies/spawners/spawner.tscn" id="3_u15jy"]
-[ext_resource type="PackedScene" uid="uid://dy1epdwu16t2i" path="res://enemies/drone_shooting_enemy.tscn" id="3_xemno"]
 [ext_resource type="PackedScene" uid="uid://urryfii606jd" path="res://Assets/World Props/Road test.glb" id="3_wu3ua"]
+[ext_resource type="PackedScene" path="res://enemies/drone_shooting_enemy.tscn" id="3_xemno"]
 [ext_resource type="Script" uid="uid://crwsxdoysoqpp" path="res://systems/audio/music_manager.gd" id="4_q0ook"]
 [ext_resource type="PackedScene" path="res://enemies/drone_exploding_enemy.tscn" id="4_wu3ua"]
 [ext_resource type="PackedScene" path="res://enemies/heli_shooting_enemy.tscn" id="5_k2est"]
@@ -57,21 +57,6 @@ environment = SubResource("Environment_u15jy")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1069605296]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
-
-[node name="Player" parent="." unique_id=518666012 instance=ExtResource("1_w0yvr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.271217, 136.18025, 230.19012)
-
-[node name="FrontRight" parent="Player/Hover" parent_id_path=PackedInt32Array(518666012, 224496255) index="1" unique_id=510855177]
-target_position = Vector3(0, -1, 0)
-
-[node name="BackLeft" parent="Player/Hover" parent_id_path=PackedInt32Array(518666012, 224496255) index="2" unique_id=96208573]
-target_position = Vector3(0, -1, 0)
-
-[node name="BackRight" parent="Player/Hover" parent_id_path=PackedInt32Array(518666012, 224496255) index="3" unique_id=844165943]
-target_position = Vector3(0, -1, 0)
-
-[node name="Camera3D" parent="Player" index="2" unique_id=387855202]
-transform = Transform3D(1, 0, 0, 0, 0.68234295, 0.73103225, 0, -0.73103225, 0.68234295, -9.564308, 123.998024, 244.68863)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1203247307]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.176926, -12.120659, 0)
@@ -498,4 +483,4 @@ spawn_bounds = Vector3(0, 0, 0)
 script = ExtResource("4_q0ook")
 
 [node name="Player" parent="." unique_id=518666012 instance=ExtResource("1_w0yvr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.549505, 120.44026, 238.16649)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.549505, 120.44026, 241.48125)
