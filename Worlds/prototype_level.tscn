@@ -3,15 +3,23 @@
 [ext_resource type="PackedScene" uid="uid://h2xotxmtsvq0" path="res://player/movement/player.tscn" id="1_w0yvr"]
 [ext_resource type="PackedScene" uid="uid://ckprci1fnwa1i" path="res://enemies/police_enemy.tscn" id="2_3j3h8"]
 [ext_resource type="PackedScene" uid="uid://c71une4c2sj72" path="res://Assets/World Props/Building test.glb" id="2_xemno"]
+[ext_resource type="ArrayMesh" uid="uid://cqn1itm5xo5nv" path="res://Assets/destrutableprops/mailbox.obj" id="3_fbbyy"]
 [ext_resource type="PackedScene" uid="uid://dtkmtl3oc8x5q" path="res://enemies/spawners/spawner.tscn" id="3_u15jy"]
 [ext_resource type="PackedScene" uid="uid://urryfii606jd" path="res://Assets/World Props/Road test.glb" id="3_wu3ua"]
-[ext_resource type="PackedScene" path="res://enemies/drone_shooting_enemy.tscn" id="3_xemno"]
+[ext_resource type="PackedScene" uid="uid://dy1epdwu16t2i" path="res://enemies/drone_shooting_enemy.tscn" id="3_xemno"]
 [ext_resource type="Script" uid="uid://crwsxdoysoqpp" path="res://systems/audio/music_manager.gd" id="4_q0ook"]
-[ext_resource type="PackedScene" path="res://enemies/drone_exploding_enemy.tscn" id="4_wu3ua"]
-[ext_resource type="PackedScene" path="res://enemies/heli_shooting_enemy.tscn" id="5_k2est"]
-[ext_resource type="PackedScene" path="res://enemies/police_enemy_stronger.tscn" id="6_d12ac"]
-[ext_resource type="PackedScene" path="res://enemies/police_enemy_bigger.tscn" id="7_1swxr"]
-[ext_resource type="PackedScene" path="res://enemies/police_explodes_enemy.tscn" id="8_fbbyy"]
+[ext_resource type="PackedScene" uid="uid://bw456cvak5564" path="res://enemies/drone_exploding_enemy.tscn" id="4_wu3ua"]
+[ext_resource type="PackedScene" uid="uid://bsf1qsdotu57v" path="res://enemies/heli_shooting_enemy.tscn" id="5_k2est"]
+[ext_resource type="PackedScene" uid="uid://3xdhf2c8t1lj" path="res://enemies/police_enemy_stronger.tscn" id="6_d12ac"]
+[ext_resource type="PackedScene" uid="uid://byo5cbcjucood" path="res://enemies/police_enemy_bigger.tscn" id="7_1swxr"]
+[ext_resource type="PackedScene" uid="uid://camunn3dh5myq" path="res://enemies/police_explodes_enemy.tscn" id="8_fbbyy"]
+[ext_resource type="Texture2D" uid="uid://b1ila1eqmjo35" path="res://Assets/destrutableprops/mailbox_M_01___Defaultbasecolortexture.png" id="13_tvkxs"]
+[ext_resource type="ArrayMesh" uid="uid://cn2b3f0avreow" path="res://Assets/destrutableprops/trafficcone.obj" id="14_n8572"]
+[ext_resource type="Texture2D" uid="uid://hugrmw5t0yw1" path="res://Assets/destrutableprops/trafficcone_M_01___Defaultbasecolortexture.png" id="15_rojaj"]
+[ext_resource type="ArrayMesh" uid="uid://b2xuogo4b8npx" path="res://Assets/destrutableprops/slicksign.obj" id="15_uwyh4"]
+[ext_resource type="ArrayMesh" uid="uid://8jehu5i2xqr6" path="res://Assets/destrutableprops/plyon.obj" id="16_eubhg"]
+[ext_resource type="Texture2D" uid="uid://d000xnvhpojbv" path="res://Assets/destrutableprops/slicksign_M_01___Defaultbasecolortexture.png" id="17_eghjr"]
+[ext_resource type="Texture2D" uid="uid://c8t4anavn840b" path="res://Assets/destrutableprops/pylon_M_02___Defaultbasecolortexture.png" id="19_d4bhe"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w0yvr"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -48,6 +56,18 @@ albedo_color = Color(0.17283279, 0.17283264, 0.17283267, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u15jy"]
 albedo_color = Color(0.37413925, 0.37413928, 0.37413922, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c8jah"]
+albedo_texture = ExtResource("13_tvkxs")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mmcgr"]
+albedo_texture = ExtResource("15_rojaj")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fbute"]
+albedo_texture = ExtResource("17_eghjr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p4b6q"]
+albedo_texture = ExtResource("19_d4bhe")
 
 [node name="Prototype level" type="Node3D" unique_id=1092864291]
 
@@ -484,3 +504,23 @@ script = ExtResource("4_q0ook")
 
 [node name="Player" parent="." unique_id=518666012 instance=ExtResource("1_w0yvr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.549505, 120.44026, 241.48125)
+
+[node name="destructiblemailbox" type="MeshInstance3D" parent="." unique_id=319559719]
+transform = Transform3D(0.16812815, 0, 0, 0, 0.054891124, 0, 0, 0, 0.12688074, -97.966705, -8.838562, -78.311226)
+material_override = SubResource("StandardMaterial3D_c8jah")
+mesh = ExtResource("3_fbbyy")
+
+[node name="destructiblecone" type="MeshInstance3D" parent="." unique_id=196723662]
+transform = Transform3D(0.12944579, 0, 0, 0, 0.04226196, 0, 0, 0, 0.097688444, -103.63851, -10.407921, -73.06767)
+material_override = SubResource("StandardMaterial3D_mmcgr")
+mesh = ExtResource("14_n8572")
+
+[node name="destructiblesign" type="MeshInstance3D" parent="." unique_id=17789921]
+transform = Transform3D(0.07088121, 0, 0, 0, 0.045613546, 0, 0, 0, 0.114619285, -92.25551, 3.4611588, -48.087105)
+material_override = SubResource("StandardMaterial3D_fbute")
+mesh = ExtResource("15_uwyh4")
+
+[node name="destructiblepylon" type="MeshInstance3D" parent="." unique_id=1351130534]
+transform = Transform3D(0.16900313, 0, 0, 0, 0.0732052, 0, 0, 0, 0.16921368, -96.75103, -10.407921, -67.17976)
+material_override = SubResource("StandardMaterial3D_p4b6q")
+mesh = ExtResource("16_eubhg")
