@@ -46,3 +46,5 @@ updatetimer = 0.2
 [node name="CanDie" parent="." unique_id=1900563199 instance=ExtResource("6_kk2he")]
 
 [node name="PatrolAround" parent="." unique_id=438560549 instance=ExtResource("7_gwxp8")]
+
+[editable path="MeshInstance3D/drone2"]

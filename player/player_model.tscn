@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b0to0b2t4tyor" path="res://Assets/Player/Player Model.glb" id="1_70xuj"]
 [ext_resource type="Script" uid="uid://cemk4vwyrl5vo" path="res://player/player_model.gd" id="1_nis8b"]
 [ext_resource type="AnimationLibrary" uid="uid://npx05d3v7rhf" path="res://Assets/Player/Player Animations.glb" id="2_65fbn"]
+[ext_resource type="PackedScene" uid="uid://ctjidnxmjl6l7" path="res://player/weapons/bat.glb" id="3_4xcvv"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nis8b"]
 animation = &"Player Animations/Player Lean Foward"
@@ -40,6 +41,43 @@ script = ExtResource("1_nis8b")
 
 [node name="Player Model" parent="." unique_id=341180623 instance=ExtResource("1_70xuj")]
 
+[node name="Skeleton3D" parent="Player Model/Player rig" parent_id_path=PackedInt32Array(341180623, 795619704) index="0" unique_id=536155382]
+bones/0/position = Vector3(-0.098, 0.05666724, -0.36531717)
+bones/0/rotation = Quaternion(-0.62996066, 0.35076562, 0.46498397, 0.51371497)
+bones/1/position = Vector3(0.027060032, 0.06083311, 0.1695302)
+bones/1/rotation = Quaternion(-0.39539945, 0.51871014, 0.73194754, 0.19710892)
+bones/2/position = Vector3(-0.015412747, 0.49790037, 0.06761514)
+bones/2/rotation = Quaternion(0.22638147, -0.35258827, 0.0021797323, 0.90798026)
+bones/6/rotation = Quaternion(0.21871, 0.34684315, -0.040847633, 0.9111516)
+bones/9/rotation = Quaternion(0.8606173, 0.1832603, 0.08640228, -0.4672134)
+bones/10/rotation = Quaternion(0.24806796, 0.0042894576, 0.08894449, 0.96464133)
+bones/10/scale = Vector3(0.99999946, 0.99999976, 0.9999996)
+bones/12/rotation = Quaternion(0.8517345, 0.20801222, 0.09303786, -0.47182983)
+bones/13/rotation = Quaternion(0.1998128, 0.0076965378, 0.073192306, 0.9770663)
+bones/13/scale = Vector3(1.0000004, 1.0000002, 0.9999997)
+bones/16/rotation = Quaternion(0.043020166, 0.9094394, -0.4123574, -0.032105684)
+bones/17/rotation = Quaternion(0.6119728, -0.013815517, 0.09269214, 0.7853067)
+bones/18/rotation = Quaternion(0.25840747, -0.05297183, 0.07687233, 0.96151453)
+bones/23/rotation = Quaternion(0.052284747, -0.8338613, 0.49708804, 0.23419026)
+bones/24/rotation = Quaternion(0.6186375, 0.013589709, -0.09385904, 0.77993166)
+bones/25/rotation = Quaternion(0.26100323, 0.052828655, -0.077257276, 0.9607902)
+bones/29/rotation = Quaternion(-7.4796795e-08, 0.6969363, 0.71713305, -4.4768775e-08)
+bones/30/rotation = Quaternion(-7.4796795e-08, 0.6969363, 0.71713305, -4.4768775e-08)
+bones/33/rotation = Quaternion(0.8489264, 0.21265319, 0.050780978, 0.48116934)
+bones/34/rotation = Quaternion(0.7999756, -0.0012366696, 0.23674917, 0.5513504)
+bones/37/rotation = Quaternion(0.8387206, -0.30620456, 0.43914816, 0.099676915)
+bones/38/rotation = Quaternion(0.5430876, 0.0018483514, -0.16072457, 0.8241482)
+
+[node name="BoneAttachment3D" type="BoneAttachment3D" parent="Player Model/Player rig/Skeleton3D" index="5" unique_id=1448830704]
+transform = Transform3D(-0.8081725, -0.11617631, 0.57737327, 0.58099055, -0.31785142, 0.74927944, 0.096470416, 0.9409954, 0.32437643, -0.39804143, 0.79389465, 0.03926976)
+bone_name = "hand.R"
+bone_idx = 25
+use_external_skeleton = true
+external_skeleton = NodePath("..")
+
+[node name="bat" parent="Player Model/Player rig/Skeleton3D/BoneAttachment3D" unique_id=501403706 instance=ExtResource("3_4xcvv")]
+transform = Transform3D(0.17694141, 5.9726143, -0.5445475, -5.596407, 0.36028546, 2.1331697, 2.1561337, 0.4450106, 5.581489, 0.28260398, 0.18124652, 0.024186224)
+
 [node name="PlayerAnimations" type="AnimationPlayer" parent="Player Model" unique_id=1762213404]
 "libraries/Player Animations" = ExtResource("2_65fbn")
 
@@ -47,3 +85,5 @@ script = ExtResource("1_nis8b")
 tree_root = SubResource("AnimationNodeStateMachine_nis8b")
 anim_player = NodePath("../PlayerAnimations")
 "parameters/Hover Pivot/blend_position" = Vector2(0.0005339384, 0.042654037)
+
+[editable path="Player Model"]

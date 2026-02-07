@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c1nq7wx8yd3eg"]
+
+[ext_resource type="PackedScene" uid="uid://btf2hv7lawc6v" path="res://enemies/enemy_model.tscn" id="1_81l4l"]
+[ext_resource type="Material" uid="uid://dpn1pf70suwkt" path="res://materials/enemybomb.tres" id="2_310mi"]
+
+[node name="EnemyExplosion" unique_id=849311592 instance=ExtResource("1_81l4l")]
+
+[node name="Skeleton3D" parent="Enemy Model/Enemy_Rig" parent_id_path=PackedInt32Array(1401620240, 1993311206) index="0" unique_id=17957952]
+bones/0/position = Vector3(2.4827616e-08, 0.71666485, -0.011608718)
+bones/0/rotation = Quaternion(0.3165034, -0.041169062, -0.019152947, 0.9475041)
+bones/4/rotation = Quaternion(0.30954507, 0.036383487, -0.003055506, 0.95018363)
+bones/8/rotation = Quaternion(-0.36805835, 0.8162162, -0.4010016, 0.1937061)
+bones/9/rotation = Quaternion(0.5658746, -0.08570662, 0.14050381, 0.807898)
+bones/10/rotation = Quaternion(0.1258726, 0.02392783, 0.04787546, 0.99060166)
+bones/15/rotation = Quaternion(-0.2312973, -0.6900612, 0.60193783, 0.32861534)
+bones/16/rotation = Quaternion(0.5275397, 0.08933221, -0.12860096, 0.8349751)
+bones/17/rotation = Quaternion(0.100155026, -0.01097905, -0.032635655, 0.9943758)
+bones/25/rotation = Quaternion(0.47109866, 0.18355545, -0.036051355, 0.8620172)
+bones/26/rotation = Quaternion(0.8254333, 0.00048575364, 0.123007596, 0.5509344)
+bones/27/rotation = Quaternion(-0.5027557, 0.012917187, 0.017935956, 0.864146)
+bones/29/rotation = Quaternion(0.91335845, -0.0679535, -0.036504578, 0.39978272)
+bones/30/rotation = Quaternion(0.54191417, -0.0007376401, -0.080757126, 0.8365446)
+bones/31/rotation = Quaternion(-0.6002602, -0.013457019, -0.012811451, 0.799589)
+bones/35/position = Vector3(-0.19013342, 0.013923584, -0.24409875)
+bones/35/rotation = Quaternion(-1.8912591e-07, 0.69583976, 0.7181971, -2.1116374e-07)
+bones/36/position = Vector3(0.19013324, 0.15430655, 0.22589698)
+bones/36/rotation = Quaternion(7.579135e-08, 0.29238418, 0.956301, -5.839607e-07)
+
+[node name="Enemy " parent="Enemy Model/Enemy_Rig/Skeleton3D" index="0" unique_id=1906471961]
+surface_material_override/0 = ExtResource("2_310mi")
+
+[editable path="Enemy Model"]

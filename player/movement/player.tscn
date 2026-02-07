@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bh6mbtifu4hhu" path="res://enemies/behaviors/can_die.tscn" id="5_td4vs"]
 [ext_resource type="PackedScene" uid="uid://cfxu8l7pwlof3" path="res://player/weapons/bat.tscn" id="5_wa6sx"]
 [ext_resource type="PackedScene" uid="uid://b1tqu6gcxbdx7" path="res://player/movement/hoverboard.glb" id="5_x6hbi"]
-[ext_resource type="Script" path="res://player/drift_manager.gd" id="7_vuopl"]
+[ext_resource type="Script" uid="uid://dap041ridrkje" path="res://player/drift_manager.gd" id="7_vuopl"]
 [ext_resource type="PackedScene" uid="uid://bv1ioe4rqhxqm" path="res://player/player_model.tscn" id="8_x6hbi"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g1dw6"]
