@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bh6l6i2j4dmfk"]
 
 [ext_resource type="Script" uid="uid://canxphibppiyg" path="res://ui/main_menu/main_menu.gd" id="1_h7g2k"]
+[ext_resource type="Texture2D" uid="uid://cbd2cqs61lvap" path="res://ui/main_menu/title image.png" id="2_x85v6"]
+[ext_resource type="Texture2D" uid="uid://wahjw0yq5xbi" path="res://ui/main_menu/play.png" id="3_u1tth"]
 
 [node name="MainMenu" type="Control" unique_id=541379625]
 layout_mode = 3
@@ -19,11 +21,20 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="TitleImage" type="Sprite2D" parent="BackgroundImage" unique_id=11256883]
+position = Vector2(572, 319.5)
+scale = Vector2(0.59583336, 0.59166664)
+texture = ExtResource("2_x85v6")
+
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=269203973]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 182.0
+offset_top = 233.0
+offset_right = 182.0
+offset_bottom = 233.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 200
@@ -37,6 +48,11 @@ alignment = 1
 
 [node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1871248612]
 layout_mode = 2
+
+[node name="Play" type="Sprite2D" parent="MarginContainer/VBoxContainer/StartButton" unique_id=152712726]
+position = Vector2(381, 12.999985)
+scale = Vector2(5.875, 5)
+texture = ExtResource("3_u1tth")
 
 [node name="OptionsButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=140548732]
 layout_mode = 2
