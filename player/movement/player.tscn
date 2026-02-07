@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b1tqu6gcxbdx7" path="res://player/movement/hoverboard.glb" id="5_x6hbi"]
 [ext_resource type="Script" path="res://player/drift_manager.gd" id="7_vuopl"]
 [ext_resource type="PackedScene" uid="uid://bv1ioe4rqhxqm" path="res://player/player_model.tscn" id="8_x6hbi"]
+[ext_resource type="PackedScene" uid="uid://c3yen83yiarm1" path="res://player/weapons/spray_paint.tscn" id="9_0n2qj"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g1dw6"]
 friction = 0.0
@@ -102,3 +103,6 @@ script = ExtResource("7_vuopl")
 
 [node name="PlayerModelHolder" parent="." unique_id=624723337 instance=ExtResource("8_x6hbi")]
 transform = Transform3D(-3, 0, 2.6226832e-07, 0, 3, 0, -2.6226832e-07, 0, -3, 0, 0.30043828, 0)
+
+[node name="SprayPaint" parent="." unique_id=34355755 instance=ExtResource("9_0n2qj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -3)
