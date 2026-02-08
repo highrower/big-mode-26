@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cl40fo218c3oa"]
+
+[ext_resource type="Shader" uid="uid://qg7k7s1ucco" path="res://ui/hud/ScoreSpeedometer.gdshader" id="1_65oq6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ysief"]
+shader = ExtResource("1_65oq6")
+
+[node name="ScoreSpeedometer" type="Control" unique_id=873267655]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1509351824]
+material = SubResource("ShaderMaterial_ysief")
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 256.0
