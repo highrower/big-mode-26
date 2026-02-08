@@ -419,15 +419,15 @@ size = Vector3(50, 100, 96.12451)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building4" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls3" unique_id=1870943667]
-transform = Transform3D(0.7597934, 0, 0.6501645, 0, 1, 0, -0.6501645, 0, 0.7597934, -0.6263504, -6.386345, -103.99969)
+transform = Transform3D(0.7597934, 0, 0.6501645, 0, 1, 0, -0.6501645, 0, 0.7597934, -8.675148, -6.386345, -113.40564)
 use_collision = true
-size = Vector3(50, 100, 50)
+size = Vector3(50, 100, 25.240723)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building5" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls3" unique_id=1787371346]
-transform = Transform3D(0.5534637, 0, -0.6542921, 0, 0.8267391, 0, 0.47885075, 0, 0.75624186, 3.2285767, -12.4986, -42.34321)
+transform = Transform3D(0.5534637, 0, -0.6542921, 0, 0.8267391, 0, 0.47885075, 0, 0.75624186, -7.7536774, -12.4986, -51.844894)
 use_collision = true
-size = Vector3(50, 100, 50)
+size = Vector3(89.68555, 100, 50)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building10" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls3" unique_id=310964946]
@@ -546,7 +546,7 @@ material = SubResource("StandardMaterial3D_eghjr")
 [node name="Ramp Visual2" type="CSGPolygon3D" parent="NavigationRegion3D/Main building and road" unique_id=812986991]
 transform = Transform3D(0.8008461, 0, 0.59886986, 0, 1, 0, -0.59886986, 0, 0.8008461, 134.04991, 7.6368685, 68.67923)
 use_collision = true
-polygon = PackedVector2Array(-6.2527237, -9.341865, -57.686264, -9.3422785, -104.00537, -8.148763, -43.089336, 3.5832396, 14.817383, 15.742017, 56.993835, 24.828293, 55.465515, 1.534545, 56.480774, -7.9964314)
+polygon = PackedVector2Array(-6.2527237, -9.341865, -57.686264, -9.3422785, -104.00537, -8.148763, -43.089336, 3.5832396, 14.817383, 15.742017, 62.650047, 20.745682, 55.465515, 1.534545, 56.480774, -7.9964314)
 depth = 38.0
 material = SubResource("StandardMaterial3D_eghjr")
 
@@ -575,7 +575,7 @@ spawn_bounds = Vector3(0, 0, 0)
 script = ExtResource("4_q0ook")
 
 [node name="Player" parent="." unique_id=518666012 instance=ExtResource("1_w0yvr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.549505, 120.44026, 241.48125)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.549505, -10.5675335, 141.11415)
 
 [node name="canbedestroyed" type="Node" parent="." unique_id=1824068229]
 
