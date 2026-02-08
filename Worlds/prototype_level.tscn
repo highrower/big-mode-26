@@ -194,15 +194,21 @@ material = SubResource("StandardMaterial3D_w0yvr")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -237.43486, 50, 60)
 
 [node name="Outer building" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls" unique_id=349787331]
-transform = Transform3D(0.5614914, 0, -0.8274826, 0, 1, 0, 0.8274826, 0, 0.5614914, 96.49451, 0, -220.8338)
+transform = Transform3D(0.5614914, 0, -0.8274826, 0, 1, 0, 0.8274826, 0, 0.5614914, 94.65686, 0, -219.58687)
+use_collision = true
+size = Vector3(50, 100, 76.1886)
+material = SubResource("StandardMaterial3D_q0ook")
+
+[node name="Outer building10" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls" unique_id=2145709143]
+transform = Transform3D(0.47686845, 0, 0.36412156, 0, 0.6834975, 0, -0.2664863, 0, 0.9197228, 195.09602, -18.230618, -501.81644)
 use_collision = true
 size = Vector3(50, 100, 50)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building2" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls" unique_id=1964608216]
-transform = Transform3D(0.7146975, 0, 0.21529782, 0, 0.8267391, 0, -0.15756802, 0, 0.97654843, 144.21307, -9.97987, -242.38873)
+transform = Transform3D(0.7146975, 0, 0.21529782, 0, 0.8267391, 0, -0.15756802, 0, 0.97654843, 155.77765, -9.97987, -244.93834)
 use_collision = true
-size = Vector3(50, 100, 50)
+size = Vector3(109.881775, 100, 50)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building3" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls" unique_id=1302317156]
@@ -212,9 +218,9 @@ size = Vector3(50, 100, 50)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building7" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls" unique_id=1032537785]
-transform = Transform3D(0.8309942, 0, 0.5562811, 0, 1, 0, -0.5562811, 0, 0.8309942, 41.107483, 0, 45.607964)
+transform = Transform3D(0.8309942, 0, 0.5562811, 0, 1, 0, -0.5562811, 0, 0.8309942, 41.572678, 0, 46.30288)
 use_collision = true
-size = Vector3(50, 100, 50)
+size = Vector3(50, 100, 76.60803)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building8" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls" unique_id=1938426054]
@@ -224,9 +230,9 @@ size = Vector3(50, 100, 50)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building9" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls" unique_id=1280056848]
-transform = Transform3D(0.5141833, 0, 0.89361274, 0, 0.8267392, 0, -0.7981316, 0, 0.5756955, 87.763596, -9.972607, 90.00044)
+transform = Transform3D(0.5141833, 0, 0.89361274, 0, 0.8267392, 0, -0.7981316, 0, 0.5756955, 106.22185, -9.972607, 101.89188)
 use_collision = true
-size = Vector3(50, 100, 50)
+size = Vector3(50, 100, 91.31152)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building4" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls" unique_id=956067701]
@@ -242,9 +248,9 @@ size = Vector3(50, 100, 50)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building6" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls" unique_id=1093366911]
-transform = Transform3D(0.94942015, 0, 0, 0, 0.8267391, 0, 0, 0, 0.488505, 12.070404, -16.578838, -57.446693)
+transform = Transform3D(0.94942015, 0, 0, 0, 0.8267391, 0, 0, 0, 0.488505, 12.070404, -16.578838, -53.04654)
 use_collision = true
-size = Vector3(50, 100, 50)
+size = Vector3(50, 100, 109.81555)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Building walls4" type="Node3D" parent="NavigationRegion3D/World props" unique_id=1303685861]
@@ -257,15 +263,15 @@ size = Vector3(50, 100, 50)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building2" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls4" unique_id=1320771338]
-transform = Transform3D(0.7146975, 0, 0.21529782, 0, 0.8267391, 0, -0.15756802, 0, 0.97654843, 144.21307, -9.97987, -242.38873)
+transform = Transform3D(0.7146977, 0, 0.2152979, 0, 0.8267391, 0, -0.15756804, 0, 0.97655004, 140.39444, -9.97987, -241.54688)
 use_collision = true
-size = Vector3(50, 100, 50)
+size = Vector3(60.686035, 100, 50)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building3" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls4" unique_id=631793795]
-transform = Transform3D(0.66593003, 0, -0.3481873, 0, 0.82673913, 0, 0.67670965, 0, 0.34264085, 60.71251, -9.97987, -192.17168)
+transform = Transform3D(0.6659314, 0, -0.3481873, 0, 0.82673913, 0, 0.67670965, 0, 0.34264085, 65.10071, -9.97987, -196.49008)
 use_collision = true
-size = Vector3(50, 100, 50)
+size = Vector3(50, 100, 75.20654)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building7" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls4" unique_id=1608749946]
@@ -275,21 +281,21 @@ size = Vector3(50, 100, 50)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building8" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls4" unique_id=305638039]
-transform = Transform3D(0.70818007, 0, 0.2523227, 0, 0.8267391, 0, -0.18466508, 0, 0.96764314, 22.438019, -9.97987, -10.88398)
+transform = Transform3D(0.7081813, 0, 0.25232333, 0, 0.8267391, 0, -0.18466583, 0, 0.96764445, 23.5047, -9.97987, -6.7935257)
 use_collision = true
-size = Vector3(50, 100, 50)
+size = Vector3(50, 100, 77.65076)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building9" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls4" unique_id=1278443558]
-transform = Transform3D(0.5141833, 0, 0.89361274, 0, 0.8267392, 0, -0.7981316, 0, 0.5756955, 87.763596, -9.972607, 90.00044)
+transform = Transform3D(0.5141836, 0, 0.8936127, 0, 0.8267392, 0, -0.79813313, 0, 0.57569766, 97.28192, -9.972607, 96.13258)
 use_collision = true
-size = Vector3(50, 100, 50)
+size = Vector3(50, 100, 109.03607)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building4" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls4" unique_id=884669207]
-transform = Transform3D(0.89040357, 0, -0.45517197, 0, 1, 0, 0.45517197, 0, 0.89040357, 33.29167, -6, -157.57172)
+transform = Transform3D(0.89040357, 0, -0.455172, 0, 1, 0, 0.455172, 0, 0.89040357, 32.02594, -6, -155.09567)
 use_collision = true
-size = Vector3(50, 100, 50)
+size = Vector3(50, 100, 55.561646)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building5" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls4" unique_id=687564514]
@@ -299,9 +305,9 @@ size = Vector3(50, 100, 50)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building6" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls4" unique_id=999971180]
-transform = Transform3D(0.94942015, 0, -3.7252903e-09, 0, 0.8267391, 0, 0, 0, 0.48850504, 12.070374, -12.0882225, -57.446697)
+transform = Transform3D(0.94942015, 0, -3.7252903e-08, 0, 0.8267391, 0, 0, 0, 0.48850554, 12.070435, -12.0882225, -62.072124)
 use_collision = true
-size = Vector3(50, 100, 50)
+size = Vector3(50, 100, 68.93701)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Building walls2" type="Node3D" parent="NavigationRegion3D/World props" unique_id=454060915]
@@ -314,33 +320,33 @@ size = Vector3(50, 100, 50)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building3" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls2" unique_id=940138291]
-transform = Transform3D(0.7292011, 0, 0.3128344, 0, 0.82673913, 0, -0.60800034, 0, 0.37519568, -22.625473, -9.97987, -135.55124)
+transform = Transform3D(0.7292011, 0, 0.3128344, 0, 0.82673913, 0, -0.60800034, 0, 0.37519568, -26.00586, -9.97987, -139.60547)
 use_collision = true
-size = Vector3(50, 100, 50)
+size = Vector3(50, 100, 71.61133)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building11" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls2" unique_id=64823837]
-transform = Transform3D(0.9403366, 0, -0.06741253, 0, 0.82673913, 0, 0.13101782, 0, 0.4838313, -91.49296, -9.97987, -321.65393)
+transform = Transform3D(0.9403366, 0, -0.06741253, 0, 0.82673913, 0, 0.13101782, 0, 0.4838313, -92.09617, -9.97987, -317.32446)
 use_collision = true
-size = Vector3(50, 100, 50)
+size = Vector3(50, 100, 67.89661)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building7" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls2" unique_id=543219424]
-transform = Transform3D(0.92254484, 0, -0.38588995, 0, 1, 0, 0.38588995, 0, 0.92254484, -82.11022, 0, 64.28375)
+transform = Transform3D(0.92254484, 0, -0.38588995, 0, 1, 0, 0.38588995, 0, 0.92254484, -85.756096, 0, 72.99997)
 use_collision = true
-size = Vector3(50, 100, 50)
+size = Vector3(50, 100, 68.895996)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building8" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls2" unique_id=1641565500]
-transform = Transform3D(0.579245, 0, -0.6112093, 0, 0.8267391, 0, 0.4473201, 0, 0.791469, -48.656822, -9.97987, 18.897942)
+transform = Transform3D(0.579245, 0, -0.6112093, 0, 0.8267391, 0, 0.4473201, 0, 0.791469, -52.649223, -9.97987, 24.067818)
 use_collision = true
-size = Vector3(50, 100, 50)
+size = Vector3(50, 100, 63.063965)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building9" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls2" unique_id=56878681]
-transform = Transform3D(0.94586486, 0, -0.09190724, 0, 0.8267392, 0, 0.0820871, 0, 1.0590193, -101.20312, -9.97987, 124.24822)
+transform = Transform3D(0.94586486, 0, -0.09190724, 0, 0.8267392, 0, 0.0820871, 0, 1.0590193, -101.36408, -9.97987, 126.10306)
 use_collision = true
-size = Vector3(50, 100, 50)
+size = Vector3(50, 100, 53.50293)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building4" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls2" unique_id=1495046404]
@@ -356,9 +362,9 @@ size = Vector3(50, 100, 50)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building10" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls2" unique_id=1810672436]
-transform = Transform3D(0.934161, 0, 0.35685217, 0, 1, 0, -0.35685217, 0, 0.934161, -81.54456, 0, -220.97925)
+transform = Transform3D(0.934161, 0, 0.35685217, 0, 1, 0, -0.35685217, 0, 0.934161, -81.79763, 0, -221.64172)
 use_collision = true
-size = Vector3(50, 100, 50)
+size = Vector3(50, 100, 67.16565)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building12" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls2" unique_id=2091951802]
@@ -383,9 +389,9 @@ size = Vector3(50, 100, 50)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building3" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls3" unique_id=1152754184]
-transform = Transform3D(0.7292011, 0, 0.3128344, 0, 0.82673913, 0, -0.60800034, 0, 0.37519568, -22.625473, -9.97987, -135.55124)
+transform = Transform3D(0.7292011, 0, 0.3128344, 0, 0.82673913, 0, -0.60800034, 0, 0.37519568, -25.790543, -9.97987, -139.34723)
 use_collision = true
-size = Vector3(50, 100, 50)
+size = Vector3(50, 100, 70.23486)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building11" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls3" unique_id=309657882]
@@ -395,21 +401,21 @@ size = Vector3(50, 100, 50)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building7" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls3" unique_id=1240749709]
-transform = Transform3D(0.92254484, 0, -0.38588995, 0, 1, 0, 0.38588995, 0, 0.92254484, -82.110214, 0, 77.72273)
+transform = Transform3D(0.92254484, 0, -0.38588995, 0, 1, 0, 0.38588995, 0, 0.92254484, -84.1851, -0.29721832, 85.14661)
 use_collision = true
-size = Vector3(50, 100, 50)
+size = Vector3(50, 100, 60.91162)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building8" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls3" unique_id=1771517294]
-transform = Transform3D(0.579245, 0, -0.6112093, 0, 0.8267391, 0, 0.4473201, 0, 0.791469, -54.744263, -9.97987, 29.569138)
+transform = Transform3D(0.579245, 0, -0.6112093, 0, 0.8267391, 0, 0.4473201, 0, 0.791469, -60.672768, -9.97987, 37.246155)
 use_collision = true
-size = Vector3(50, 100, 50)
+size = Vector3(50, 100, 69.39929)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building9" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls3" unique_id=467886778]
-transform = Transform3D(0.94586486, 0, -0.09190724, 0, 0.8267392, 0, 0.0820871, 0, 1.0590193, -101.203125, -9.97987, 143.47157)
+transform = Transform3D(0.94586486, 0, -0.09190724, 0, 0.8267392, 0, 0.0820871, 0, 1.0590193, -103.322716, -9.97987, 167.89499)
 use_collision = true
-size = Vector3(50, 100, 50)
+size = Vector3(50, 100, 96.12451)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building4" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls3" unique_id=1870943667]
@@ -431,15 +437,15 @@ size = Vector3(50, 100, 50)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building12" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls3" unique_id=1032763905]
-transform = Transform3D(0.7299565, 0, 0.0720893, 0, 0.8267391, 0, -0.052759353, 0, 0.99739814, -87.283, -12.4986, -276.8813)
+transform = Transform3D(0.7299565, 0, 0.0720893, 0, 0.8267391, 0, -0.052759353, 0, 0.99739814, -87.476494, -12.4986, -279.55832)
 use_collision = true
-size = Vector3(50, 100, 50)
+size = Vector3(50, 100, 55.368164)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Outer building6" type="CSGBox3D" parent="NavigationRegion3D/World props/Building walls3" unique_id=1058355968]
-transform = Transform3D(0.76602685, 0, -0.2885964, 0, 0.8267392, 0, 0.5608935, 0, 0.39414373, -24.972984, -12.4986, -13.315155)
+transform = Transform3D(0.76602685, 0, -0.2885964, 0, 0.8267392, 0, 0.5608935, 0, 0.39414373, -27.874832, -12.4986, -9.351929)
 use_collision = true
-size = Vector3(50, 100, 50)
+size = Vector3(50, 100, 91.439026)
 material = SubResource("StandardMaterial3D_q0ook")
 
 [node name="Ground" type="CSGBox3D" parent="NavigationRegion3D/World props" unique_id=523607595]
@@ -572,23 +578,355 @@ script = ExtResource("4_q0ook")
 [node name="Player" parent="." unique_id=518666012 instance=ExtResource("1_w0yvr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.549505, 120.44026, 241.48125)
 
-[node name="destructiblemailbox" type="MeshInstance3D" parent="." unique_id=319559719]
-transform = Transform3D(0.16812815, 0, 0, 0, 0.054891124, 0, 0, 0, 0.12688074, -97.966705, -8.838562, -78.311226)
+[node name="canbedestroyed" type="Node" parent="." unique_id=1824068229]
+
+[node name="destructiblemailbox" type="MeshInstance3D" parent="canbedestroyed" unique_id=319559719]
+transform = Transform3D(0.13142012, 0, 0, 0, 0.054891124, 0, 0, 0, 0.16085118, -90.159355, -9.987286, -78.311226)
 material_override = SubResource("StandardMaterial3D_c8jah")
 mesh = ExtResource("3_fbbyy")
 
-[node name="destructiblecone" type="MeshInstance3D" parent="." unique_id=196723662]
-transform = Transform3D(0.12944579, 0, 0, 0, 0.04226196, 0, 0, 0, 0.097688444, -103.63851, -10.407921, -73.06767)
+[node name="destructiblecone" type="MeshInstance3D" parent="canbedestroyed" unique_id=196723662]
+transform = Transform3D(0.08218831, 0, 0, 0, 0.04226196, 0, 0, 0, 0.097688444, 569.5022, 24.94319, -96.97681)
 material_override = SubResource("StandardMaterial3D_mmcgr")
 mesh = ExtResource("14_n8572")
 
-[node name="destructiblesign" type="MeshInstance3D" parent="." unique_id=17789921]
-transform = Transform3D(0.07088121, 0, 0, 0, 0.045613546, 0, 0, 0, 0.114619285, -92.25551, 3.4611588, -48.087105)
+[node name="destructiblesign" type="MeshInstance3D" parent="canbedestroyed" unique_id=17789921]
+transform = Transform3D(0.06772699, 0, 0.03381167, 0, 0.045613542, 0, -0.020909317, 0, 0.10951873, -114.01867, 3.4611588, 41.76644)
 material_override = SubResource("StandardMaterial3D_fbute")
 mesh = ExtResource("15_uwyh4")
 
-[node name="destructiblepylon" type="MeshInstance3D" parent="." unique_id=1351130534]
-transform = Transform3D(0.16900313, 0, 0, 0, 0.0732052, 0, 0, 0, 0.16921368, -96.75103, -10.407921, -67.17976)
+[node name="destructiblepylon" type="MeshInstance3D" parent="canbedestroyed" unique_id=1351130534]
+transform = Transform3D(0.13451432, 0.044317786, 0, -0.102313004, 0.058266066, 0, 0, 0, 0.16921367, -85.00728, -9.7329645, -75.029335)
+material_override = SubResource("StandardMaterial3D_p4b6q")
+mesh = ExtResource("16_eubhg")
+
+[node name="canbedestroyed" type="Node" parent="canbedestroyed" unique_id=454160565]
+
+[node name="destructiblemailbox" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed" unique_id=1564372573]
+transform = Transform3D(-0.07847559, 0, 0.12902525, 0, 0.054891124, 0, -0.10541743, 0, -0.09604992, -37.143158, -10.743719, -104.86513)
+material_override = SubResource("StandardMaterial3D_c8jah")
+mesh = ExtResource("3_fbbyy")
+
+[node name="destructiblecone" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed" unique_id=123736706]
+transform = Transform3D(-0.007603211, 0, -0.09726953, 0, 0.042261958, 0, 0.081835866, 0, -0.009037123, 131.99084, -10.238089, -86.42724)
+material_override = SubResource("StandardMaterial3D_mmcgr")
+mesh = ExtResource("14_n8572")
+
+[node name="destructiblesign" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed" unique_id=2147079365]
+transform = Transform3D(0.06910796, 0, -0.025477607, 0, 0.045613542, 0, 0.015755497, 0, 0.11175185, 26.880089, 3.4611588, -48.087105)
+material_override = SubResource("StandardMaterial3D_fbute")
+mesh = ExtResource("15_uwyh4")
+
+[node name="destructiblepylon" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed" unique_id=2100751478]
+transform = Transform3D(0.16900311, 0, 0, 0, 0.006569881, -0.16853085, 0, 0.072909795, 0.01518625, -96.75103, -9.601759, -1.3853607)
+material_override = SubResource("StandardMaterial3D_p4b6q")
+mesh = ExtResource("16_eubhg")
+
+[node name="canbedestroyed" type="Node" parent="canbedestroyed/canbedestroyed" unique_id=2010085982]
+
+[node name="destructiblemailbox" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed/canbedestroyed" unique_id=2016108780]
+transform = Transform3D(-0.06206227, 0, -0.14178522, 0, 0.054891124, 0, 0.1158427, 0, -0.07596086, -37.143158, -10.743719, 20.773254)
+material_override = SubResource("StandardMaterial3D_c8jah")
+mesh = ExtResource("3_fbbyy")
+
+[node name="destructiblecone" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed/canbedestroyed" unique_id=1906316579]
+transform = Transform3D(-0.007603211, 0, -0.09726953, 0, 0.042261958, 0, 0.081835866, 0, -0.009037123, -19.384506, -10.166758, 121.17239)
+material_override = SubResource("StandardMaterial3D_mmcgr")
+mesh = ExtResource("14_n8572")
+
+[node name="destructiblesign" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed/canbedestroyed" unique_id=1011134096]
+transform = Transform3D(0.048437517, -0.0015822754, 0.08358672, 0.004267237, 0.04552898, -0.0010241081, -0.05157269, 0.0022810812, 0.07842062, 177.98227, 2.6363, 1.3097801)
+material_override = SubResource("StandardMaterial3D_fbute")
+mesh = ExtResource("15_uwyh4")
+
+[node name="destructiblepylon" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed/canbedestroyed" unique_id=598131844]
+transform = Transform3D(0.12936336, 0.04710725, 0, -0.108752824, 0.05603488, 0, 0, 0, 0.16921367, -80.53509, -10.407921, -67.17976)
+material_override = SubResource("StandardMaterial3D_p4b6q")
+mesh = ExtResource("16_eubhg")
+
+[node name="canbedestroyed" type="Node" parent="canbedestroyed/canbedestroyed/canbedestroyed" unique_id=656251129]
+
+[node name="destructiblemailbox" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed/canbedestroyed/canbedestroyed" unique_id=1607752389]
+transform = Transform3D(-0.101138026, 0, 0.10271199, 0, 0.054891124, 0, -0.08391873, 0, -0.123787545, 104.19197, -10.743719, 17.484283)
+material_override = SubResource("StandardMaterial3D_c8jah")
+mesh = ExtResource("3_fbbyy")
+
+[node name="destructiblecone" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed/canbedestroyed/canbedestroyed" unique_id=493185374]
+transform = Transform3D(0.027234973, -0.0050309375, -0.09143245, -0.004732931, 0.041738216, -0.014262402, 0.07740006, 0.0043224962, 0.03130046, 117.566956, 1.1880941, 78.576)
+material_override = SubResource("StandardMaterial3D_mmcgr")
+mesh = ExtResource("14_n8572")
+
+[node name="destructiblesign" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed/canbedestroyed/canbedestroyed" unique_id=1679499705]
+transform = Transform3D(0.041262448, -0.0012697483, 0.09314138, 0.004267236, 0.045528978, -0.0010241077, -0.05747473, 0.002468737, 0.06679232, 313.56207, 2.6363, 65.67497)
+material_override = SubResource("StandardMaterial3D_fbute")
+mesh = ExtResource("15_uwyh4")
+
+[node name="destructiblepylon" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed/canbedestroyed/canbedestroyed" unique_id=1861755876]
+transform = Transform3D(0.0071183667, 0.073140234, 0, -0.16885313, 0.0030833837, 0, 0, 0, 0.16921367, 90.94739, -7.653097, -67.17976)
+material_override = SubResource("StandardMaterial3D_p4b6q")
+mesh = ExtResource("16_eubhg")
+
+[node name="canbedestroyed2" type="Node" parent="canbedestroyed" unique_id=135655212]
+
+[node name="destructiblemailbox" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed2" unique_id=132692084]
+transform = Transform3D(-0.06871569, 0, -0.1371115, 0, 0.054891124, 0, 0.112024106, 0, -0.08410432, 95.52068, -10.461646, 43.98282)
+material_override = SubResource("StandardMaterial3D_c8jah")
+mesh = ExtResource("3_fbbyy")
+
+[node name="destructiblecone" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed2" unique_id=950610822]
+transform = Transform3D(0.08218831, 0, 0, 0, 0.04226196, 0, 0, 0, 0.097688444, -113.23761, -11.488054, 19.9627)
+material_override = SubResource("StandardMaterial3D_mmcgr")
+mesh = ExtResource("14_n8572")
+
+[node name="destructiblesign" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed2" unique_id=207417444]
+transform = Transform3D(0.06355937, 0, -0.050734274, 0, 0.04561354, 0, 0.03137436, 0, 0.10277943, 558.5657, 35.577976, 61.917236)
+material_override = SubResource("StandardMaterial3D_fbute")
+mesh = ExtResource("15_uwyh4")
+
+[node name="destructiblepylon" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed2" unique_id=915094990]
+transform = Transform3D(0.10890848, 0.035881553, 0.099315494, -0.102313, 0.058266066, 0, -0.078949615, -0.02601115, 0.13700253, -67.64253, -9.7329645, 67.69493)
+material_override = SubResource("StandardMaterial3D_p4b6q")
+mesh = ExtResource("16_eubhg")
+
+[node name="canbedestroyed" type="Node" parent="canbedestroyed/canbedestroyed2" unique_id=1503069649]
+
+[node name="destructiblemailbox" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed2/canbedestroyed" unique_id=2010598062]
+transform = Transform3D(-0.07847559, 0, 0.12902525, 0, 0.054891124, 0, -0.10541743, 0, -0.09604992, -37.143158, -10.743719, -104.86513)
+material_override = SubResource("StandardMaterial3D_c8jah")
+mesh = ExtResource("3_fbbyy")
+
+[node name="destructiblecone" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed2/canbedestroyed" unique_id=600807037]
+transform = Transform3D(-0.007603211, 0, -0.09726953, 0, 0.042261958, 0, 0.081835866, 0, -0.009037123, 26.043724, -10.348356, -150.45238)
+material_override = SubResource("StandardMaterial3D_mmcgr")
+mesh = ExtResource("14_n8572")
+
+[node name="destructiblesign" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed2/canbedestroyed" unique_id=61617191]
+transform = Transform3D(0.06910796, 0, -0.025477607, 0, 0.045613542, 0, 0.015755497, 0, 0.11175185, -125.4347, 3.4611588, -48.087105)
+material_override = SubResource("StandardMaterial3D_fbute")
+mesh = ExtResource("15_uwyh4")
+
+[node name="destructiblepylon" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed2/canbedestroyed" unique_id=1384820942]
+transform = Transform3D(0.16900311, 0, 0, 0, 0.006569881, -0.16853085, 0, 0.072909795, 0.01518625, -96.75103, -9.601759, -1.3853607)
+material_override = SubResource("StandardMaterial3D_p4b6q")
+mesh = ExtResource("16_eubhg")
+
+[node name="canbedestroyed" type="Node" parent="canbedestroyed/canbedestroyed2/canbedestroyed" unique_id=645914682]
+
+[node name="destructiblemailbox" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed2/canbedestroyed/canbedestroyed" unique_id=2064943728]
+transform = Transform3D(-0.06206227, 0, -0.14178522, 0, 0.054891124, 0, 0.1158427, 0, -0.07596086, -37.143158, -10.743719, 20.773254)
+material_override = SubResource("StandardMaterial3D_c8jah")
+mesh = ExtResource("3_fbbyy")
+
+[node name="destructiblecone" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed2/canbedestroyed/canbedestroyed" unique_id=423288590]
+transform = Transform3D(-0.007603211, 0, -0.09726953, 0, 0.042261958, 0, 0.081835866, 0, -0.009037123, -19.384506, -11.488054, 140.19028)
+material_override = SubResource("StandardMaterial3D_mmcgr")
+mesh = ExtResource("14_n8572")
+
+[node name="destructiblesign" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed2/canbedestroyed/canbedestroyed" unique_id=1683981432]
+transform = Transform3D(0.048437517, -0.0015822754, 0.08358672, 0.004267237, 0.04552898, -0.0010241081, -0.05157269, 0.0022810812, 0.07842062, 177.98227, 2.6363, 1.3097801)
+material_override = SubResource("StandardMaterial3D_fbute")
+mesh = ExtResource("15_uwyh4")
+
+[node name="destructiblepylon" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed2/canbedestroyed/canbedestroyed" unique_id=251231599]
+transform = Transform3D(0.12936336, 0.04710725, 0, -0.108752824, 0.05603488, 0, 0, 0, 0.16921367, -80.53509, -10.407921, -67.17976)
+material_override = SubResource("StandardMaterial3D_p4b6q")
+mesh = ExtResource("16_eubhg")
+
+[node name="canbedestroyed" type="Node" parent="canbedestroyed/canbedestroyed2/canbedestroyed/canbedestroyed" unique_id=1812860130]
+
+[node name="destructiblemailbox" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed2/canbedestroyed/canbedestroyed/canbedestroyed" unique_id=1655842166]
+transform = Transform3D(-0.101138026, 0, 0.10271199, 0, 0.054891124, 0, -0.08391873, 0, -0.123787545, 104.19197, -10.743719, 17.484283)
+material_override = SubResource("StandardMaterial3D_c8jah")
+mesh = ExtResource("3_fbbyy")
+
+[node name="destructiblecone" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed2/canbedestroyed/canbedestroyed/canbedestroyed" unique_id=625982861]
+transform = Transform3D(0.027582917, -0.009419849, -0.0894096, -0.0018240688, 0.0409714, -0.023858624, 0.07740006, 0.0043224967, 0.031300463, 162.57907, 15.387385, 44.708324)
+material_override = SubResource("StandardMaterial3D_mmcgr")
+mesh = ExtResource("14_n8572")
+
+[node name="destructiblesign" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed2/canbedestroyed/canbedestroyed/canbedestroyed" unique_id=346706579]
+transform = Transform3D(0.041262448, -0.0012697483, 0.09314138, 0.004267236, 0.045528978, -0.0010241077, -0.05747473, 0.002468737, 0.06679232, 313.56207, 2.6363, 65.67497)
+material_override = SubResource("StandardMaterial3D_fbute")
+mesh = ExtResource("15_uwyh4")
+
+[node name="destructiblepylon" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed2/canbedestroyed/canbedestroyed/canbedestroyed" unique_id=1513918039]
+transform = Transform3D(0.0052824053, 0.054275986, 0.11342562, -0.16885312, 0.0030833832, 0, -0.0047715125, -0.04902663, 0.12557027, 148.08034, -8.751453, -67.17976)
+material_override = SubResource("StandardMaterial3D_p4b6q")
+mesh = ExtResource("16_eubhg")
+
+[node name="canbedestroyed3" type="Node" parent="canbedestroyed" unique_id=1709547319]
+
+[node name="destructiblemailbox" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3" unique_id=1170233644]
+transform = Transform3D(0.13142012, 0, 0, 0, 0.054891124, 0, 0, 0, 0.16085118, 69.233284, -9.987286, -42.654938)
+material_override = SubResource("StandardMaterial3D_c8jah")
+mesh = ExtResource("3_fbbyy")
+
+[node name="destructiblecone" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3" unique_id=90687639]
+transform = Transform3D(0.08218831, 0, 0, 0, 0.04226196, 0, 0, 0, 0.097688444, -147.47208, -10.280123, 28.704803)
+material_override = SubResource("StandardMaterial3D_mmcgr")
+mesh = ExtResource("14_n8572")
+
+[node name="destructiblesign" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3" unique_id=1648149646]
+transform = Transform3D(0.03772589, 0, -0.09703586, 0, 0.045613542, 0, 0.06000752, 0, 0.0610051, 230.29599, 35.907944, -6.411957)
+material_override = SubResource("StandardMaterial3D_fbute")
+mesh = ExtResource("15_uwyh4")
+
+[node name="destructiblepylon" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3" unique_id=1795194215]
+transform = Transform3D(0.13451432, 0.044317786, 0, -0.102313004, 0.058266066, 0, 0, 0, 0.16921367, 375.36722, -9.7329645, -43.76739)
+material_override = SubResource("StandardMaterial3D_p4b6q")
+mesh = ExtResource("16_eubhg")
+
+[node name="canbedestroyed" type="Node" parent="canbedestroyed/canbedestroyed3" unique_id=1846656680]
+
+[node name="destructiblemailbox" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3/canbedestroyed" unique_id=1232356496]
+transform = Transform3D(-0.07847559, 0, 0.12902525, 0, 0.054891124, 0, -0.10541743, 0, -0.09604992, -37.143158, -10.743719, -104.86513)
+material_override = SubResource("StandardMaterial3D_c8jah")
+mesh = ExtResource("3_fbbyy")
+
+[node name="destructiblecone" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3/canbedestroyed" unique_id=1091939458]
+transform = Transform3D(-0.043181326, 0.0051416517, -0.082264945, 0.00529282, 0.04194802, 0.010083376, 0.06973001, 0, -0.051709123, 287.31085, 23.461946, -65.34053)
+material_override = SubResource("StandardMaterial3D_mmcgr")
+mesh = ExtResource("14_n8572")
+
+[node name="destructiblesign" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3/canbedestroyed" unique_id=1558998650]
+transform = Transform3D(-0.053705998, 0, -0.07480218, 0, 0.04561354, 0, 0.04625809, 0, -0.08684593, 512.66187, 3.4611588, -65.44641)
+material_override = SubResource("StandardMaterial3D_fbute")
+mesh = ExtResource("15_uwyh4")
+
+[node name="destructiblepylon" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3/canbedestroyed" unique_id=1178275759]
+transform = Transform3D(0.16900311, 0, 0, 0, 0.006569881, -0.16853085, 0, 0.072909795, 0.01518625, -96.75103, -9.601759, -1.3853607)
+material_override = SubResource("StandardMaterial3D_p4b6q")
+mesh = ExtResource("16_eubhg")
+
+[node name="canbedestroyed" type="Node" parent="canbedestroyed/canbedestroyed3/canbedestroyed" unique_id=1819353544]
+
+[node name="destructiblemailbox" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3/canbedestroyed/canbedestroyed" unique_id=1954713822]
+transform = Transform3D(-0.06206227, 0, -0.14178522, 0, 0.054891124, 0, 0.1158427, 0, -0.07596086, -37.143158, -10.743719, 20.773254)
+material_override = SubResource("StandardMaterial3D_c8jah")
+mesh = ExtResource("3_fbbyy")
+
+[node name="destructiblecone" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3/canbedestroyed/canbedestroyed" unique_id=706714358]
+transform = Transform3D(-0.007603211, 0, -0.09726953, 0, 0.042261958, 0, 0.081835866, 0, -0.009037123, -19.384506, -11.488054, 121.17239)
+material_override = SubResource("StandardMaterial3D_mmcgr")
+mesh = ExtResource("14_n8572")
+
+[node name="destructiblesign" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3/canbedestroyed/canbedestroyed" unique_id=2047985874]
+transform = Transform3D(0.048437517, -0.0015822754, 0.08358672, 0.004267237, 0.04552898, -0.0010241081, -0.05157269, 0.0022810812, 0.07842062, 177.98227, 2.6363, 1.3097801)
+material_override = SubResource("StandardMaterial3D_fbute")
+mesh = ExtResource("15_uwyh4")
+
+[node name="destructiblepylon" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3/canbedestroyed/canbedestroyed" unique_id=1368434392]
+transform = Transform3D(0.12936336, 0.04710725, 0, -0.108752824, 0.05603488, 0, 0, 0, 0.16921367, -80.53509, -10.407921, -67.17976)
+material_override = SubResource("StandardMaterial3D_p4b6q")
+mesh = ExtResource("16_eubhg")
+
+[node name="canbedestroyed" type="Node" parent="canbedestroyed/canbedestroyed3/canbedestroyed/canbedestroyed" unique_id=518525516]
+
+[node name="destructiblemailbox" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3/canbedestroyed/canbedestroyed/canbedestroyed" unique_id=1204527260]
+transform = Transform3D(-0.101138026, 0, 0.10271199, 0, 0.054891124, 0, -0.08391873, 0, -0.123787545, 104.19197, -10.743719, 17.484283)
+material_override = SubResource("StandardMaterial3D_c8jah")
+mesh = ExtResource("3_fbbyy")
+
+[node name="destructiblecone" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3/canbedestroyed/canbedestroyed/canbedestroyed" unique_id=1421891263]
+transform = Transform3D(-0.06364266, 0.003087365, -0.06139947, 0.005341887, 0.042145386, 0.0035004795, 0.05172994, -0.00055379746, -0.07590042, 255.56177, -10.576939, 60.530502)
+material_override = SubResource("StandardMaterial3D_mmcgr")
+mesh = ExtResource("14_n8572")
+
+[node name="destructiblesign" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3/canbedestroyed/canbedestroyed/canbedestroyed" unique_id=1466033582]
+transform = Transform3D(-0.04965766, 0.0022180765, 0.0815996, 0.004267236, 0.045528974, -0.0010241076, -0.0503989, 0.0016694486, -0.08048622, 313.56207, 35.187054, -73.97455)
+material_override = SubResource("StandardMaterial3D_fbute")
+mesh = ExtResource("15_uwyh4")
+
+[node name="destructiblepylon" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3/canbedestroyed/canbedestroyed/canbedestroyed" unique_id=1894351396]
+transform = Transform3D(0.0071183667, 0.073140234, 0, -0.16885313, 0.0030833837, 0, 0, 0, 0.16921367, 151.561, -7.653097, 3.6228943)
+material_override = SubResource("StandardMaterial3D_p4b6q")
+mesh = ExtResource("16_eubhg")
+
+[node name="canbedestroyed2" type="Node" parent="canbedestroyed/canbedestroyed3" unique_id=421303431]
+
+[node name="destructiblemailbox" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3/canbedestroyed2" unique_id=1513923755]
+transform = Transform3D(-0.06871569, 0, -0.1371115, 0, 0.054891124, 0, 0.112024106, 0, -0.08410432, 95.52068, -10.461646, -51.474792)
+material_override = SubResource("StandardMaterial3D_c8jah")
+mesh = ExtResource("3_fbbyy")
+
+[node name="destructiblecone" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3/canbedestroyed2" unique_id=299370455]
+transform = Transform3D(0.08218831, 0, 0, 0, 0.04226196, 0, 0, 0, 0.097688444, -110.843445, -11.488054, -75.88697)
+material_override = SubResource("StandardMaterial3D_mmcgr")
+mesh = ExtResource("14_n8572")
+
+[node name="destructiblesign" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3/canbedestroyed2" unique_id=1120585952]
+transform = Transform3D(0.020909313, 0, -0.10951873, 0, 0.045613542, 0, 0.06772699, 0, 0.033811666, 52.083157, 3.4611588, 92.99412)
+material_override = SubResource("StandardMaterial3D_fbute")
+mesh = ExtResource("15_uwyh4")
+
+[node name="destructiblepylon" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3/canbedestroyed2" unique_id=1957749649]
+transform = Transform3D(0.13451432, 0.044317786, 0, -0.102313004, 0.058266066, 0, 0, 0, 0.16921367, 76.824394, -9.7329645, -2.643814)
+material_override = SubResource("StandardMaterial3D_p4b6q")
+mesh = ExtResource("16_eubhg")
+
+[node name="canbedestroyed" type="Node" parent="canbedestroyed/canbedestroyed3/canbedestroyed2" unique_id=1218068272]
+
+[node name="destructiblemailbox" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3/canbedestroyed2/canbedestroyed" unique_id=570839899]
+transform = Transform3D(-0.07847559, 0, 0.12902525, 0, 0.054891124, 0, -0.10541743, 0, -0.09604992, 21.959824, -10.743719, -104.86513)
+material_override = SubResource("StandardMaterial3D_c8jah")
+mesh = ExtResource("3_fbbyy")
+
+[node name="destructiblecone" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3/canbedestroyed2/canbedestroyed" unique_id=1257082219]
+transform = Transform3D(-0.007603211, 0, -0.09726953, 0, 0.042261958, 0, 0.081835866, 0, -0.009037123, 434.77017, 23.79014, -140.61789)
+material_override = SubResource("StandardMaterial3D_mmcgr")
+mesh = ExtResource("14_n8572")
+
+[node name="destructiblesign" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3/canbedestroyed2/canbedestroyed" unique_id=325608895]
+transform = Transform3D(-0.015755495, 0, -0.11175184, 0, 0.04561354, 0, 0.06910795, 0, -0.025477603, 27.057526, 3.4611588, -127.4353)
+material_override = SubResource("StandardMaterial3D_fbute")
+mesh = ExtResource("15_uwyh4")
+
+[node name="destructiblepylon" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3/canbedestroyed2/canbedestroyed" unique_id=468989486]
+transform = Transform3D(0.1137543, 0.05392121, 0.011231152, 0, 0.006569881, -0.16853085, -0.12498804, 0.04907485, 0.010221713, 3.5322342, -9.601759, -1.3853607)
+material_override = SubResource("StandardMaterial3D_p4b6q")
+mesh = ExtResource("16_eubhg")
+
+[node name="canbedestroyed" type="Node" parent="canbedestroyed/canbedestroyed3/canbedestroyed2/canbedestroyed" unique_id=1466476559]
+
+[node name="destructiblemailbox" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3/canbedestroyed2/canbedestroyed/canbedestroyed" unique_id=848925687]
+transform = Transform3D(-0.12213895, 0, 0.059375077, 0, 0.054891124, 0, -0.0485112, 0, -0.14949149, 362.2614, -10.743719, 25.80053)
+material_override = SubResource("StandardMaterial3D_c8jah")
+mesh = ExtResource("3_fbbyy")
+
+[node name="destructiblecone" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3/canbedestroyed2/canbedestroyed/canbedestroyed" unique_id=908502890]
+transform = Transform3D(-0.007603211, 0, -0.09726953, 0, 0.042261958, 0, 0.081835866, 0, -0.009037123, 421.14536, 24.517817, 141.50084)
+material_override = SubResource("StandardMaterial3D_mmcgr")
+mesh = ExtResource("14_n8572")
+
+[node name="destructiblesign" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3/canbedestroyed2/canbedestroyed/canbedestroyed" unique_id=325216925]
+transform = Transform3D(0.048437517, -0.0015822754, 0.08358672, 0.004267237, 0.04552898, -0.0010241081, -0.05157269, 0.0022810812, 0.07842062, 246.05504, 2.6363, 5.7086906)
+material_override = SubResource("StandardMaterial3D_fbute")
+mesh = ExtResource("15_uwyh4")
+
+[node name="destructiblepylon" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3/canbedestroyed2/canbedestroyed/canbedestroyed" unique_id=385967038]
+transform = Transform3D(0.12936336, 0.04710725, 0, -0.108752824, 0.05603488, 0, 0, 0, 0.16921367, 345.81747, -10.407921, 16.006556)
+material_override = SubResource("StandardMaterial3D_p4b6q")
+mesh = ExtResource("16_eubhg")
+
+[node name="canbedestroyed" type="Node" parent="canbedestroyed/canbedestroyed3/canbedestroyed2/canbedestroyed/canbedestroyed" unique_id=1766309839]
+
+[node name="destructiblemailbox" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3/canbedestroyed2/canbedestroyed/canbedestroyed/canbedestroyed" unique_id=1883432370]
+transform = Transform3D(-0.101138026, 0, 0.10271199, 0, 0.054891124, 0, -0.08391873, 0, -0.123787545, 104.19197, -10.743719, 17.484283)
+material_override = SubResource("StandardMaterial3D_c8jah")
+mesh = ExtResource("3_fbbyy")
+
+[node name="destructiblecone" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3/canbedestroyed2/canbedestroyed/canbedestroyed/canbedestroyed" unique_id=231114090]
+transform = Transform3D(0.02617095, 0.0015053033, -0.0925381, -0.0089008985, 0.042013362, 9.52445e-05, 0.07740006, 0.0043224962, 0.03130046, 208.93375, 22.830437, -1.338234)
+material_override = SubResource("StandardMaterial3D_mmcgr")
+mesh = ExtResource("14_n8572")
+
+[node name="destructiblesign" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3/canbedestroyed2/canbedestroyed/canbedestroyed/canbedestroyed" unique_id=61022674]
+transform = Transform3D(0.041262448, -0.0012697483, 0.09314138, 0.004267236, 0.045528978, -0.0010241077, -0.05747473, 0.002468737, 0.06679232, 461.5884, 2.6363, 9.86367)
+material_override = SubResource("StandardMaterial3D_fbute")
+mesh = ExtResource("15_uwyh4")
+
+[node name="destructiblepylon" type="MeshInstance3D" parent="canbedestroyed/canbedestroyed3/canbedestroyed2/canbedestroyed/canbedestroyed/canbedestroyed" unique_id=20262673]
+transform = Transform3D(0.0052824053, 0.054275986, 0.11342562, -0.16885312, 0.0030833832, 0, -0.0047715125, -0.04902663, 0.12557027, 320.687, 26.08097, -98.72694)
 material_override = SubResource("StandardMaterial3D_p4b6q")
 mesh = ExtResource("16_eubhg")
 

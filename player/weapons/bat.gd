@@ -1,6 +1,11 @@
 extends Area3D
 
 @onready var Cooldown := $Cooldown
+
+@onready var animation_tree: AnimationTree = $"../../PlayerModelHolder/Player Model/AnimationTree"
+@onready var playback: AnimationNodeStateMachinePlayback = animation_tree["parameters/playback"]
+
+
 @export var CooldownTime := 1.0
 @export var damage := 50.0
 @export var knockback := 25.0
@@ -13,12 +18,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("attack") and can_attack:
-		can_attack = false
-		#Placeholder Animation Tween for Macks!
-		var tween = create_tween()
-		tween.tween_property($TempAnim,"rotation:y",-PI,0.3)
-		tween.tween_property($TempAnim,"rotation:y",0.0,0.1)
-		#this is probably horrible please delete this later, I'm not killing the tween here since that doesn't make the animation play??
+		playback.travel("Player Swing")
 		Cooldown.start()
 		if has_overlapping_bodies():
 			for i in get_overlapping_bodies():
@@ -35,3 +35,15 @@ func hit(target):
 
 func _on_cooldown_timeout() -> void:
 	can_attack = true
+
+
+func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "Player animations/Player Swing Recover":
+		print("Done Swinging")
+
+
+func _on_animation_tree_animation_started(anim_name: StringName) -> void:
+	if anim_name == "Player animations/Player Swing":
+		can_attack = false
+		print("SWINING")
+	return # Replace with function body.
