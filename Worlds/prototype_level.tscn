@@ -569,7 +569,6 @@ ExtResource("7_1swxr"): 0.5,
 ExtResource("8_fbbyy"): 0.75
 }
 spawn_rate = 10.0
-max_enemies = 0
 spawn_bounds = Vector3(0, 0, 0)
 
 [node name="MusicManager" type="Node" parent="." unique_id=693600566]
@@ -930,20 +929,16 @@ transform = Transform3D(0.0052824053, 0.054275986, 0.11342562, -0.16885312, 0.00
 material_override = SubResource("StandardMaterial3D_p4b6q")
 mesh = ExtResource("16_eubhg")
 
-[node name="DroneEnemy" parent="." unique_id=1337185290 instance=ExtResource("4_wu3ua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -112.83796, 3.1307545, -102.272)
-
-[node name="DroneShootingEnemy" parent="." unique_id=1738409039 instance=ExtResource("3_xemno")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 176.1831, 17.63473, -22.222076)
-
-[node name="HeliShootingEnemy" parent="." unique_id=1060774577 instance=ExtResource("5_k2est")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -105.358894, 4.660797, -16.317383)
-
-[node name="PoliceEnemyBigger" parent="." unique_id=487353085 instance=ExtResource("7_1swxr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.12641, -7.7493086, -127.91986)
-
-[node name="PoliceEnemyStronger" parent="." unique_id=1882071875 instance=ExtResource("6_d12ac")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 116.37272, 6.6016436, 23.174316)
-
-[node name="PoliceExplodesEnemy" parent="." unique_id=1771318718 instance=ExtResource("8_fbbyy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -129.93285, -10.249278, -50.47162)
+[node name="Spawner2" parent="." unique_id=2056295286 instance=ExtResource("3_u15jy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 458.72824, 44.881958, -32.1084)
+spawn_list = {
+ExtResource("2_3j3h8"): 1.0,
+ExtResource("3_xemno"): 0.5,
+ExtResource("4_wu3ua"): 0.25,
+ExtResource("5_k2est"): 0.05,
+ExtResource("6_d12ac"): 0.75,
+ExtResource("7_1swxr"): 0.5,
+ExtResource("8_fbbyy"): 0.75
+}
+spawn_rate = 10.0
+spawn_bounds = Vector3(0, 0, 0)
