@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="big-mode-26"
-run/main_scene="uid://uvj7miqi530m"
+run/main_scene="uid://bh6l6i2j4dmfk"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-ScoreSystem="*uid://d1yuavyle2ds0"
 AudioSystem="*uid://b45qs8c0e8xv0"
+ScoreSystem="*uid://d1yuavyle2ds0"
 
 [global_group]
 

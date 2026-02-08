@@ -9,7 +9,7 @@ func _ready():
 
 func _on_start_pressed():
 	# We can rename later
-	get_tree().change_scene_to_file("res://levels/level_01.tscn")
+	get_tree().change_scene_to_file("res://Worlds/prototype_level.tscn")
 
 func _on_quit_pressed():
 	get_tree().quit()
